@@ -387,3 +387,20 @@ describe('should transform todos', () => {
 
 })
 
+it('should transform horizontal lines', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<hr/>
+</div>
+</en-note>`
+	const entryContent = [
+		{
+			"data": {},
+			"content": [],
+			"nodeType": "hr"
+		},
+	]
+	expect(await content2content(noteContent)).toEqual(entryContent)
+})

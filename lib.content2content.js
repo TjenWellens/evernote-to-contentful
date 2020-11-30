@@ -112,6 +112,18 @@ function isTodoNode(node) {
 	return isNode(node) && node.$$.some(isTodo)
 }
 
+function isHorizontalLine(node) {
+	return node["#name"] === "hr";
+}
+
+function horizontalLine() {
+	return {
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	}
+}
+
 function parseNode(node, images) {
 	if(isTodoNode(node)) return [todo(node)]
 
@@ -132,6 +144,8 @@ function parseNode(node, images) {
 	if (isImage(node)) return [image(node, images)]
 
 	if (isNewline(node)) return [newline()]
+
+	if(isHorizontalLine(node)) return [horizontalLine()]
 
 	throw new Error("Unknown node type" + JSON.stringify(node))
 }
