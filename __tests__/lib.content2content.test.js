@@ -621,7 +621,7 @@ target="_blank">In progress blogpost</a>)
 				{
 					"data": {},
 					"marks": [],
-					"value": ")\n",
+					"value": ")",
 					"nodeType": "text"
 				}
 			],
