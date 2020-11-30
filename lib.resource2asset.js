@@ -42,7 +42,7 @@ function createAssetFromUpload({uploadId, contentType, fileName, assetId, title,
 
 function fetchEvernoteResource(url) {
 	return axios.post(url,
-		qs.stringify({auth: process.env.EVERNOTE_DEVELOPER_TOKEN}), {
+		qs.stringify({auth: process.env.EVERNOTE_TOKEN}), {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},

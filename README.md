@@ -14,7 +14,7 @@ and creates corresponding blogposts on contentful.
 create a `.env` file in project root
 
 ```
-EVERNOTE_DEVELOPER_TOKEN="..."
+EVERNOTE_TOKEN="..."
 EVERNOTE_NOTESTORE_URL="https://sandbox.evernote.com/shard/s1/notestore"
 CONTENTFUL_SPACE="..."
 CONTENTFUL_ENVIRONMENT="master"
