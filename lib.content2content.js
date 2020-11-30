@@ -1,7 +1,10 @@
 const xml2js = require('xml2js');
 
 const parser = new xml2js.Parser({
-	trim: true
+	// trim: true,
+	preserveChildrenOrder: true,
+	explicitChildren: true,
+	charsAsChildren: true,
 });
 
 function paragraph(text) {
@@ -11,7 +14,7 @@ function paragraph(text) {
 			{
 				"data": {},
 				"marks": [],
-				"value": text,
+				"value": text.trim(),
 				"nodeType": "text"
 			}
 		],
@@ -24,7 +27,7 @@ function newline() {
 }
 
 function image(node, images) {
-	const hash = node[0].$.hash
+	const hash = node.$.hash
 	const {assetId} = images[hash]
 	return {
 		"data": {
@@ -41,25 +44,49 @@ function image(node, images) {
 	}
 }
 
+function isNode(node) {
+	return node.$$ && node.$$.length !== 0
+}
+
+function isText(node) {
+	return node["#name"] === "__text__"
+}
+
+function isImage(node) {
+	return node["#name"] === "en-media"
+}
+
+function isNewline(node) {
+	return node["#name"] === "br"
+}
+
+function isImageNode(node) {
+	return isNode(node) && node.$$.some(isImage)
+}
+
 function parseNode(node, images) {
-	const result = []
-	if (node["_"])
-		result.push(paragraph(node["_"]))
+	if(isImageNode(node)) {
+		// evernote always adds a newline between text and image
+		// we don't want those to be added
+		return node.$$
+			.filter(node => !isNewline(node))
+			.flatMap(node => parseNode(node, images))
+	}
 
-	if (node["en-media"])
-		result.push(image(node["en-media"], images))
+	if(isNode(node)) return node.$$.flatMap(node => parseNode(node, images))
 
-	if (result.length === 0 && node["br"]) result.push(newline())
+	if(isText(node)) return [paragraph(node._)]
 
-	if (result.length === 0)
-		result.push(paragraph(node))
+	if(isImage(node)) return [image(node, images)]
 
-	return result
+	if(isNewline(node)) return [newline()]
+
+	log.error("Unknown node type", node)
 }
 
 async function content2content(noteContent, images) {
 	const parsedNodeContent = await parser.parseStringPromise(noteContent)
-	return parsedNodeContent["en-note"].div.flatMap(node => parseNode(node, images))
+	return parsedNodeContent["en-note"].$$.flatMap(node => parseNode(node, images))
 }
 
 module.exports = {
