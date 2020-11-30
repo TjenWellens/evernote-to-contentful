@@ -1,0 +1,52 @@
+{
+	"name": "everblog",
+	"description": "",
+	"displayField": "title",
+	"fields": [
+		{
+			"id": "title",
+			"name": "title",
+			"type": "Symbol",
+			"localized": false,
+			"required": false,
+			"validations": [],
+			"disabled": false,
+			"omitted": false
+		},
+		{
+			"id": "content",
+			"name": "content",
+			"type": "RichText",
+			"localized": false,
+			"required": false,
+			"validations": [],
+			"disabled": false,
+			"omitted": false
+		},
+		{
+			"id": "id",
+			"name": "id",
+			"type": "Symbol",
+			"localized": false,
+			"required": false,
+			"validations": [],
+			"disabled": false,
+			"omitted": false
+		},
+		{
+			"id": "tags",
+			"name": "tags",
+			"type": "Array",
+			"localized": false,
+			"required": false,
+			"validations": [],
+			"disabled": false,
+			"omitted": false,
+			"items": {
+				"type": "Symbol",
+				"validations": []
+			}
+		}
+	],
+	"sys": "a lot more stuff here"
+}
