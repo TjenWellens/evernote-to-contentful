@@ -15,53 +15,55 @@ it('should transform note-content to rich text', async () => {
 	expect(await content2content(note.content, images)).toEqual(entryContent)
 })
 
-it('should transform paragraphs', async () => {
-	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+describe('should transform paragraphs', () => {
+	it('simple line', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>Hello there</div>
 <div>this is my first blogpost</div>
 <div>hope you like it!</div>
 </en-note>`
-	const entryContent = [
-		{
-			"data": {},
-			"content": [
-				{
-					"data": {},
-					"marks": [],
-					"value": "Hello there",
-					"nodeType": "text"
-				}
-			],
-			"nodeType": "paragraph"
-		},
-		{
-			"data": {},
-			"content": [
-				{
-					"data": {},
-					"marks": [],
-					"value": "this is my first blogpost",
-					"nodeType": "text"
-				}
-			],
-			"nodeType": "paragraph"
-		},
-		{
-			"data": {},
-			"content": [
-				{
-					"data": {},
-					"marks": [],
-					"value": "hope you like it!",
-					"nodeType": "text"
-				}
-			],
-			"nodeType": "paragraph"
-		},
-	]
-	expect(await content2content(noteContent)).toEqual(entryContent)
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "Hello there",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "this is my first blogpost",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "hope you like it!",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 })
 
 it('should transform empty lines', async () => {
