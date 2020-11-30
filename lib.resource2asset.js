@@ -91,7 +91,20 @@ async function fetchResourceMimeAndFilename(resourceGuid) {
 	}
 }
 
+async function tryFindAsset(resourceGuid) {
+	const space = await contentfulClient.getSpace(process.env.CONTENTFUL_SPACE)
+	const environment = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT)
+	return environment.getAsset(resourceGuid)
+		.catch(reason => {
+			if (reason.name !== 'NotFound') throw new Error('tryFindEntry failed for unknown reason: ' + reason.message)
+			return null
+		})
+}
+
 async function createAssetFromEvernoteResource(resourceGuid) {
+	const alreadyExists = await tryFindAsset(resourceGuid)
+	if(alreadyExists) return alreadyExists
+
 	const url = await fetchResourceUrl(resourceGuid)
 	const {mime, fileName} = await fetchResourceMimeAndFilename(resourceGuid);
 	const stream = await fetchEvernoteResource(url)
