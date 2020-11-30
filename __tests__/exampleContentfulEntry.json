@@ -313,6 +313,42 @@
 						"content": [
 							{
 								"data": {},
+								"marks": [],
+								"value": "[ ] almost",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "[ ] entirely",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "[ ] done",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
 								"content": [
 									{
 										"data": {},
