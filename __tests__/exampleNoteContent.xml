@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>Hello there</div>
+	<div>this is my first blogpost</div>
+	<div>hope you like it!</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>Here is an image
+		<br clear="none"/>
+		<en-media hash="215f60a9a488d2683632fce8526d2959" type="image/png"></en-media>
+	</div>
+	<div>with some remarks beneath</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>and then another image</div>
+	<div>
+		<en-media hash="373798d4ffbde8f490e01d418b9d2a01" type="image/png"></en-media>
+	</div>
+	<div>notestore.xxx</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>tadaa</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>(src: <a shape="rect"
+				  href="evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/">
+		In progress blogpost</a>)
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+</en-note>
