@@ -197,3 +197,77 @@ describe('should transform images', () => {
 	})
 })
 
+it('should transform ordered list', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<ol>
+<li>first</li>
+<li>second</li>
+<li>third</li>
+</ol>
+</en-note>`
+	const entryContent = [
+		{
+			"data": {},
+			"content": [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"value": "first",
+									"nodeType": "text"
+								}
+							],
+							"nodeType": "paragraph"
+						}
+					],
+					"nodeType": "list-item"
+				},
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"value": "second",
+									"nodeType": "text"
+								}
+							],
+							"nodeType": "paragraph"
+						}
+					],
+					"nodeType": "list-item"
+				},
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"value": "third",
+									"nodeType": "text"
+								}
+							],
+							"nodeType": "paragraph"
+						}
+					],
+					"nodeType": "list-item"
+				}
+			],
+			"nodeType": "ordered-list"
+		},
+	]
+	expect(await content2content(noteContent)).toEqual(entryContent)
+})

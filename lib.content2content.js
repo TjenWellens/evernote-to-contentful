@@ -64,8 +64,28 @@ function isImageNode(node) {
 	return isNode(node) && node.$$.some(isImage)
 }
 
+function isList(node) {
+	return node["#name"] === "ol"
+}
+
+function listItem(node) {
+	return {
+		"data": {},
+		"content": parseNode(node.$$[0]),
+		"nodeType": "list-item"
+	}
+}
+
+function list(node) {
+	return {
+		"data": {},
+		"content": node.$$.map(listItem),
+		"nodeType": "ordered-list"
+	};
+}
+
 function parseNode(node, images) {
-	if(isImageNode(node)) {
+	if (isImageNode(node)) {
 		// evernote always adds a newline between text and image
 		// we don't want those to be added
 		return node.$$
@@ -73,13 +93,15 @@ function parseNode(node, images) {
 			.flatMap(node => parseNode(node, images))
 	}
 
-	if(isNode(node)) return node.$$.flatMap(node => parseNode(node, images))
+	if (isList(node)) return [list(node)]
 
-	if(isText(node)) return [paragraph(node._)]
+	if (isNode(node)) return node.$$.flatMap(node => parseNode(node, images))
 
-	if(isImage(node)) return [image(node, images)]
+	if (isText(node)) return [paragraph(node._)]
 
-	if(isNewline(node)) return [newline()]
+	if (isImage(node)) return [image(node, images)]
+
+	if (isNewline(node)) return [newline()]
 
 	log.error("Unknown node type", node)
 }
