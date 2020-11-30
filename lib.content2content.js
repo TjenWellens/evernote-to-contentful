@@ -98,7 +98,23 @@ function list(node) {
 	};
 }
 
+function isTodo(node) {
+	return node["#name"] === "en-todo";
+}
+
+function todo(node) {
+	const textNode = node.$$.filter(node => !isTodo(node))[0];
+	if(!isText(textNode)) throw new Error('textnode expected in todo' + JSON.stringify(textNode))
+	return paragraph("[ ] " + textNode._.trim())
+}
+
+function isTodoNode(node) {
+	return isNode(node) && node.$$.some(isTodo)
+}
+
 function parseNode(node, images) {
+	if(isTodoNode(node)) return [todo(node)]
+
 	if (isImageNode(node)) {
 		// evernote always adds a newline between text and image
 		// we don't want those to be added

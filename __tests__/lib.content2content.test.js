@@ -334,3 +334,56 @@ describe('should transform list', () => {
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
 })
+
+describe('should transform todos', () => {
+	it('lone todos', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>are you done yet?</div>
+<div><en-todo></en-todo>almost</div>
+<div>are you done yet?</div>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "are you done yet?",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "[ ] almost",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "are you done yet?",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
+
+})
+
