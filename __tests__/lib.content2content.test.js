@@ -213,6 +213,34 @@ clear="none"/>and this line
 				}
 			])
 		});
+		it('only squash text (and not links!)', () => {
+			const children = [
+				{
+					"#name": "__text__",
+					"_": "(src: "
+				},
+				{
+					"_": "In progress blogpost",
+					"$": {
+						"shape": "rect",
+						"href": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/",
+						"target": "_blank"
+					},
+					"#name": "a",
+					"$$": [
+						{
+							"#name": "__text__",
+							"_": "In progress blogpost"
+						}
+					]
+				},
+				{
+					"#name": "__text__",
+					"_": ")"
+				}
+			]
+			expect(squashInlineNewline(children)).toEqual(children)
+		})
 	});
 })
 

@@ -168,7 +168,9 @@ function isInlineNode(node) {
 
 function squashInlineNewline(children) {
 	if(children.length === 0) return children
-	return replaceTrailingWhitespace(squashText(replaceNewlineWithText()))
+	const moreText = replaceNewlineWithText();
+	const squashed = squashText(moreText);
+	return replaceTrailingWhitespace(squashed)
 
 	function replaceLastText(input, fnReplacementText) {
 		const result = [...input]
@@ -189,6 +191,9 @@ function squashInlineNewline(children) {
 		return children.reduce((squashed, child) => {
 			if (squashed.length === 0)
 				return [{...child}]
+
+			if(!isText(child))
+				return [...squashed, {...child}]
 
 			const previous = last(squashed)
 			if (!isText(previous))
