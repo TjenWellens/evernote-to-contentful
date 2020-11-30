@@ -2,7 +2,7 @@ const {createAssetsFromEvernoteResources} = require("./lib.resource2asset");
 const {content2contentAsRichText} = require("./lib.content2content");
 const {createOrUpdateEntry} = require("./lib.createEntry");
 
-async function createEntryFromNote(note) {
+async function createEntryFromNote(note, tags) {
 	const responses = await createAssetsFromEvernoteResources(note.resources)
 
 	console.log(responses)
@@ -13,6 +13,10 @@ async function createEntryFromNote(note) {
 	}), {})
 	const entryContent = await content2contentAsRichText(note.content, images)
 
+	const tagNames = tags
+		.filter(tag => note.tagGuids.includes(tag.guid))
+		.map(tag => tag.name)
+
 	return createOrUpdateEntry({
 		contentTypeId: 'everblog',
 		entryId: note.guid,
@@ -20,12 +24,7 @@ async function createEntryFromNote(note) {
 			id: note.guid,
 			title: note.title,
 			content: entryContent,
-			// todo
-			tags: [
-				"foo",
-				"todo",
-				"create actual tags"
-			]
+			tags: tagNames
 		}
 	})
 }
