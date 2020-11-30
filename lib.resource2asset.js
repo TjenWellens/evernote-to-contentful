@@ -106,6 +106,13 @@ async function createAssetFromEvernoteResource(resourceGuid) {
 		title: resourceGuid,
 		description: '',
 	})
+	return asset
+}
+
+async function createAssetsFromEvernoteResources(resources) {
+	return Promise.all(
+		resources.map(resource => createAssetFromEvernoteResource(resource.guid).then(asset =>({asset, resource})))
+	)
 }
 
 module.exports = {
@@ -115,4 +122,5 @@ module.exports = {
 	fetchResourceUrl,
 	fetchResourceMimeAndFilename,
 	createAssetFromEvernoteResource,
+	createAssetsFromEvernoteResources
 }
