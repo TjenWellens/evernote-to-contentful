@@ -3,8 +3,9 @@ const {content2content} = require("../lib.content2content");
 it('should transform note-content to rich text', async () => {
 	const fs = require('fs')
 	const {note} = require('./exampleNote')
-	const exampleContentfulEntryContentJson = fs.readFileSync('./__tests__/exampleContentfulEntryContent.json');
-	const entryContent = JSON.parse(exampleContentfulEntryContentJson)
+	const entryJson = fs.readFileSync('./__tests__/exampleContentfulEntry.json');
+	const entry = JSON.parse(entryJson)
+	const entryContent = entry.fields.content["en-US"].content
 
 	expect(await content2content(note.content)).toEqual(entryContent)
 })

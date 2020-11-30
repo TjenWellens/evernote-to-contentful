@@ -9,8 +9,8 @@
 		},
 		"id": "5cIrtgtqHMbBlHCN7vBBZZ",
 		"type": "Entry",
-		"createdAt": "2020-11-29T10:35:40.621Z",
-		"updatedAt": "2020-11-29T10:35:40.621Z",
+		"createdAt": "2020-11-29T10:31:59.570Z",
+		"updatedAt": "2020-11-30T07:22:41.930Z",
 		"environment": {
 			"sys": {
 				"id": "master",
@@ -18,217 +18,535 @@
 				"linkType": "Environment"
 			}
 		},
-		"revision": 1,
+		"publishedVersion": 35,
+		"publishedAt": "2020-11-30T07:22:41.930Z",
+		"firstPublishedAt": "2020-11-29T10:35:40.621Z",
+		"createdBy": {
+			"sys": {
+				"type": "Link",
+				"linkType": "User",
+				"id": "0Z9Oh4wQErSau8RyeRf9pH"
+			}
+		},
+		"updatedBy": {
+			"sys": {
+				"type": "Link",
+				"linkType": "User",
+				"id": "0Z9Oh4wQErSau8RyeRf9pH"
+			}
+		},
+		"publishedCounter": 3,
+		"version": 36,
+		"publishedBy": {
+			"sys": {
+				"type": "Link",
+				"linkType": "User",
+				"id": "0Z9Oh4wQErSau8RyeRf9pH"
+			}
+		},
 		"contentType": {
 			"sys": {
 				"type": "Link",
 				"linkType": "ContentType",
 				"id": "everblog"
 			}
-		},
-		"locale": "en-US"
+		}
 	},
 	"fields": {
-		"title": "First blogpost",
+		"title": {
+			"en-US": "First blogpost"
+		},
 		"content": {
-			"data": {},
-			"content": [
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "Hello there\nthis is my first blogpost\nhope you like it!",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "Here is an image",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {
-						"target": {
-							"sys": {
-								"space": {
-									"sys": {
-										"type": "Link",
-										"linkType": "Space",
-										"id": "p2rtto0i6kcn"
-									}
-								},
-								"id": "3n1RaUimNYsv0wGAtcEPn0",
-								"type": "Asset",
-								"createdAt": "2020-11-29T10:33:50.074Z",
-								"updatedAt": "2020-11-29T10:33:50.074Z",
-								"environment": {
-									"sys": {
-										"id": "master",
-										"type": "Link",
-										"linkType": "Environment"
-									}
-								},
-								"revision": 1,
-								"locale": "en-US"
-							},
-							"fields": {
-								"title": "first image",
-								"file": {
-									"url": "//images.ctfassets.net/p2rtto0i6kcn/3n1RaUimNYsv0wGAtcEPn0/4dd87c58d3aa1ba114e6ef39398b8a22/Screenshot_2020-11-29_at_10.54.33.png",
-									"details": {
-										"size": 124835,
-										"image": {
-											"width": 668,
-											"height": 932
-										}
-									},
-									"fileName": "Screenshot 2020-11-29 at 10.54.33.png",
-									"contentType": "image/png"
+			"en-US": {
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Hello there",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "this is my first blogpost",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "hope you like it!",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Here is an image",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {
+							"target": {
+								"sys": {
+									"id": "766297c1-ea9b-4f66-aad2-66c7b42c133f",
+									"type": "Link",
+									"linkType": "Asset"
 								}
 							}
-						}
+						},
+						"content": [],
+						"nodeType": "embedded-asset-block"
 					},
-					"content": [],
-					"nodeType": "embedded-asset-block"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "with some remarks beneath",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "and then another image",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {
-						"target": {
-							"sys": {
-								"space": {
-									"sys": {
-										"type": "Link",
-										"linkType": "Space",
-										"id": "p2rtto0i6kcn"
-									}
-								},
-								"id": "2pWcZnigT6iUOMDJlEZyLr",
-								"type": "Asset",
-								"createdAt": "2020-11-29T10:34:28.959Z",
-								"updatedAt": "2020-11-29T10:34:28.959Z",
-								"environment": {
-									"sys": {
-										"id": "master",
-										"type": "Link",
-										"linkType": "Environment"
-									}
-								},
-								"revision": 1,
-								"locale": "en-US"
-							},
-							"fields": {
-								"title": "second image",
-								"file": {
-									"url": "//images.ctfassets.net/p2rtto0i6kcn/2pWcZnigT6iUOMDJlEZyLr/a7263f1be92ebfcf3aaba6c9d7164ff7/Screenshot_2020-11-29_at_10.55.49.png",
-									"details": {
-										"size": 169429,
-										"image": {
-											"width": 712,
-											"height": 794
-										}
-									},
-									"fileName": "Screenshot 2020-11-29 at 10.55.49.png",
-									"contentType": "image/png"
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "with some remarks beneath",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "and then another image",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {
+							"target": {
+								"sys": {
+									"id": "1b88f389-19df-4417-bde1-f759abc8a542",
+									"type": "Link",
+									"linkType": "Asset"
 								}
 							}
-						}
+						},
+						"content": [],
+						"nodeType": "embedded-asset-block"
 					},
-					"content": [],
-					"nodeType": "embedded-asset-block"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "notestore.xxx\ntadaa\n(src: ",
-							"nodeType": "text"
-						},
-						{
-							"data": {
-								"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "notestore.xxx",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "it has happened on numerous occations",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "first",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
 							},
-							"content": [
-								{
-									"data": {},
-									"marks": [],
-									"value": "In progress blogpost",
-									"nodeType": "text"
-								}
-							],
-							"nodeType": "hyperlink"
-						},
-						{
-							"data": {},
-							"marks": [],
-							"value": ")\n",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				},
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "paragraph"
-				}
-			],
-			"nodeType": "document"
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "second",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							},
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "third",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							}
+						],
+						"nodeType": "ordered-list"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "but also",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "aaa",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							},
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "bbb",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							}
+						],
+						"nodeType": "unordered-list"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "are you done yet?",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "almost",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							},
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "entirely",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							},
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"value": "done",
+												"nodeType": "text"
+											}
+										],
+										"nodeType": "paragraph"
+									}
+								],
+								"nodeType": "list-item"
+							}
+						],
+						"nodeType": "unordered-list"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "can we maybe quote with indentation?",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Yes we can!",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "--- Me\n",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "like someone mentioned ",
+								"nodeType": "text"
+							},
+							{
+								"data": {
+									"uri": "https://www.example.com/"
+								},
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"value": "here",
+										"nodeType": "text"
+									}
+								],
+								"nodeType": "hyperlink"
+							},
+							{
+								"data": {},
+								"marks": [],
+								"value": "\n",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [],
+						"nodeType": "hr"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "and a horizontal line",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [],
+						"nodeType": "hr"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "\nand a code block",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "and some lines without new paragraph\nthis line\nand this line\nand this line",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "(src: ",
+								"nodeType": "text"
+							},
+							{
+								"data": {
+									"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+								},
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"value": "In progress blogpost",
+										"nodeType": "text"
+									}
+								],
+								"nodeType": "hyperlink"
+							},
+							{
+								"data": {},
+								"marks": [],
+								"value": ")\n",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "document"
+			}
+		},
+		"tags": {
+			"en-US": [
+				"foo",
+				"first"
+			]
 		}
 	}
 }
