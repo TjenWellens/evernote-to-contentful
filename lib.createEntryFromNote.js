@@ -18,7 +18,7 @@ async function createEntryFromNote(note, tags) {
 		.map(tag => tag.name)
 
 	return createOrUpdateEntry({
-		contentTypeId: 'everblog',
+		contentTypeId: process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID,
 		entryId: note.guid,
 		fields: {
 			id: note.guid,
