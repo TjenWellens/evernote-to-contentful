@@ -108,7 +108,7 @@ clear="none"/>and this line
 				},
 			])
 		});
-		it('text + newline = text_', () => {
+		it('remove trailing newline: text + newline = text', () => {
 			expect(squashInlineNewline([
 				{
 					"#name": "__text__",
@@ -123,11 +123,11 @@ clear="none"/>and this line
 			])).toEqual([
 				{
 					"#name": "__text__",
-					"_": "and some lines without new paragraph\n"
+					"_": "and some lines without new paragraph"
 				},
 			])
 		});
-		it('newline + text = _text', () => {
+		it('keep leading newline because should not happen anyway: newline + text = _text', () => {
 			expect(squashInlineNewline([
 				{
 					"$": {
@@ -146,7 +146,7 @@ clear="none"/>and this line
 				},
 			])
 		});
-		it('text + newline + text = text_text', () => {
+		it('join text with newline in between: text + newline + text = text_text', () => {
 			expect(squashInlineNewline([
 				{
 					"#name": "__text__",
@@ -209,7 +209,7 @@ clear="none"/>and this line
 			expect(squashInlineNewline(children)).toEqual([
 				{
 					"#name": "__text__",
-					"_": "and some lines without new paragraph\nthis line\nand this line\nand this line\n"
+					"_": "and some lines without new paragraph\nthis line\nand this line\nand this line"
 				}
 			])
 		});

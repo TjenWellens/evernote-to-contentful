@@ -85,8 +85,8 @@ function listItem(node) {
 }
 
 function listType(node) {
-	if(isOrderedList(node)) return "ordered-list"
-	if(isUnorderedList(node)) return "unordered-list"
+	if (isOrderedList(node)) return "ordered-list"
+	if (isUnorderedList(node)) return "unordered-list"
 	throw new Error("unknown list type" + JSON.stringify(node));
 }
 
@@ -104,7 +104,7 @@ function isTodo(node) {
 
 function todo(node) {
 	const textNode = node.$$.filter(node => !isTodo(node))[0];
-	if(!isText(textNode)) throw new Error('textnode expected in todo' + JSON.stringify(textNode))
+	if (!isText(textNode)) throw new Error('textnode expected in todo' + JSON.stringify(textNode))
 	return paragraph("[ ] " + textNode._.trim())
 }
 
@@ -128,7 +128,7 @@ function text(node) {
 	return {
 		"data": {},
 		"marks": [],
-		"value": node._.trim(),
+		"value": node._,
 		"nodeType": "text"
 	}
 }
@@ -167,24 +167,34 @@ function isInlineNode(node) {
 }
 
 function squashInlineNewline(children) {
-	return squashText(replaceNewlineWithText())
+	if(children.length === 0) return children
+	return replaceTrailingWhitespace(squashText(replaceNewlineWithText()))
+
+	function replaceLastText(input, fnReplacementText) {
+		const result = [...input]
+		const lastItem = last(input);
+		const newItem = {
+			...lastItem,
+			_: fnReplacementText(lastItem._)
+		};
+		result.splice(input.length - 1, 1, newItem);
+		return result;
+	}
+
+	function last(array) {
+		return array[array.length - 1];
+	}
 
 	function squashText(children) {
-		return children.reduce((squashed, child)=>{
-			if(squashed.length === 0)
+		return children.reduce((squashed, child) => {
+			if (squashed.length === 0)
 				return [{...child}]
 
-			const previous = squashed[squashed.length - 1]
-			if(!isText(previous))
+			const previous = last(squashed)
+			if (!isText(previous))
 				return [...squashed, {...child}]
 
-			const newPrevious = {
-				...previous,
-				_: previous._ + child._
-			};
-			const newSquashed = [...squashed]
-			newSquashed.splice(squashed.length - 1, 1, newPrevious);
-			return newSquashed
+			return replaceLastText(squashed, previousText => previousText + child._)
 		}, [])
 	}
 
@@ -198,6 +208,13 @@ function squashInlineNewline(children) {
 	function replaceNewlineWithText() {
 		return children.map(node => isNewline(node) ? textNewline() : node);
 	}
+
+	function replaceTrailingWhitespace(children) {
+		if (!isText(last(children)))
+			return children
+
+		return replaceLastText(children, text => text.replace(/\s+$/, ''))
+	}
 }
 
 function parseInlineNode(node) {
@@ -210,9 +227,9 @@ function parseInlineNode(node) {
 }
 
 function parseNode(node, images) {
-	if(isInlineNode(node)) return parseInlineNode(node)
+	if (isInlineNode(node)) return parseInlineNode(node)
 
-	if(isTodoNode(node)) return [todo(node)]
+	if (isTodoNode(node)) return [todo(node)]
 
 	if (isImageNode(node)) {
 		// evernote always adds a newline between text and image
@@ -232,7 +249,7 @@ function parseNode(node, images) {
 
 	if (isNewline(node)) return [newline()]
 
-	if(isHorizontalLine(node)) return [horizontalLine()]
+	if (isHorizontalLine(node)) return [horizontalLine()]
 
 	throw new Error("Unknown node type" + JSON.stringify(node))
 }
