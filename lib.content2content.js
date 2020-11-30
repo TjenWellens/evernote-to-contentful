@@ -117,7 +117,7 @@ function parseNode(node, images) {
 
 	if (isNewline(node)) return [newline()]
 
-	log.error("Unknown node type", node)
+	throw new Error("Unknown node type" + JSON.stringify(node))
 }
 
 async function content2content(noteContent, images) {
