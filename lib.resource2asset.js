@@ -101,7 +101,8 @@ async function tryFindAsset(resourceGuid) {
 		})
 }
 
-async function createAssetFromEvernoteResource(resourceGuid) {
+async function createAssetFromEvernoteResource(resource) {
+	const resourceGuid = resource.guid
 	const alreadyExists = await tryFindAsset(resourceGuid)
 	if(alreadyExists) return alreadyExists
 
@@ -110,6 +111,7 @@ async function createAssetFromEvernoteResource(resourceGuid) {
 	const stream = await fetchEvernoteResource(url)
 	const upload = await createUploadForStream(stream)
 
+	const description = resource.data.bodyHash.toString('hex');
 	const asset = await createAssetFromUpload({
 		uploadId: upload.sys.id,
 		contentType:
@@ -117,14 +119,14 @@ async function createAssetFromEvernoteResource(resourceGuid) {
 		fileName,
 		assetId: resourceGuid,
 		title: resourceGuid,
-		description: '',
+		description,
 	})
 	return asset
 }
 
 async function createAssetsFromEvernoteResources(resources) {
 	return Promise.all(
-		resources.map(resource => createAssetFromEvernoteResource(resource.guid).then(asset =>({asset, resource})))
+		resources.map(resource => createAssetFromEvernoteResource(resource).then(asset =>({asset, resource})))
 	)
 }
 
@@ -134,6 +136,5 @@ module.exports = {
 	createUploadForStream,
 	fetchResourceUrl,
 	fetchResourceMimeAndFilename,
-	createAssetFromEvernoteResource,
 	createAssetsFromEvernoteResources
 }
