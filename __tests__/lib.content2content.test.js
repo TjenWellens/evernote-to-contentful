@@ -144,5 +144,55 @@ describe('should transform images', () => {
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
 	})
+	it('(with text)', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+  Here is an image
+  <br clear="none"/>
+  <en-media hash="215f60a9a488d2683632fce8526d2959" type="image/png"></en-media>
+</div>
+</en-note>`
+		const hash = "215f60a9a488d2683632fce8526d2959"
+		const assetId = "2pWcZnigT6iUOMDJlEZyLr";
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "Here is an image",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {
+					"target": {
+						"sys": {
+							type: 'Link',
+							linkType: 'Asset',
+							id: assetId
+						},
+					}
+				},
+				"content": [],
+				"nodeType": "embedded-asset-block"
+			},
+		]
+
+		const images = {
+			[hash]: {
+				hash,
+				assetId,
+			}
+		}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
 })
 

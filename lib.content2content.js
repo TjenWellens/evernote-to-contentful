@@ -1,6 +1,8 @@
 const xml2js = require('xml2js');
 
-const parser = new xml2js.Parser(/* options */);
+const parser = new xml2js.Parser({
+	trim: true
+});
 
 function paragraph(text) {
 	return {
@@ -40,14 +42,24 @@ function image(node, images) {
 }
 
 function parseNode(node, images) {
-	if (node.br) return newline()
-	if (node["en-media"]) return image(node["en-media"], images)
-	return paragraph(node)
+	const result = []
+	if (node["_"])
+		result.push(paragraph(node["_"]))
+
+	if (node["en-media"])
+		result.push(image(node["en-media"], images))
+
+	if (result.length === 0 && node["br"]) result.push(newline())
+
+	if (result.length === 0)
+		result.push(paragraph(node))
+
+	return result
 }
 
 async function content2content(noteContent, images) {
 	const parsedNodeContent = await parser.parseStringPromise(noteContent)
-	return parsedNodeContent["en-note"].div.map(node => parseNode(node, images))
+	return parsedNodeContent["en-note"].div.flatMap(node => parseNode(node, images))
 }
 
 module.exports = {
