@@ -128,7 +128,7 @@ function text(node) {
 	return {
 		"data": {},
 		"marks": [],
-		"value": node._,
+		"value": node._.trim(),
 		"nodeType": "text"
 	}
 }
@@ -148,23 +148,63 @@ function link(node) {
 }
 
 function isInline(node) {
-	return isText(node) || isLink(node)
+	return isText(node) || isLink(node) || isNewline(node)
 }
 
 function parseInline(node) {
 	if (isText(node)) return text(node)
 	if (isLink(node)) return link(node)
+	if (isNewline(node)) return inlineNewline(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
+}
+
+function inlineNewline(node) {
+	return undefined;
 }
 
 function isInlineNode(node) {
 	return isNode(node) && node.$$.every(isInline)
 }
 
+function squashInlineNewline(children) {
+	return squashText(replaceNewlineWithText())
+
+	function squashText(children) {
+		return children.reduce((squashed, child)=>{
+			if(squashed.length === 0)
+				return [{...child}]
+
+			const previous = squashed[squashed.length - 1]
+			if(!isText(previous))
+				return [...squashed, {...child}]
+
+			const newPrevious = {
+				...previous,
+				_: previous._ + child._
+			};
+			const newSquashed = [...squashed]
+			newSquashed.splice(squashed.length - 1, 1, newPrevious);
+			return newSquashed
+		}, [])
+	}
+
+	function textNewline() {
+		return {
+			"#name": "__text__",
+			"_": "\n"
+		}
+	}
+
+	function replaceNewlineWithText() {
+		return children.map(node => isNewline(node) ? textNewline() : node);
+	}
+}
+
 function parseInlineNode(node) {
+	const children = squashInlineNewline(node.$$)
 	return {
 		"data": {},
-		"content": node.$$.map(parseInline),
+		"content": children.map(parseInline),
 		"nodeType": "paragraph"
 	}
 }
@@ -203,5 +243,6 @@ async function content2content(noteContent, images) {
 }
 
 module.exports = {
-	content2content
+	content2content,
+	squashInlineNewline
 }

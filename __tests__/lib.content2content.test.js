@@ -1,3 +1,4 @@
+const {squashInlineNewline} = require("../lib.content2content");
 const {content2content} = require("../lib.content2content");
 
 it('should transform note-content to rich text', async () => {
@@ -64,6 +65,155 @@ describe('should transform paragraphs', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
+
+	it('newline in same paragraph', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>and some lines without new paragraph<br clear="none"/>this line<br clear="none"/>and this line<br
+clear="none"/>and this line
+</div>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "and some lines without new paragraph\nthis line\nand this line\nand this line",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
+
+	describe('squashInlineNewline', () => {
+		it('empty', () => {
+			expect(squashInlineNewline([])).toEqual([])
+		});
+		it('one entry', () => {
+			expect(squashInlineNewline([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+			])).toEqual([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+			])
+		});
+		it('text + newline = text_', () => {
+			expect(squashInlineNewline([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+			])).toEqual([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph\n"
+				},
+			])
+		});
+		it('newline + text = _text', () => {
+			expect(squashInlineNewline([
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+			])).toEqual([
+				{
+					"#name": "__text__",
+					"_": "\nand some lines without new paragraph"
+				},
+			])
+		});
+		it('text + newline + text = text_text', () => {
+			expect(squashInlineNewline([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+				{
+					"#name": "__text__",
+					"_": "this line"
+				},
+			])).toEqual([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph\nthis line"
+				},
+			])
+		});
+		it('loads', () => {
+			const children = [
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph"
+				},
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+				{
+					"#name": "__text__",
+					"_": "this line"
+				},
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+				{
+					"#name": "__text__",
+					"_": "and this line"
+				},
+				{
+					"$": {
+						"clear": "none"
+					},
+					"#name": "br"
+				},
+				{
+					"#name": "__text__",
+					"_": "and this line\n"
+				}
+			];
+			expect(squashInlineNewline(children)).toEqual([
+				{
+					"#name": "__text__",
+					"_": "and some lines without new paragraph\nthis line\nand this line\nand this line\n"
+				}
+			])
+		});
+	});
 })
 
 it('should transform empty lines', async () => {
