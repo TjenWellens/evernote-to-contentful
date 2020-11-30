@@ -10,7 +10,7 @@
 		"id": "5cIrtgtqHMbBlHCN7vBBZZ",
 		"type": "Entry",
 		"createdAt": "2020-11-29T10:31:59.570Z",
-		"updatedAt": "2020-11-30T07:22:41.930Z",
+		"updatedAt": "2020-11-30T09:53:00.599Z",
 		"environment": {
 			"sys": {
 				"id": "master",
@@ -18,8 +18,8 @@
 				"linkType": "Environment"
 			}
 		},
-		"publishedVersion": 35,
-		"publishedAt": "2020-11-30T07:22:41.930Z",
+		"publishedVersion": 43,
+		"publishedAt": "2020-11-30T09:53:00.599Z",
 		"firstPublishedAt": "2020-11-29T10:35:40.621Z",
 		"createdBy": {
 			"sys": {
@@ -35,8 +35,8 @@
 				"id": "0Z9Oh4wQErSau8RyeRf9pH"
 			}
 		},
-		"publishedCounter": 3,
-		"version": 36,
+		"publishedCounter": 4,
+		"version": 44,
 		"publishedBy": {
 			"sys": {
 				"type": "Link",
@@ -349,66 +349,6 @@
 						"content": [
 							{
 								"data": {},
-								"content": [
-									{
-										"data": {},
-										"content": [
-											{
-												"data": {},
-												"marks": [],
-												"value": "almost",
-												"nodeType": "text"
-											}
-										],
-										"nodeType": "paragraph"
-									}
-								],
-								"nodeType": "list-item"
-							},
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"content": [
-											{
-												"data": {},
-												"marks": [],
-												"value": "entirely",
-												"nodeType": "text"
-											}
-										],
-										"nodeType": "paragraph"
-									}
-								],
-								"nodeType": "list-item"
-							},
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"content": [
-											{
-												"data": {},
-												"marks": [],
-												"value": "done",
-												"nodeType": "text"
-											}
-										],
-										"nodeType": "paragraph"
-									}
-								],
-								"nodeType": "list-item"
-							}
-						],
-						"nodeType": "unordered-list"
-					},
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
 								"marks": [],
 								"value": "can we maybe quote with indentation?",
 								"nodeType": "text"
@@ -544,19 +484,7 @@
 							{
 								"data": {},
 								"marks": [],
-								"value": ")\n",
-								"nodeType": "text"
-							}
-						],
-						"nodeType": "paragraph"
-					},
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"marks": [],
-								"value": "",
+								"value": ")",
 								"nodeType": "text"
 							}
 						],
