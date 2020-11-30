@@ -28,7 +28,8 @@ function newline() {
 
 function image(node, images) {
 	const hash = node.$.hash
-	const {assetId} = images[hash]
+	const assetId = images[hash]
+	if(!assetId) throw new Error(`link could not find matching image for hash(${hash}) in images(${JSON.stringify(images)})`)
 	return {
 		"data": {
 			"target": {
@@ -264,7 +265,21 @@ async function content2content(noteContent, images) {
 	return parsedNodeContent["en-note"].$$.flatMap(node => parseNode(node, images))
 }
 
+function richText(content) {
+	return {
+			"data": {},
+			"content": content,
+			"nodeType": "document"
+	}
+}
+
+async function content2contentAsRichText(noteContent, images) {
+	const content = await content2content(noteContent, images)
+	return richText(content)
+}
+
 module.exports = {
 	content2content,
-	squashInlineNewline
+	squashInlineNewline,
+	content2contentAsRichText,
 }

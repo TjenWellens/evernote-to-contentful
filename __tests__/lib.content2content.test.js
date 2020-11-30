@@ -9,8 +9,8 @@ it('should transform note-content to rich text', async () => {
 	const entryContent = entry.fields.content["en-US"].content
 
 	const images = {
-		"215f60a9a488d2683632fce8526d2959": {assetId: "766297c1-ea9b-4f66-aad2-66c7b42c133f"},
-		"373798d4ffbde8f490e01d418b9d2a01": {assetId: "1b88f389-19df-4417-bde1-f759abc8a542"},
+		"215f60a9a488d2683632fce8526d2959": "766297c1-ea9b-4f66-aad2-66c7b42c133f",
+		"373798d4ffbde8f490e01d418b9d2a01": "1b88f389-19df-4417-bde1-f759abc8a542",
 	}
 
 	expect(await content2content(note.content, images)).toEqual(entryContent)
@@ -322,10 +322,7 @@ describe('should transform images', () => {
 		]
 
 		const images = {
-			[hash]: {
-				hash,
-				assetId,
-			}
+			[hash]: assetId
 		}
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
@@ -372,10 +369,7 @@ describe('should transform images', () => {
 		]
 
 		const images = {
-			[hash]: {
-				hash,
-				assetId,
-			}
+			[hash]: assetId,
 		}
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
