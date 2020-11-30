@@ -1,17 +1,17 @@
-var evernote = require('evernote');
+const {createEvernoteClient, NoteStore} = require("./lib.evernote");
 
-const client = new evernote.Client({token: process.env.EVERNOTE_DEVELOPER_TOKEN});
+const client = createEvernoteClient()
 
 const noteStore = client.getNoteStore();
 
 function findPublishedNotes(notebook, publishedTag) {
-	const filter = new evernote.NoteStore.NoteFilter({
+	const filter = new NoteStore.NoteFilter({
 		notebookGuid: notebook.guid,
 		tagGuids: [
 			publishedTag.guid,
 		],
 	});
-	const spec = new evernote.NoteStore.NotesMetadataResultSpec({
+	const spec = new NoteStore.NotesMetadataResultSpec({
 		includeTitle: true,
 		includeContentLength: true,
 		includeCreated: true,

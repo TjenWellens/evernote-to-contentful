@@ -1,14 +1,14 @@
 const contentful = require('contentful-management')
 const axios = require('axios');
-const evernote = require('evernote');
 const qs = require('querystring')
 const httpAdapter = require('axios/lib/adapters/http');
+const {createEvernoteClient} = require("./lib.evernote");
 
 const contentfulClient = contentful.createClient({
 	accessToken: process.env.CONTENTFUL_CONTENT_MANAGEMENT_API_KEY
 })
 
-const evernoteClient = new evernote.Client({token: process.env.EVERNOTE_DEVELOPER_TOKEN});
+const evernoteClient = createEvernoteClient()
 
 function createAssetFromUpload({uploadId, contentType, fileName, assetId, title, description}) {
 	return contentfulClient.getSpace(process.env.CONTENTFUL_SPACE)
