@@ -124,7 +124,54 @@ function horizontalLine() {
 	}
 }
 
+function text(node) {
+	return {
+		"data": {},
+		"marks": [],
+		"value": node._,
+		"nodeType": "text"
+	}
+}
+
+function isLink(node) {
+	return node["#name"] === "a";
+}
+
+function link(node) {
+	return {
+		"data": {
+			"uri": node.$.href
+		},
+		"content": node.$$.map(parseInline),
+		"nodeType": "hyperlink"
+	};
+}
+
+function isInline(node) {
+	return isText(node) || isLink(node)
+}
+
+function parseInline(node) {
+	if (isText(node)) return text(node)
+	if (isLink(node)) return link(node)
+	throw new Error('Unknown inline node type ' + JSON.stringify(node))
+}
+
+function isInlineNode(node) {
+	return isNode(node) && node.$$.every(isInline)
+}
+
+function parseInlineNode(node) {
+	return {
+		"data": {},
+		"content": node.$$.map(parseInline),
+		"nodeType": "paragraph"
+	}
+}
+
 function parseNode(node, images) {
+	if(isInlineNode(node)) return parseInlineNode(node)
+
 	if(isTodoNode(node)) return [todo(node)]
 
 	if (isImageNode(node)) {
