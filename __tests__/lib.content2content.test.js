@@ -272,4 +272,60 @@ describe('should transform list', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
+
+	it('unordered', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<ul>
+<li>aaa</li>
+<li>bbb</li>
+</ul>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"value": "aaa",
+										"nodeType": "text"
+									}
+								],
+								"nodeType": "paragraph"
+							}
+						],
+						"nodeType": "list-item"
+					},
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"value": "bbb",
+										"nodeType": "text"
+									}
+								],
+								"nodeType": "paragraph"
+							}
+						],
+						"nodeType": "list-item"
+					}
+				],
+				"nodeType": "unordered-list"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 })

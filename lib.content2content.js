@@ -64,8 +64,16 @@ function isImageNode(node) {
 	return isNode(node) && node.$$.some(isImage)
 }
 
+function isOrderedList(node) {
+	return node["#name"] === "ol";
+}
+
+function isUnorderedList(node) {
+	return node["#name"] === "ul";
+}
+
 function isList(node) {
-	return node["#name"] === "ol"
+	return isOrderedList(node) || isUnorderedList(node)
 }
 
 function listItem(node) {
@@ -76,11 +84,17 @@ function listItem(node) {
 	}
 }
 
+function listType(node) {
+	if(isOrderedList(node)) return "ordered-list"
+	if(isUnorderedList(node)) return "unordered-list"
+	throw new Error("unknown list type" + JSON.stringify(node));
+}
+
 function list(node) {
 	return {
 		"data": {},
 		"content": node.$$.map(listItem),
-		"nodeType": "ordered-list"
+		"nodeType": listType(node)
 	};
 }
 
