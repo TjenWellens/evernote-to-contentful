@@ -2,7 +2,9 @@ const {createAssetsFromEvernoteResources} = require("./lib.resource2asset");
 const {content2contentAsRichText} = require("./lib.content2content");
 const {createOrUpdateEntry} = require("./lib.createEntry");
 
-async function createEntryFromNote(note, tags) {
+async function createImages(note) {
+	if(!note.resources) return {}
+
 	const responses = await createAssetsFromEvernoteResources(note.resources)
 
 	console.log(responses)
@@ -11,11 +13,21 @@ async function createEntryFromNote(note, tags) {
 		...result,
 		[resource.data.bodyHash.toString('hex')]: asset.sys.id
 	}), {})
+	return images;
+}
+
+async function createEntryFromNote(note, tags) {
+	const images = await createImages(note);
+
 	const entryContent = await content2contentAsRichText(note.content, images)
 
-	const tagNames = tags
+	const tagLinks = tags
 		.filter(tag => note.tagGuids.includes(tag.guid))
-		.map(tag => tag.name)
+		.map(tag => ({sys: {
+			type: 'Link',
+			linkType: 'Entry',
+			id: tag.guid
+		}}))
 
 	return createOrUpdateEntry({
 		contentTypeId: process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID,
@@ -24,7 +36,7 @@ async function createEntryFromNote(note, tags) {
 			id: note.guid,
 			title: note.title,
 			content: entryContent,
-			tags: tagNames
+			tags: tagLinks
 		}
 	})
 }

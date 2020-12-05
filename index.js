@@ -1,12 +1,17 @@
 require('dotenv').config()
 
-const {findPublishedBlogposts} = require("./lib.findPublishedBlogposts");
+const {findNotebook, findTags, findNotes} = require("./lib.findPublishedBlogposts");
+const {createEntryFromTag} = require("./lib.createEntryFromTag");
 const {createEntryFromNote} = require("./lib.createEntryFromNote");
 
-async function note2post() {
-	const {notes, tags} = await findPublishedBlogposts()
 
-	const entries = Promise.all(notes.map(note => createEntryFromNote(note, tags)))
+async function note2post() {
+	const notebook = await findNotebook("Blog")
+	const tags = await findTags(notebook)
+	const notes = await findNotes(notebook)
+
+	const tagEntries = await Promise.all(tags.map(tag => createEntryFromTag(tag)))
+	const noteEntries = await Promise.all(notes.map(note => createEntryFromNote(note, tags)))
 }
 
 note2post()

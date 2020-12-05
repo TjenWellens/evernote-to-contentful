@@ -9,13 +9,11 @@ function field(data) {
 	}
 }
 
-function fields({fields: {title, content, tags, id}}) {
-	return {
-		id: field(id),
-		title: field(title),
-		tags: field(tags),
-		content: field(content),
-	}
+function fields({fields}) {
+	return Object.getOwnPropertyNames(fields).reduce((result, key) => ({
+		...result,
+		[key]: field(fields[key])
+	}), {})
 }
 
 async function createEntry(environment, data) {

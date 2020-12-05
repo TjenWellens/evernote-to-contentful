@@ -5,11 +5,17 @@ const client = createEvernoteClient()
 const noteStore = client.getNoteStore();
 
 function findPublishedNotes(notebook, publishedTag) {
-	const filter = new NoteStore.NoteFilter({
-		notebookGuid: notebook.guid,
+	return findNotesMetadata(notebook, {
 		tagGuids: [
 			publishedTag.guid,
 		],
+	})
+}
+
+function findNotesMetadata(notebook, query={}) {
+	const filter = new NoteStore.NoteFilter({
+		...query,
+		notebookGuid: notebook.guid,
 	});
 	const spec = new NoteStore.NotesMetadataResultSpec({
 		includeTitle: true,
@@ -31,6 +37,11 @@ function findPublishedNotes(notebook, publishedTag) {
 			// todo: paging?
 			return notesMetadataList.notes
 		});
+}
+
+function findNotes(notebook) {
+	return findNotesMetadata(notebook)
+		.then(fetchFullNotes)
 }
 
 function findNotebook(name) {
@@ -86,4 +97,7 @@ async function findPublishedBlogposts() {
 
 module.exports = {
 	findPublishedBlogposts,
+	findNotebook,
+	findTags,
+	findNotes,
 }
