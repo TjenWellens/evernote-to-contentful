@@ -38,7 +38,7 @@ async function note2post() {
 	await createTags(tags)
 
 	// const notes = await findNotes(notebook)
-	const {stable, updated, created, removed} = await findUpdatedNoteIds(notebook);
+	const {stable, updated, created, removed} = await findUpdatedNoteIds(notebook)
 
 	console.log(`notes found:
 	stable: ${stable.length}
@@ -47,7 +47,7 @@ async function note2post() {
 	removed: ${removed.length}
 	`)
 
-	await createNotes([...created, ...updated], tags);
+	await createNotes([...created, ...updated], tags)
 
 	// const noteEntries = await Promise.all(notes.map(note => createEntryFromNote(note, tags)))
 }
