@@ -44,13 +44,9 @@ function findNotes(notebook) {
 		.then(fetchFullNotes)
 }
 
-function findNotebook(name) {
-	return noteStore.listNotebooks().then(notebooks => {
-		return notebooks.find(notebook => name === notebook.name)
-		// for (var i in notebooks) {
-		// 	console.log("Notebook: " + notebooks[i].name);
-		// }
-	});
+async function findNotebook(name) {
+	const notebooks = await noteStore.listNotebooks();
+	return notebooks.find(notebook => name === notebook.name)
 }
 
 function findTags(notebook) {
