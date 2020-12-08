@@ -36,7 +36,8 @@ async function createEntryFromNote(note, tags) {
 			id: note.guid,
 			title: note.title,
 			content: entryContent,
-			tags: tagLinks
+			tags: tagLinks,
+			updateSequenceNum: note.updateSequenceNum
 		}
 	})
 }
