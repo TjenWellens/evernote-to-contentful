@@ -22,14 +22,19 @@ function flattenArrayOnId(array) {
 	return Object.values(lookup)
 }
 
+const CAT_CREATED = 'created'
+const CAT_REMOVED = 'removed'
+const CAT_UPDATED = 'updated'
+const CAT_STABLE = 'stable'
+
 function sortToCategory(mergeItem) {
-	if (created(mergeItem.items)) return 'created'
+	if (created(mergeItem.items)) return CAT_CREATED
 
-	if (removed(mergeItem.items)) return 'removed'
+	if (removed(mergeItem.items)) return CAT_REMOVED
 
-	if (updated(mergeItem.items)) return 'updated'
+	if (updated(mergeItem.items)) return CAT_UPDATED
 
-	if (stable(mergeItem.items)) return 'stable'
+	if (stable(mergeItem.items)) return CAT_STABLE
 
 	throw new Error('should never reach this place' + JSON.stringify(mergeItem))
 
@@ -83,10 +88,10 @@ function compareUpdates(notes, posts) {
 	const merged = flattenArrayOnId([...notes.map(mark('evernote')), ...posts.map(mark('contentful'))])
 
 	return merged.reduce(reduceToIdsPerCategory, {
-		stable: [],
-		updated: [],
-		created: [],
-		removed: [],
+		[CAT_STABLE]: [],
+		[CAT_UPDATED]: [],
+		[CAT_CREATED]: [],
+		[CAT_REMOVED]: [],
 	})
 
 	function mark(attribute) {
