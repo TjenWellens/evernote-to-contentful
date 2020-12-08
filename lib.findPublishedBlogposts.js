@@ -33,7 +33,6 @@ function findNotesMetadata(notebook, query={}) {
 
 	return noteStore.findNotesMetadata(filter, 0, 500, spec)
 		.then((notesMetadataList) => {
-			// console.log(notesMetadataList)
 			// todo: paging?
 			return notesMetadataList.notes
 		});
@@ -55,7 +54,6 @@ function findTags(notebook) {
 
 async function findPublishedTag(notebook) {
 	const tags = await noteStore.listTagsByNotebook(notebook.guid)
-	// console.log(tags)
 	return tags.find(({name}) => name === "published")
 }
 
@@ -71,32 +69,11 @@ function fetchFullNote(metadata) {
 	})
 }
 
-async function findPublishedBlogposts() {
-	const notebook = await findNotebook("Blog")
-	console.log(`${notebook.name}\t${notebook.guid}`)
-
-	const published = await findPublishedTag(notebook)
-	console.log(`${published.name}\t${published.guid}`)
-
-	const publishedNotes = await findPublishedNotes(notebook, published)
-	// console.log(publishedNotes)
-	publishedNotes.forEach(post => {
-		console.log(`${post.title}\t${post.guid}`)
-	})
-
-	const publishedFullNotes = await fetchFullNotes(publishedNotes)
-	return {
-		notes: publishedFullNotes,
-		tags: await findTags(notebook)
-	}
-}
-
 function findNoteById(id) {
 	return fetchFullNote({guid: id})
 }
 
 module.exports = {
-	findPublishedBlogposts,
 	findNotebook,
 	findTags,
 	findNotes,

@@ -20,7 +20,6 @@ async function createEntry(environment, data) {
 	const entry = await environment.createEntryWithId(data.contentTypeId, data.entryId, {
 		fields: fields(data)
 	})
-	console.log(entry)
 	return entry
 }
 

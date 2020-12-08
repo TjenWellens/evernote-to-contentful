@@ -55,7 +55,6 @@ function fetchEvernoteResource(url) {
 async function createUploadForStream(stream) {
 	const space = await contentfulClient.getSpace(process.env.CONTENTFUL_SPACE)
 	const environment = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT)
-	console.log(environment)
 
 	return environment.createUpload({file: stream})
 }
@@ -63,13 +62,10 @@ async function createUploadForStream(stream) {
 async function fetchResourceUrl(resourceGuid) {
 	const userStore = evernoteClient.getUserStore()
 	const user = await userStore.getUser()
-	// console.log(user.username)
 
 	const publicUserInfo = await userStore.getPublicUserInfo(user.username)
-	// console.log(publicUserInfo.webApiUrlPrefix)
 
 	const resourceUrl = parseResourceUrl(publicUserInfo, resourceGuid)
-	// console.log(resourceUrl)
 	return resourceUrl
 }
 
