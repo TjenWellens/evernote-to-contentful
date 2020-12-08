@@ -34,15 +34,14 @@ async function toArray(promisedGenerator) {
 	return result
 }
 
-async function getBlogUpdateDictionary() {
+async function getBlogUpdates() {
 	const entries = await toArray(getEntriesGenerator());
-	return entries
-		.reduce((result, entry) => ({
-			...result,
-			[entry.sys.id]: entry.sys.updatedAt
-		}), {})
+	return entries.map(({sys}) => ({
+		id: sys.id,
+		updated: sys.updatedAt
+	}))
 }
 
 module.exports = {
-	getBlogUpdateDictionary,
+	getBlogUpdates,
 }

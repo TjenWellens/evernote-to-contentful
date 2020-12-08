@@ -71,15 +71,14 @@ async function toArray(promisedGenerator) {
 	return result
 }
 
-async function getNotesUpdateDictionary(notebook) {
+async function getNotesUpdates(notebook) {
 	const notes = await toArray(getNotesGenerator(notebook));
-	return notes
-		.reduce((result, note) => ({
-			...result,
-			[note.guid]: note.updated
-		}), {})
+	return notes.map(({guid, updated}) => ({
+		id: guid,
+		updated
+	}))
 }
 
 module.exports = {
-	getNotesUpdateDictionary,
+	getNotesUpdates,
 }
