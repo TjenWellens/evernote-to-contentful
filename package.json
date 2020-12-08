@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-	"start": "node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
-    "contentful-management": "6.3.2",
+    "contentful-management": "^7.5.0",
     "dotenv": "^8.2.0",
     "evernote": "^2.0.5",
     "xml2js": "^0.4.23"
