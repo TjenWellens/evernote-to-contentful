@@ -22,55 +22,16 @@ function flattenArrayOnId(array) {
 	return Object.values(lookup)
 }
 
-function mark(attribute) {
-	return item => ({...item, [attribute]: true});
-}
+function sortToCategory(mergeItem) {
+	if (created(mergeItem.items)) return 'created'
 
-function compareUpdates(notes, posts) {
-	const merged = flattenArrayOnId([...notes.map(mark('evernote')), ...posts.map(mark('contentful'))])
+	if (removed(mergeItem.items)) return 'removed'
 
-	return merged.reduce((result, mergeItem) => {
-		const id = mergeItem.id
+	if (updated(mergeItem.items)) return 'updated'
 
-		if (created(mergeItem.items)) return {
-			...result,
-			created: [
-				...result.created,
-				id
-			],
-		}
+	if (stable(mergeItem.items)) return 'stable'
 
-		if (removed(mergeItem.items)) return {
-			...result,
-			removed: [
-				...result.removed,
-				id
-			],
-		}
-
-		if (updated(mergeItem.items)) return {
-			...result,
-			updated: [
-				...result.updated,
-				id
-			],
-		}
-
-		if (stable(mergeItem.items)) return {
-			...result,
-			stable: [
-				...result.stable,
-				id
-			],
-		}
-
-		throw new Error('should never reach this place' + JSON.stringify(mergeItem))
-	}, {
-		stable: [],
-		updated: [],
-		created: [],
-		removed: [],
-	})
+	throw new Error('should never reach this place' + JSON.stringify(mergeItem))
 
 	function evernote(item) {
 		return item && item.evernote && item;
@@ -102,6 +63,34 @@ function compareUpdates(notes, posts) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
 		return evernoteItem && contentfulItem && comparable(evernoteItem) <= comparable(contentfulItem)
+	}
+}
+
+function reduceToIdsPerCategory(result, mergeItem) {
+	const id = mergeItem.id
+
+	const category = sortToCategory(mergeItem)
+	return {
+		...result,
+		[category]: [
+			...result[category],
+			id
+		]
+	}
+}
+
+function compareUpdates(notes, posts) {
+	const merged = flattenArrayOnId([...notes.map(mark('evernote')), ...posts.map(mark('contentful'))])
+
+	return merged.reduce(reduceToIdsPerCategory, {
+		stable: [],
+		updated: [],
+		created: [],
+		removed: [],
+	})
+
+	function mark(attribute) {
+		return item => ({...item, [attribute]: true});
 	}
 }
 
