@@ -88,20 +88,20 @@ function compareUpdates(notes, posts) {
 		return !items.some(evernote) && items.some(contentful)
 	}
 
-	function date({updated}) {
-		return new Date(updated);
+	function comparable({updateSequenceNum}) {
+		return updateSequenceNum;
 	}
 
 	function updated(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && date(evernoteItem) > date(contentfulItem)
+		return evernoteItem && contentfulItem && comparable(evernoteItem) > comparable(contentfulItem)
 	}
 
 	function stable(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && date(evernoteItem) <= date(contentfulItem)
+		return evernoteItem && contentfulItem && comparable(evernoteItem) <= comparable(contentfulItem)
 	}
 }
 

@@ -11,7 +11,7 @@ async function* getEntriesGenerator(preferredPageSize = 100) {
 	do {
 		res = await environment.getEntries({
 			content_type: process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID,
-			select: 'sys.id,sys.updatedAt',
+			select: 'sys.id,sys.updatedAt,fields.updateSequenceNum',
 			limit: preferredPageSize,
 			skip: page * entryCount()
 		})
@@ -36,9 +36,10 @@ async function toArray(promisedGenerator) {
 
 async function getBlogUpdates() {
 	const entries = await toArray(getEntriesGenerator());
-	return entries.map(({sys}) => ({
+	return entries.map(({sys, fields}) => ({
 		id: sys.id,
-		updated: sys.updatedAt
+		updated: sys.updatedAt,
+		updateSequenceNum: fields && fields.updateSequenceNum && fields.updateSequenceNum['en-US'] || 0
 	}))
 }
 

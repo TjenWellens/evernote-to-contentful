@@ -1,22 +1,12 @@
 const {flattenArrayOnId} = require("./lib.compareUpdates");
 const {createIdMap} = require("./lib.compareUpdates");
 const {compareUpdates} = require("./lib.compareUpdates");
-const posts = [
-	{id: "a", contentful: {updated: "2020-12-08T10:33:30.453Z"}},
-	{id: "b", contentful: {updated: "2020-12-08T10:33:29.893Z"}},
-	{id: "c", contentful: {updated: "2020-12-08T10:33:30.453Z"}},
-]
-
-const notes = [
-	{id: "a", contentful: {updated: 1606749377000}},
-	{id: "b", contentful: {updated: 1606641087000}},
-]
 
 describe('compareUpdates should', () => {
 	it('all notes to be new', () => {
-		const timestamp = new Date().getTime();
+		const updateSequenceNum = 500;
 		const id = "a";
-		const notes = [{id, updated: timestamp}];
+		const notes = [{id, updateSequenceNum: updateSequenceNum}];
 		const posts = [];
 		expect(compareUpdates(notes, posts)).toEqual({
 			stable: [],
@@ -27,10 +17,10 @@ describe('compareUpdates should', () => {
 	})
 
 	it('all notes to be removed', () => {
-		const timestamp = new Date().getTime();
+		const updateSequenceNum = 500;
 		const id = "a";
 		const notes = [];
-		const posts = [{id, updated: timestamp}];
+		const posts = [{id, updateSequenceNum: updateSequenceNum}];
 		expect(compareUpdates(notes, posts)).toEqual({
 			stable: [],
 			updated: [],
@@ -40,10 +30,10 @@ describe('compareUpdates should', () => {
 	})
 
 	it('all notes to be updated', () => {
-		const timestamp = new Date().getTime();
+		const updateSequenceNum = 500;
 		const id = "a";
-		const notes = [{id, updated: timestamp}];
-		const posts = [{id, updated: timestamp - 1000}];
+		const notes = [{id, updateSequenceNum: updateSequenceNum}];
+		const posts = [{id, updateSequenceNum: updateSequenceNum - 20}];
 		expect(compareUpdates(notes, posts)).toEqual({
 			stable: [],
 			updated: [id],
@@ -53,10 +43,10 @@ describe('compareUpdates should', () => {
 	})
 
 	it('all notes to be stable', () => {
-		const timestamp = new Date().getTime();
+		const updateSequenceNum = 500;
 		const id = "a";
-		const notes = [{id, updated: timestamp - 1000}];
-		const posts = [{id, updated: timestamp}];
+		const notes = [{id, updateSequenceNum: updateSequenceNum - 20}];
+		const posts = [{id, updateSequenceNum: updateSequenceNum}];
 		expect(compareUpdates(notes, posts)).toEqual({
 			stable: [id],
 			updated: [],

@@ -13,7 +13,7 @@ async function* getNotesGenerator(notebook, preferredPageSize = 100) {
 		includeContentLength: false,
 		includeCreated: false,
 		includeDeleted: false,
-		includeUpdateSequenceNum: false,
+		includeUpdateSequenceNum: true,
 		includeNotebookGuid: false,
 		includeTagGuids: false,
 		includeAttributes: false,
@@ -37,32 +37,6 @@ async function* getNotesGenerator(notebook, preferredPageSize = 100) {
 	}
 }
 
-async function findUpdatedNotes(notebook, query = {}) {
-	const filter = new NoteStore.NoteFilter({
-		...query,
-		notebookGuid: notebook.guid,
-	});
-	const spec = new NoteStore.NotesMetadataResultSpec({
-		includeUpdated: true,
-		includeTitle: false,
-		includeContentLength: false,
-		includeCreated: false,
-		includeDeleted: false,
-		includeUpdateSequenceNum: false,
-		includeNotebookGuid: false,
-		includeTagGuids: false,
-		includeAttributes: false,
-		includeLargestResourceMime: false,
-		includeLargestResourceSize: false,
-	});
-
-	const offset = 0;
-	const limitPerPage = 500;
-	const res = await noteStore.findNotesMetadata(filter, offset, limitPerPage, spec)
-
-	return res.notes
-}
-
 async function toArray(promisedGenerator) {
 	const result = []
 	for await (const entry of promisedGenerator) {
@@ -73,9 +47,10 @@ async function toArray(promisedGenerator) {
 
 async function getNotesUpdates(notebook) {
 	const notes = await toArray(getNotesGenerator(notebook));
-	return notes.map(({guid, updated}) => ({
+	return notes.map(({guid, updated, updateSequenceNum}) => ({
 		id: guid,
-		updated
+		updated,
+		updateSequenceNum
 	}))
 }
 
