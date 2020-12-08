@@ -95,9 +95,14 @@ async function findPublishedBlogposts() {
 	}
 }
 
+function findNoteById(id) {
+	return fetchFullNote({guid: id})
+}
+
 module.exports = {
 	findPublishedBlogposts,
 	findNotebook,
 	findTags,
 	findNotes,
+	findNoteById,
 }

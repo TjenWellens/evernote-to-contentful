@@ -7,8 +7,6 @@ async function createImages(note) {
 
 	const responses = await createAssetsFromEvernoteResources(note.resources)
 
-	console.log(responses)
-
 	const images = responses.reduce((result, {asset, resource}) => ({
 		...result,
 		[resource.data.bodyHash.toString('hex')]: asset.sys.id
