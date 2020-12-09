@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>Is object calestenics the way to adaptable code?</div>
+	<div>
+		<br/>
+	</div>
+	<div>My journey</div>
+	<div>Summary </div>
+	<ol>
+		<li>
+			<div>Just random constraints </div>
+		</li>
+		<li>
+			<div>A random coding style</div>
+		</li>
+		<li>
+			<div>The style for adaptable code? </div>
+		</li>
+	</ol>
+	<div>
+		<br/>
+	</div>
+	<div>Software crafting &amp; testing community </div>
+	<ul>
+		<li>
+			<div>Code Retreat, yet another set of Constraints, nothing special, just forces you to work in a different
+				from usual way, to broaden your mind
+			</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>SoCraTesBE </div>
+	<ul>
+		<li>
+			<div>Technical coaching</div>
+		</li>
+		<ul>
+			<li>
+				<div>Pedro was there</div>
+			</li>
+		</ul>
+		<li>
+			<div>Evening chat where Pedro was a flower</div>
+		</li>
+		<ul>
+			<li>
+				<div>Discussed stuff</div>
+			</li>
+			<li>
+				<div>Mentioned his book 'Agile Technical Practices Distilled' </div>
+			</li>
+		</ul>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>Fred George </div>
+	<ul>
+		<li>
+			<div>mentioned multiple times the amount of lines per function, and uses this as a way to indicate which
+				team is better at writing maintainable code
+			</div>
+		</li>
+		<ul>
+			<li>
+				<div>Java 3-5 lines avg</div>
+			</li>
+			<li>
+				<div>Ruby 1.2 lines avg</div>
+			</li>
+		</ul>
+		<li>
+			<div>No getters and setters</div>
+		</li>
+		<li>
+			<div>... </div>
+		</li>
+		<li>
+			<div>Mentions training camp that teaches to write in this "real OO" way</div>
+		</li>
+		<li>
+			<div>"hmm, this sounds a lot like object calestenics" </div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>Refactoring book</div>
+	<ul>
+		<li>
+			<div>Refactoring seems to bring code closer tot that "object calestenics ideal" </div>
+		</li>
+		<li>
+			<div>Some code smells match to some object calestenics rules</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>Blogpost</div>
+	<div>
+		<a href="https://williamdurand.fr/2013/06/03/object-calisthenics/">
+			https://williamdurand.fr/2013/06/03/object-calisthenics/
+		</a>
+	</div>
+	<ul>
+		<li>
+			<div>Mentions thoughtworks</div>
+		</li>
+	</ul>
+	<div style="margin-left: 40px;">
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			Object Calisthenics are
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			programming exercises
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			, formalized as a set of
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			9 rules
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			invented by Jeff Bay in his book
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<a href="http://pragprog.com/book/twa/thoughtworks-anthology"
+		   style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(38, 139, 210); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			The ThoughtWorks Anthology
+		</a>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			.
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+	</div>
+	<ul>
+		<li>
+			<div>How to use it</div>
+		</li>
+	</ul>
+	<div style="margin-left: 40px;">
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			By trying to follow these rules as much as possible, you will naturally change how you write code.
+		</span>
+	</div>
+	<ul>
+		<li>
+			<div>Purpose</div>
+		</li>
+	</ul>
+	<div style="margin-left: 40px;">
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			These rules focus on
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			maintainability
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			,
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			readability
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			,
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			testability
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			, and
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="box-sizing: border-box; font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(48, 48, 48); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">
+			comprehensibility
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			 
+		</span>
+		<span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); color: rgb(81, 81, 81); font-family: &quot;PT Serif&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-variant-caps: normal; font-variant-ligatures: normal;">
+			of your code.
+		</span>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>Agile Technical Practices Distilled</div>
+	<ul>
+		<li>
+			<div>Has a chapter about it! </div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>
+		<br/>
+	</div>
+	<div>Origin </div>
+	<div>Smalltalk style of writing</div>
+	<div>People teach Martin Fowler &amp; Kent Beck </div>
+	<div>They influence a bunch of others</div>
+	<div>... </div>
+	<div>Spreads even further (eg thoughtworks writes anthology) </div>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>
+		<br/>
+	</div>
+	<div>Action plan:</div>
+	<ul>
+		<li>
+			<div>Book: Refactoring </div>
+		</li>
+		<li>
+			<div>Book: Agile Practices distilled </div>
+		</li>
+		<li>
+			<div>Practice: mob of up to 4 people that want to practice 'object calestenics' </div>
+		</li>
+		<ol>
+			<li>
+				<div>Katas</div>
+			</li>
+			<li>
+				<div>Pet projects </div>
+			</li>
+			<li>
+				<div>Production code</div>
+			</li>
+		</ol>
+	</ul>
+	<div>
+		<br/>
+	</div>
+</en-note>
