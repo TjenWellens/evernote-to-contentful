@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>Why Scaling Agile Doesn't Work • Jez Humble</div>
+	<div>
+		<a shape="rect" href="https://www.youtube.com/watch?v=2zYxWEZ0gYg">https://www.youtube.com/watch?v=2zYxWEZ0gYg
+		</a>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/aefbbfb7-aa83-4336-ad37-754426b7d9f3/aefbbfb7-aa83-4336-ad37-754426b7d9f3/">
+			Article: The IT Measurement Inversion - Douglas Hubbard
+		</a>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/05c7c290-d8ef-499e-8a3b-b68067d52191/05c7c290-d8ef-499e-8a3b-b68067d52191/">
+			Paper: Black Swan Farming using Cost of Delay - Joshua J Arnold and Ozlem Yuce
+		</a>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/b8d9a582-cd66-4ac7-abf0-dfab6e8e3d7d/b8d9a582-cd66-4ac7-abf0-dfab6e8e3d7d/">
+			Book: Impact Mapping - Gojko Adzic
+		</a>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/4875a4ed-acfa-4441-9220-7943fd889da3/4875a4ed-acfa-4441-9220-7943fd889da3/">
+			Video: Better product definition with Lean UX and Design Thinking - Jeff Gothelf
+		</a>
+	</div>
+	<div>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/4875a4ed-acfa-4441-9220-7943fd889da3/4875a4ed-acfa-4441-9220-7943fd889da3/">
+			<en-todo></en-todo>
+		</a>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/1d150a77-30b3-4bbf-ab9a-3feec87f74c4/1d150a77-30b3-4bbf-ab9a-3feec87f74c4/">
+			Paper: Online experimentation at Microsoft - Kohavi
+		</a>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/e7b93024-e42c-4d56-842d-403a64e04652/e7b93024-e42c-4d56-842d-403a64e04652/">
+			Book: A Practical Approach to Large-Scale Agile Development - Gruver, Young, Fulghum
+		</a>
+	</div>
+	<div>
+		<en-todo></en-todo>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/bb922d44-c45f-4974-8a39-f04847492dfb/bb922d44-c45f-4974-8a39-f04847492dfb/">
+			Book: Leading Change - John Kotter
+		</a>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/424d054d-6c86-4bd1-867d-88bc43c9d560/424d054d-6c86-4bd1-867d-88bc43c9d560/">
+			Model: prioritization - cost of delay vs cost to build
+		</a>
+	</div>
+	<div>ROI - cost estimates don't matter</div>
+	<div>
+		<en-media width="1602" hash="c8a8e04de8634c06ee35393dfec81aad" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>prioritize based on cost of delay</div>
+	<div>&quot;how much would we have earned if this was in production&quot;</div>
+	<div>
+		<en-media width="1986" hash="508c7de817078398f412f38e647c2f17" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>We're more wrong than not in guessing which features will be valuable</div>
+	<div>(90% wrong in uncertain/new markets, xx&gt;50% in well known markets)</div>
+	<div>So what do we do?</div>
+	<div>
+		<en-media width="1894" hash="718acb7d47b03867d92058b771c9aa4d" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>impact mapping</div>
+	<div>
+		<en-media width="1968" hash="090d44bdbf1b9087dc5a4c5642c7d4ee" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>work backwards from the outcome</div>
+	<ol>
+		<li>
+			<div>Target </div>
+		</li>
+		<li>
+			<div>Stakeholders </div>
+		</li>
+		<li>ways in which the stakeholders could help/hinder this outcome 
+			<br clear="none"/>
+		</li>
+		<li>
+			<div>what you could do aka. &quot;Story&quot;</div>
+		</li>
+	</ol>
+	<div>key thing = shared understanding by creating the impact map together</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<a shape="rect" style="color: #69aa35;"
+		   href="evernote:///view/30809684/s230/22bf3b34-5f03-4ac0-910c-2be90c969390/22bf3b34-5f03-4ac0-910c-2be90c969390/">
+			Model: Hypothesis-driven delivery
+		</a>
+	</div>
+	<div>
+		<en-media width="1972" hash="9d24218f5fcef4d6b5fb071c4d611376" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>Different types of user research</div>
+	<div>
+		<en-media width="1446" hash="7acb9c3b9c91f3ac31b24ab19301a8a9" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>Generative = brainstorm</div>
+	<div>Evaluative = decide </div>
+	<div>(Cf diamond) </div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<en-media width="1916" hash="f62bc292269873130c72ad591a74a951" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>ways that features cost</div>
+	<div>1) opportunity cost</div>
+	<div>2) complexity maintenance cost</div>
+	<div>3) complexity slows down adding new features</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>======</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>CASE STUDY</div>
+	<div>hp laserjet firmware</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<en-media width="1918" hash="4b2a4f4c177e407d78f33f78d44005ba" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>goal:</div>
+	<div>- get firmware development off the critical path</div>
+	<div>- 10x productivity increase</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<en-media width="1978" hash="a2ac5471a36efb1812547b2340654dc7" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>1) goal: firmware off critical path + 10x productivity</div>
+	<div>2) current condition:</div>
+	<div>
+		<en-media width="1908" hash="b86b42f9774d15780d8b29f2d2124253" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>3) target conditions</div>
+	<div>&quot;these are the difficult ones&quot;</div>
+	<div>
+		<en-media width="1786" hash="e4b7c80eb25095c2799d72630920ca5b" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>(eg. plan for one month for entire 400 ppl org)</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>4) define outcome and let people experiment</div>
+	<div>daily questions (for the ppl)</div>
+	<div>
+		<en-media width="1928" hash="a4c3174eaf8fef59031e2e961f961f89" type="image/png"></en-media>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>======</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">How do you introduce this in your org?</span>
+	</div>
+	<div>1) Guerillia experimentation</div>
+	<div>Find someone in your org you think is behaving stupid.</div>
+	<div>Take them out to lunch.</div>
+	<div>See why they do what they do.</div>
+	<div>Improve a small bit.</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>eg. That person from UX has yet again sent a crappy screen</div>
+	<div>
+		<br clear="none"/>
+	</div>
+	<div>2) Book: leading change - john kotter</div>
+	<div>No lasting change without executive support.</div>
+	<div>Only through disaster.</div>
+	<div>&quot;find someone feeling the disaster, they are more receptive to change&quot;</div>
+	<div>sense of urgency</div>
+	<div>
+		<br clear="none"/>
+	</div>
+</en-note>

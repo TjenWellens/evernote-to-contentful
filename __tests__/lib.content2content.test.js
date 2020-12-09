@@ -543,6 +543,48 @@ describe('should transform todos', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
+	it('lone todos with link', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+	<en-todo></en-todo>
+	<a shape="rect" style="color: #69aa35;"
+		 href="evernote:///view/30809684/s230/aefbbfb7-aa83-4336-ad37-754426b7d9f3/aefbbfb7-aa83-4336-ad37-754426b7d9f3/">
+		Article: The IT Measurement Inversion - Douglas Hubbard
+	</a>
+</div>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "[ ] ",
+						"nodeType": "text"
+					},
+					{
+						"data": {
+							"uri": "evernote:///view/30809684/s230/aefbbfb7-aa83-4336-ad37-754426b7d9f3/aefbbfb7-aa83-4336-ad37-754426b7d9f3/"
+						},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Article: The IT Measurement Inversion - Douglas Hubbard",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "hyperlink"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 
 })
 

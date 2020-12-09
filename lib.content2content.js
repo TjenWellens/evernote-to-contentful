@@ -18,6 +18,14 @@ function _paragraph(text) {
 	}
 }
 
+function _paragraph_content(content) {
+	return {
+		"data": {},
+		"content": content,
+		"nodeType": "paragraph"
+	}
+}
+
 function newline() {
 	return _paragraph("")
 }
@@ -25,7 +33,7 @@ function newline() {
 function image(node, images) {
 	const hash = node.$.hash
 	const assetId = getAssetIdForHash(images, hash)
-	if(!assetId) throw new Error(`link could not find matching image for hash(${hash}) in images(${JSON.stringify(images)})`)
+	if (!assetId) throw new Error(`link could not find matching image for hash(${hash}) in images(${JSON.stringify(images)})`)
 	return {
 		"data": {
 			"target": {
@@ -120,9 +128,7 @@ function isTodo(node) {
 }
 
 function todo(node) {
-	const textNode = node.$$.filter(node => !isTodo(node))[0];
-	if (!isText(textNode)) throw new Error('textnode expected in todo' + JSON.stringify(textNode))
-	return _paragraph("[ ] " + textNode._.trim())
+	return _text(" [ ] ");
 }
 
 function isTodoNode(node) {
@@ -163,19 +169,20 @@ function link(node) {
 		"data": {
 			"uri": node.$.href
 		},
-		"content": node.$$.map(parseInline),
+		"content": _parseInlineNodeContent(node),
 		"nodeType": "hyperlink"
 	};
 }
 
 function isInline(node) {
-	return isText(node) || isLink(node) || isNewline(node)
+	return isText(node) || isLink(node) || isNewline(node) || isTodo(node)
 }
 
 function parseInline(node) {
 	if (isText(node)) return text(node)
 	if (isLink(node)) return link(node)
 	if (isNewline(node)) return inlineNewline(node)
+	if (isTodo(node)) return todo(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
 }
 
@@ -188,7 +195,7 @@ function isInlineNode(node) {
 }
 
 function squashInlineNewline(children) {
-	if(children.length === 0) return children
+	if (children.length === 0) return children
 	const moreText = replaceNewlineWithText();
 	const squashed = squashText(moreText);
 	return replaceLeadingWhitespace(replaceTrailingWhitespace(squashed))
@@ -228,7 +235,7 @@ function squashInlineNewline(children) {
 			if (squashed.length === 0)
 				return [{...child}]
 
-			if(!isText(child))
+			if (!isText(child))
 				return [...squashed, {...child}]
 
 			const previous = last(squashed)
@@ -265,11 +272,62 @@ function squashInlineNewline(children) {
 	}
 }
 
-function parseInlineNode(node) {
+function _parseInlineNodeContent(node) {
 	const children = squashInlineNewline(node.$$)
+	const content = children.map(parseInline);
+
+	const contentSquashed = squashText(content);
+
+	const firstEntry = contentSquashed[0];
+	if (firstEntry && isTextEntry(firstEntry))
+		removeLeadingWhitespace(firstEntry)
+
+	return contentSquashed
+
+	function isTextEntry({nodeType}) {
+		return nodeType && nodeType === 'text';
+	}
+
+	function removeLeadingWhitespace(entry) {
+		entry.value = entry.value.replace(/^\s+/, '')
+	}
+
+	function last(array) {
+		return array[array.length - 1];
+	}
+
+	function squashText(children) {
+		return children.reduce((squashed, child) => {
+			if (squashed.length === 0)
+				return [{...child}]
+
+			if (!isTextEntry(child))
+				return [...squashed, {...child}]
+
+			const previous = last(squashed)
+			if (!isTextEntry(previous))
+				return [...squashed, {...child}]
+
+			return replaceLastText(squashed, previousText => previousText + child.value)
+		}, []);
+	}
+
+	function replaceLastText(input, fnReplacementText) {
+		const result = [...input]
+		const lastItem = last(input);
+		const newItem = {
+			...lastItem,
+			value: fnReplacementText(lastItem.value)
+		};
+		result.splice(input.length - 1, 1, newItem);
+		return result;
+	}
+}
+
+function parseInlineNode(node) {
 	return {
 		"data": {},
-		"content": children.map(parseInline),
+		"content": _parseInlineNodeContent(node),
 		"nodeType": "paragraph"
 	}
 }
@@ -283,9 +341,9 @@ function isTableBody(node) {
 }
 
 function parseTable(node, images) {
-	if(!node.$$) throw new Error('no weird tables allowed')
+	if (!node.$$) throw new Error('no weird tables allowed')
 	const body = node.$$.find(isTableBody);
-	if(!body) throw new Error('no weird tables allowed')
+	if (!body) throw new Error('no weird tables allowed')
 	return parseNode(body, images)
 }
 
@@ -316,7 +374,7 @@ function parseNode(node, images) {
 
 	if (isHorizontalLine(node)) return [horizontalLine()]
 
-	if(isIgnorable(node)) return []
+	if (isIgnorable(node)) return []
 
 	throw new Error("Unknown node type" + JSON.stringify(node))
 }
@@ -324,7 +382,7 @@ function parseNode(node, images) {
 async function content2content(noteContent, images) {
 	const parsedNodeContent = await parser.parseStringPromise(noteContent)
 	const content = parsedNodeContent["en-note"];
-	if(!content.$$) {
+	if (!content.$$) {
 		return []
 	}
 	return content.$$.flatMap(node => parseNode(node, images))
@@ -332,9 +390,9 @@ async function content2content(noteContent, images) {
 
 function richText(content) {
 	return {
-			"data": {},
-			"content": content,
-			"nodeType": "document"
+		"data": {},
+		"content": content,
+		"nodeType": "document"
 	}
 }
 
