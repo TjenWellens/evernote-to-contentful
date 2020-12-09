@@ -21,9 +21,12 @@ async function createNotes(noteIds, tags) {
 				return entry
 			})
 			.catch(e => {
-				fs.appendFileSync('error/_failed-ids.txt', `${id}\n`)
-				fs.writeFileSync(`error/${id}.txt`, `message: ${e.message}\nstack: ${e.stack}`)
-				console.error(`'ERROR: Failed to create note "${note.title}" [${note.guid}]`)
+				console.error(`'ERROR: Failed to create note "${note.title}" [${note.guid}]
+				message: ${e.message}
+				stack: ${e.stack}
+				`)
+				fs.writeFileSync(`note_${id}_content.xml`, note.content)
+				process.exit(1)
 				failed++
 			})
 
