@@ -19,6 +19,8 @@ async function createEntryFromNote(note, tags) {
 
 	const entryContent = await content2contentAsRichText(note.content, images)
 
+	note.tagGuids = note.tagGuids || []
+
 	const tagLinks = tags
 		.filter(tag => note.tagGuids.includes(tag.guid))
 		.map(tag => ({sys: {

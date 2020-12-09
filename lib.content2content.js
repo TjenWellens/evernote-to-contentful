@@ -244,7 +244,7 @@ function parseInlineNode(node) {
 }
 
 function parseNode(node, images) {
-	if (isInlineNode(node)) return parseInlineNode(node)
+	if (isInlineNode(node)) return [parseInlineNode(node)]
 
 	if (isTodoNode(node)) return [todo(node)]
 
