@@ -6,10 +6,11 @@ describe('real world cases should parse', () => {
 	const basePath = './__tests__/content2content/failing-cases';
 
 	test.each([
-		['note_06df248a-df35-491f-90e4-9bed811e3ee2_content.xml']
-	])( 'case %s', async (fileName) => {
-		const noteContent = fs.readFileSync(`${basePath}/${fileName}`)
-		await content2content(noteContent)
-		// no error expected
+		['06df248a-df35-491f-90e4-9bed811e3ee2']
+	])( 'case %s', async (id) => {
+		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
+		const expectedContent = fs.readFileSync(`${basePath}/note_${id}_expected.json`)
+		const result = await content2content(noteContent)
+		expect(result).toEqual(JSON.parse(expectedContent))
 	})
 })

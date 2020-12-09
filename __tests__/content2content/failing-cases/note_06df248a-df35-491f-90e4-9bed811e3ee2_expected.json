@@ -1,0 +1,1634 @@
+[
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "A friend recently asked \"how can I change my team to collaborate and communicate instead of everyone working by\n\t\tthemselves?\""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is a small team, and one developer has become the manager but seems to have no interest in the role."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "They seem to be pretty much pre-agile in the Model: Agile Fluency Model"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "They barely have any form of collaboration or communication it seems."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "My first reaction was: \"go find another team, it's not worth to spend all your effort here\""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is based on my own experience of trying to make a work unit into a team and failing to do this because\n\t\tthey did not want to be a team."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And while I do believe this is the best advice I can give... I also remember myself back then. And 'give up\n\t\twithout trying' was not even considered."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Ending up with:"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Story: I kept trying to change the workgroup's culture until I burnt out"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"nodeType": "text",
+										"value": "Model: workgroup vs team\n\t\t\t\t"
+									}
+								],
+								"data": {
+									"uri": "evernote:///view/30809684/s230/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/"
+								},
+								"nodeType": "hyperlink"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: A small bubble of matching team culture inside a workgroup of mismatching culture is a breath of\n\t\t\t\tfresh air"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: 'retrospective driven improvement' is awesome"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: a team culture bubble bursts if the members change, and each new bubble starts again from zero"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Pantera"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Opinion: keep a team stable"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Opinion: a workgroup is okay, a team is okay, the question is which do you want to work in?"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Story: Switching to a team makes an incredible difference"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: a team 'willing to experiment' is an amazing experience"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: 'pair programming' is awesome"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: 'team decisions' are awesome"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: 'team popcorn hours' are awesome"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Opinion: the smaller sliced a story, the better"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"nodeType": "text",
+										"value": "\n\t\t\t\t\tOpinion: best teambuilding happens on the job\n\t\t\t\t"
+									}
+								],
+								"data": {
+									"uri": "evernote:///view/30809684/s230/dfacd720-a049-4464-ab99-69ff3ab03c0c/dfacd720-a049-4464-ab99-69ff3ab03c0c/"
+								},
+								"nodeType": "hyperlink"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Story: even a great team can break when the environment changes really badly"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": ""
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And while I still think it's great advice. I remember when I myself was in the same situation. I didn't want to\n\t\tjust leave. I wanted to change this team, to make it better."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "It took me a long time to figure out that this team did not want to be changed, not one bit. And there were\n\t\tmany signs I choose to ignore, like predecessors trying the same and having given up after a couple of years."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Instead of changing a team into what I wanted it to be, I should have searched for a team that was close to\n\t\twhat I want my team to be and join that one."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is what I did, and it was an amazing difference! When a team culture does not match me, everything I want\n\t\tor try causes heaps of resistance. When it does match me, everything just seems to work with barely any effort."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "A simple suggestion, accepted with a \"Oh, sounds interesting, let's try that!\" instead of resistance."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "But it took me years to figure this out."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And I had people telling me exactly all that and more, when I asked for advice. But the only thing I wanted to\n\t\thear was strategies to make it work. I didn't wanna hear: \"give up\"."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "So I'm gonna assume the same here."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [],
+		"data": {},
+		"nodeType": "hr"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "How would I find an answer to this question?"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "SoCraTes open space : ask this question there"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "SoCraTes slack : ask this question there"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [],
+		"data": {},
+		"nodeType": "hr"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "How would I try with knowledge and skills I already have?"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Pair with people"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Ask people about what they're working on"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Review code"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Ask for someone to review code"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Do random games during the day"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Ask for a daily sync meeting"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Ask colleagues to help with architecture decisions"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Popcorn hour : watch conference talks together"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Design meetings"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Maybe do a Kata / code Retreat together somehow"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "But most importantly, I would try to"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "build on moments of communication that already exist"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "build more moments of communication"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "have some fun together"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [],
+		"data": {},
+		"nodeType": "hr"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Resources that have revant parts"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Podcast: soft skills engineering"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "An awesome podcast series which answers user questions. I bet this question has probably been asked already.\n\t\tProbably even close to a literal match."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Team Geek"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is where my journey started, so I'm a bit biased towards this book. Originally a couple of Google IO talks\n\t\tby the 2 authors, which later became this book. It made me realize that software development is a team sport.\n\t\tBefore I used to program on my own. I did this for years! And the I saw 'the myth of the genius programmer '.\n\t\t(that was one of the talks, and later a chapter in the book)"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I kept watching all their talks, one by one."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Todo: link here"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And it all made so much sense..."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "The software craftsman"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This book has a section about how to start a culture of technical excellence in your own team / company."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "5 Dysfunctions of a team"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is more about teambuilding and improving Teamwork. Not so much about starting a culture change from bottom\n\t\tup."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Reinventing organizations"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I only read the intro, but that blew me away. It classifies different organisational cultures based on a\n\t\ttrendline."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "the responsibility process"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Change yourself first."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Changing yourself, changes your world."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Lead by example."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "how to win friends and influence people"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Widely lauded book. I keep forgetting what's in it. Probably because not too much was paradigm shift to me by\n\t\tthe time I'd read it. But I do remember that every time I read it, I say to myself \"I have to read this again!\n\t\tI'm gonna forget this and it's such good stuff!\" so I'll have to read it again."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "the 5 levels of leadership"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This books has an interesting model in it about different levels of leadership towards a person."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "It's interesting to see the possibilities."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And an important thing to remember that this is per individual relationship. So with one colleague, you can\n\t\thave one level of leadership, while with another colleague another level. And any new colleagues always start at\n\t\tthe beginning."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "tribal leadership"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This book talks more about the team / company culture in general instead of the individual relationships."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Todo: books that focus on communication"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Vulnerability"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Communication"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Conflict"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": ""
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [],
+		"data": {},
+		"nodeType": "hr"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "What I have not read, but heard recommended."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "What was recommended"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Leading change in \"video: Why scaling agile does not work\""
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Debugging teams (same authors of Team Geek, but much more recently written, and heard good feedback\n\t\t\t\tabout it)"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": ""
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	}
+]
