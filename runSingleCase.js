@@ -24,6 +24,7 @@ async function createNotes(noteIds, tags) {
 				message: ${e.message}
 				stack: ${e.stack}
 				`)
+				fs.writeFileSync(`note_${id}_content.xml`, note.content)
 				failed++
 			})
 
@@ -35,7 +36,7 @@ async function note2post() {
 	const notebook = await findNotebook("Blog")
 	const tags = await findTags(notebook)
 
-	const id = '06df248a-df35-491f-90e4-9bed811e3ee2'
+	const id = '3ed9cba4-96c2-4791-8c18-4bad86a8f09f'
 
 	await createNotes([id], tags)
 

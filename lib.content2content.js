@@ -1,4 +1,5 @@
 const xml2js = require('xml2js');
+const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
 
 const parser = new xml2js.Parser({
 	// trim: true,
@@ -23,7 +24,7 @@ function newline() {
 
 function image(node, images) {
 	const hash = node.$.hash
-	const assetId = images[hash]
+	const assetId = getAssetIdForHash(images, hash)
 	if(!assetId) throw new Error(`link could not find matching image for hash(${hash}) in images(${JSON.stringify(images)})`)
 	return {
 		"data": {
