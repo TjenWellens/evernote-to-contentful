@@ -73,8 +73,12 @@ function isEmptyDiv(node) {
 	return node["#name"] === "div" && !isNode(node)
 }
 
+function isSpan(node) {
+	return node["#name"] === "span";
+}
+
 function isEmptySpan(node) {
-	return node["#name"] === "span" && !isNode(node)
+	return isSpan(node) && !isNode(node)
 }
 
 function isImage(node) {
@@ -188,11 +192,12 @@ function parseBold(node) {
 }
 
 function parseInline(node) {
-	if (isText(node)) return text(node)
-	if (isLink(node)) return link(node)
-	if (isNewline(node)) return inlineNewline(node)
-	if (isTodo(node)) return todo(node)
-	if (isBold(node)) return parseBold(node)
+	if (isText(node)) return [text(node)]
+	if (isLink(node)) return [link(node)]
+	if (isNewline(node)) return [inlineNewline(node)]
+	if (isTodo(node)) return [todo(node)]
+	if (isBold(node)) return [parseBold(node)]
+	if (isSpan(node)) return _parseInlineNodeContent(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
 }
 
@@ -365,7 +370,7 @@ function squashInlineTextAndCleanupWhitespace(children) {
 }
 
 function _parseInlineNodeContent(node) {
-	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.map(parseInline));
+	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.flatMap(parseInline));
 
 	return contentSquashed
 

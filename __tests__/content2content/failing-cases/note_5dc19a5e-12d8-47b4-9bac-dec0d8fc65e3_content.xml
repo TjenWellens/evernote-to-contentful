@@ -1,0 +1,478 @@
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>TDD, Where Did It All Go Wrong - Ian Cooper</div>
+	<div style="--en-richlink:true; --en-href:https://www.youtube.com/watch?v=EZ05e7EMOLM; --en-viewerProps:{&quot;videoId&quot;:&quot;EZ05e7EMOLM&quot;};">
+		<a href="https://www.youtube.com/watch?v=EZ05e7EMOLM" rev="en_rl_small">
+			https://www.youtube.com/watch?v=EZ05e7EMOLM
+		</a>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<en-todo checked="false"/>
+		<a href="evernote:///view/30809684/s230/33362d81-042d-4c22-957a-77dcbef82900/33362d81-042d-4c22-957a-77dcbef82900/"
+		   rev="en_rl_none">
+			<span style="color:#69aa35;">Book: Refactoring: Improving the Design of Existing Code - Martin Fowler</span>
+		</a>
+	</div>
+	<div>
+		<en-todo checked="false"/>
+		<a href="evernote:///view/30809684/s230/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/"
+		   rev="en_rl_none">
+			<span style="color:#69aa35;">Book: Refactoring to Patterns - Joshua Kerievsky</span>
+		</a>
+	</div>
+	<div>
+		<en-todo checked="false"/>
+		<a href="evernote:///view/30809684/s230/12d83e0c-29de-444a-8fb7-38153c313ad3/12d83e0c-29de-444a-8fb7-38153c313ad3/"
+		   rev="en_rl_none">
+			<span style="color:#69aa35;">Book: Test Driven Development By Example - Kent Beck</span>
+		</a>
+	</div>
+	<div>
+		<en-todo checked="true"/>
+		<a href="evernote:///view/30809684/s230/15a62c3a-7ac2-48ff-8e0b-66378a3cb89c/15a62c3a-7ac2-48ff-8e0b-66378a3cb89c/"
+		   rev="en_rl_none">
+			<span style="color:rgb(105, 170, 53);">Article: Is TDD Dead? - Martin Fowler</span>
+		</a>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>Ian Cooper - TDD, Where Did It All Go Wrong</div>
+	<div>
+		<a href="https://www.youtube.com/watch?v=EZ05e7EMOLM" rev="en_rl_none">
+			https://www.youtube.com/watch?v=EZ05e7EMOLM
+		</a>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>Trigger for writing test</div>
+	<div>!= new method</div>
+	<div>!= new class</div>
+	<div>= requirement</div>
+	<en-media style="--en-naturalWidth:1188; --en-naturalHeight:728;" type="image/png"
+			  hash="f3fb63fe99ed74fbcc7f32e20c087596"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>test api</div>
+	<en-media style="--en-naturalWidth:1478; --en-naturalHeight:1104;" type="image/png"
+			  hash="4a550818a5044a0f69eb755fa768458c"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>System Under Test (SUT) != class</div>
+	<div>Unit test -&gt; exports of module</div>
+	<en-media style="--en-naturalWidth:1474; --en-naturalHeight:1008;" type="image/png"
+			  hash="485f5bbf8cf7107181e61297a6f401ff"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1446; --en-naturalHeight:816;" type="image/png"
+			  hash="fa94c10821ec045475f862f6ba7482d7"/>
+	<div>
+		<br/>
+	</div>
+	<div>refactoring = separate implementation detail from things you do need to test</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>extra</div>
+	<en-media style="--en-naturalWidth:1128; --en-naturalHeight:620;" type="image/png"
+			  hash="cd6b7b72890af5e781a889662d649d4f"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>"The word 'test' in TDD confuses people about how to do TDD, when I change it to Behavior, it tends to be
+		better understood"
+	</div>
+	<div>-- Dan North</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1790; --en-naturalHeight:1006;" type="image/png"
+			  hash="9fea2c608082cf5ef1e5a3376b6410e6"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>todo: re-read 'TDD by example'</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>design clean api first, then realistic</div>
+	<en-media style="--en-naturalWidth:1700; --en-naturalHeight:842;" type="image/png"
+			  hash="39795cd7406944c89eb79a50bcf2e272"/>
+	<div>
+		<br/>
+	</div>
+	<div>test is first consumer of your code</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>unit of isolation = test, not sut</div>
+	<en-media style="--en-naturalWidth:1668; --en-naturalHeight:906;" type="image/png"
+			  hash="df59a5a2698fa3af3dc24a52a2ca0ace"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1548; --en-naturalHeight:962;" type="image/png"
+			  hash="a02ed8d1a5bb9ea1c8d110e88c8e6126"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>RED-GREEN-REFACTOR</div>
+	<div>1) write test that fails without implementation</div>
+	<div>2) make test pass asap, sinful, ducttape</div>
+	<div>line by line</div>
+	<div>not nice classes, no patterns</div>
+	<div>speed &gt; design</div>
+	<div>3) make good code</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>"""</div>
+	<div>You can't do 2 things at once easily</div>
+	<div> - understand the solution to the problem</div>
+	<div> - engineer the code right</div>
+	<div>You will either</div>
+	<div> - over-engineer</div>
+	<div> - analysis-paralysis</div>
+	<div>"""</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>CLEAN CODE WHEN</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1716; --en-naturalHeight:862;" type="image/png"
+			  hash="713aab78093c0972b509ada5a1615a28"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>refactoring</div>
+	<div>don't write tests</div>
+	<div>private/internal visibility</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1360; --en-naturalHeight:1358;" type="image/png"
+			  hash="2a7e8522a9fed14ca7f44e1b0619185e"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>only in the refactoring step</div>
+	<div>now I know I need it</div>
+	<en-media style="--en-naturalWidth:1838; --en-naturalHeight:1370;" type="image/png"
+			  hash="3f3372bafa74b3bac4d5b2a599edf036"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1902; --en-naturalHeight:1350;" type="image/png"
+			  hash="9f1f3e4ad97f9ab730afd3da05ccbc55"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>HEXAGONAL ARCHITECTURE</div>
+	<div>PORTS AND ADAPTERS</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>GEARS</div>
+	<div>throw away helping tests with implementation details when implemented</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>ACCEPTANCE TDD</div>
+	<div>Don't do it</div>
+	<div> - customers are not interested</div>
+	<div> - they're expensive</div>
+	<div>Maybe you need it, because programmer tests don't focus on the gist of the system.</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>MOCKS</div>
+	<en-media style="--en-naturalWidth:1786; --en-naturalHeight:1262;" type="image/png"
+			  hash="22f29e51dae7f380fa9ea25c493787b8"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<en-media style="--en-naturalWidth:1410; --en-naturalHeight:1020;" type="image/png"
+			  hash="20aabebb6635e9f9d57717255eef596e"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>===</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>SUMMARY</div>
+	<en-media style="--en-naturalWidth:1392; --en-naturalHeight:1156;" type="image/png"
+			  hash="5c8f3f2e38c87f50a20637a204d1f9bf"/>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>check out: 
+		<a href="https://martinfowler.com/articles/is-tdd-dead/" rev="en_rl_none">
+			https://martinfowler.com/articles/is-tdd-dead/
+		</a>
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<br/>
+	</div>
+</en-note>

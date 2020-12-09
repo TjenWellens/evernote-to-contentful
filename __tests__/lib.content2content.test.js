@@ -768,3 +768,45 @@ describe('<b>', ()=>{
 	})
 })
 
+it('should work with span', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+  <en-todo checked="false"/>
+  <a href="evernote:///view/30809684/s230/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/"
+     rev="en_rl_none">
+    <span style="color:#69aa35;">Book: Refactoring to Patterns - Joshua Kerievsky</span>
+  </a>
+</div>
+</en-note>`
+	const entryContent = [
+		{
+			"data": {},
+			"content": [
+				{
+					"data": {},
+					"marks": [],
+					"value": "[ ] ",
+					"nodeType": "text"
+				},
+				{
+					"data": {
+						"uri": "evernote:///view/30809684/s230/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/"
+					},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "Book: Refactoring to Patterns - Joshua Kerievsky",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "hyperlink"
+				},
+			],
+			"nodeType": "paragraph"
+		},
+	]
+	expect(await content2content(noteContent)).toEqual(entryContent)
+})
