@@ -37,7 +37,9 @@ async function createEntryFromNote(note, tags) {
 			title: note.title,
 			content: entryContent,
 			tags: tagLinks,
-			updateSequenceNum: note.updateSequenceNum
+			updateSequenceNum: note.updateSequenceNum,
+			created: new Date(note.created).toISOString(),
+			updated: new Date(note.updated).toISOString(),
 		}
 	})
 }
