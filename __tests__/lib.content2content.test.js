@@ -1,4 +1,7 @@
-const {squashInlineNewline} = require("../lib.content2content");
+const {squashInlineTextAndCleanupWhitespace} = require("../lib.content2content");
+const {_text} = require("../lib.content2content");
+const {inlineNewline} = require("../lib.content2content");
+const {link} = require("../lib.content2content");
 const {content2content} = require("../lib.content2content");
 
 describe('should transform paragraphs', () => {
@@ -76,135 +79,60 @@ clear="none"/>and this line
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
 
-	describe('squashInlineNewline', () => {
+	describe('squashInlineTextAndCleanupWhitespace', () => {
 		it('empty', () => {
-			expect(squashInlineNewline([])).toEqual([])
+			expect(squashInlineTextAndCleanupWhitespace([])).toEqual([])
 		});
 		it('one entry', () => {
-			expect(squashInlineNewline([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
+			expect(squashInlineTextAndCleanupWhitespace([
+				_text("and some lines without new paragraph"),
 			])).toEqual([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
+				_text("and some lines without new paragraph"),
 			])
 		});
 		it('remove trailing newline: text + newline = text', () => {
-			expect(squashInlineNewline([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
+			expect(squashInlineTextAndCleanupWhitespace([
+				_text("and some lines without new paragraph"),
+				inlineNewline(),
 			])).toEqual([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
+				_text("and some lines without new paragraph"),
 			])
 		});
 		it('remove leading newline: newline + text = text', () => {
-			expect(squashInlineNewline([
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
+			expect(squashInlineTextAndCleanupWhitespace([
+				inlineNewline(),
+				_text("and some lines without new paragraph"),
 			])).toEqual([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
+				_text("and some lines without new paragraph"),
 			])
 		});
 		it('join text with newline in between: text + newline + text = text_text', () => {
-			expect(squashInlineNewline([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
-				{
-					"#name": "__text__",
-					"_": "this line"
-				},
+			expect(squashInlineTextAndCleanupWhitespace([
+				_text("and some lines without new paragraph"),
+				inlineNewline(),
+				_text("this line"),
 			])).toEqual([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph\nthis line"
-				},
+				_text("and some lines without new paragraph\nthis line"),
 			])
 		});
 		it('loads', () => {
 			const children = [
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph"
-				},
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
-				{
-					"#name": "__text__",
-					"_": "this line"
-				},
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
-				{
-					"#name": "__text__",
-					"_": "and this line"
-				},
-				{
-					"$": {
-						"clear": "none"
-					},
-					"#name": "br"
-				},
-				{
-					"#name": "__text__",
-					"_": "and this line\n"
-				}
+				_text("and some lines without new paragraph"),
+				inlineNewline(),
+				_text("this line"),
+				inlineNewline(),
+				_text("and this line"),
+				inlineNewline(),
+				_text("and this line\n"),
 			];
-			expect(squashInlineNewline(children)).toEqual([
-				{
-					"#name": "__text__",
-					"_": "and some lines without new paragraph\nthis line\nand this line\nand this line"
-				}
+			expect(squashInlineTextAndCleanupWhitespace(children)).toEqual([
+				_text("and some lines without new paragraph\nthis line\nand this line\nand this line"),
 			])
 		});
 		it('only squash text (and not links!)', () => {
 			const children = [
-				{
-					"#name": "__text__",
-					"_": "(src: "
-				},
-				{
+				_text("(src: "),
+				link({
 					"_": "In progress blogpost",
 					"$": {
 						"shape": "rect",
@@ -218,13 +146,10 @@ clear="none"/>and this line
 							"_": "In progress blogpost"
 						}
 					]
-				},
-				{
-					"#name": "__text__",
-					"_": ")"
-				}
+				}),
+				_text(")"),
 			]
-			expect(squashInlineNewline(children)).toEqual(children)
+			expect(squashInlineTextAndCleanupWhitespace(children)).toEqual(children)
 		})
 	});
 })

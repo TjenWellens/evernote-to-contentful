@@ -187,7 +187,7 @@ function parseInline(node) {
 }
 
 function inlineNewline(node) {
-	return undefined;
+	return _text('\n');
 }
 
 function isInlineNode(node) {
@@ -272,15 +272,90 @@ function squashInlineNewline(children) {
 	}
 }
 
+function squashInlineTextAndCleanupWhitespace(children) {
+	if (children.length === 0) return children
+	const moreText = children;
+	const squashed = squashText(moreText);
+	return replaceLeadingWhitespace(replaceTrailingWhitespace(squashed))
+
+	function replaceLastText(input, fnReplacementText) {
+		const result = [...input]
+		const lastItem = last(input);
+		const newItem = {
+			...lastItem,
+			value: fnReplacementText(lastItem.value)
+		};
+		result.splice(input.length - 1, 1, newItem);
+		return result;
+	}
+
+	function replaceFirstText(input, fnReplacementText) {
+		const result = [...input]
+		const firstItem = first(input);
+		const newItem = {
+			...firstItem,
+			value: fnReplacementText(firstItem.value)
+		};
+		result.splice(0, 1, newItem);
+		return result;
+	}
+
+	function last(array) {
+		return array[array.length - 1];
+	}
+
+	function first(array) {
+		return array[0];
+	}
+
+	function squashText(children) {
+		return children.reduce((squashed, child) => {
+			if (squashed.length === 0)
+				return [{...child}]
+
+			if (!isText(child))
+				return [...squashed, {...child}]
+
+			const previous = last(squashed)
+			if (!isText(previous))
+				return [...squashed, {...child}]
+
+			return replaceLastText(squashed, previousText => previousText + child.value)
+		}, [])
+	}
+
+	function textNewline() {
+		return {
+			"#name": "__text__",
+			"_": "\n"
+		}
+	}
+
+	function replaceNewlineWithText(children) {
+		return children.map(node => isNewline(node) ? textNewline() : node);
+	}
+
+	function replaceTrailingWhitespace(children) {
+		if (!isText(last(children)))
+			return children
+
+		return replaceLastText(children, text => text.replace(/\s+$/, ''))
+	}
+
+	function replaceLeadingWhitespace(children) {
+		if (!isText(first(children)))
+			return children
+
+		return replaceFirstText(children, text => text.replace(/^\s+/, ''))
+	}
+
+	function isText({nodeType}) {
+		return nodeType && nodeType === 'text';
+	}
+}
+
 function _parseInlineNodeContent(node) {
-	const children = squashInlineNewline(node.$$)
-	const content = children.map(parseInline);
-
-	const contentSquashed = squashText(content);
-
-	const firstEntry = contentSquashed[0];
-	if (firstEntry && isTextEntry(firstEntry))
-		removeLeadingWhitespace(firstEntry)
+	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.map(parseInline));
 
 	return contentSquashed
 
@@ -403,6 +478,9 @@ async function content2contentAsRichText(noteContent, images) {
 
 module.exports = {
 	content2content,
-	squashInlineNewline,
+	squashInlineTextAndCleanupWhitespace,
 	content2contentAsRichText,
+	_text,
+	inlineNewline,
+	link,
 }
