@@ -121,9 +121,12 @@ async function createAssetFromEvernoteResource(resource) {
 }
 
 async function createAssetsFromEvernoteResources(resources) {
-	return Promise.all(
-		resources.map(resource => createAssetFromEvernoteResource(resource).then(asset =>({asset, resource})))
-	)
+	const pairs = []
+	for(const resource of resources) {
+		const pair = await createAssetFromEvernoteResource(resource).then(asset =>({asset, resource}))
+		pairs.push(pair)
+	}
+	return pairs
 }
 
 module.exports = {
