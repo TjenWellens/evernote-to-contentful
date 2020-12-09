@@ -7,23 +7,18 @@ const parser = new xml2js.Parser({
 	charsAsChildren: true,
 });
 
-function paragraph(text) {
+function _paragraph(text) {
 	return {
 		"data": {},
 		"content": [
-			{
-				"data": {},
-				"marks": [],
-				"value": text.trim(),
-				"nodeType": "text"
-			}
+			_text(text.trim())
 		],
 		"nodeType": "paragraph"
 	}
 }
 
 function newline() {
-	return paragraph("")
+	return _paragraph("")
 }
 
 function image(node, images) {
@@ -51,6 +46,18 @@ function isNode(node) {
 
 function isText(node) {
 	return node["#name"] === "__text__"
+}
+
+function isParagraph(node) {
+	return node["#name"] === "div"
+}
+
+function hasAttributes(node) {
+	return node.$
+}
+
+function isEmptyDiv(node) {
+	return node["#name"] === "div" && !isNode(node) && !hasAttributes(node)
 }
 
 function isImage(node) {
@@ -106,7 +113,7 @@ function isTodo(node) {
 function todo(node) {
 	const textNode = node.$$.filter(node => !isTodo(node))[0];
 	if (!isText(textNode)) throw new Error('textnode expected in todo' + JSON.stringify(textNode))
-	return paragraph("[ ] " + textNode._.trim())
+	return _paragraph("[ ] " + textNode._.trim())
 }
 
 function isTodoNode(node) {
@@ -125,13 +132,17 @@ function horizontalLine() {
 	}
 }
 
-function text(node) {
+function _text(text) {
 	return {
 		"data": {},
 		"marks": [],
-		"value": node._,
+		"value": text,
 		"nodeType": "text"
 	}
+}
+
+function text(node) {
+	return _text(node._)
 }
 
 function isLink(node) {
@@ -249,13 +260,15 @@ function parseNode(node, images) {
 
 	if (isNode(node)) return node.$$.flatMap(node => parseNode(node, images))
 
-	if (isText(node)) return [paragraph(node._)]
+	if (isText(node)) return [_paragraph(node._)]
 
 	if (isImage(node)) return [image(node, images)]
 
 	if (isNewline(node)) return [newline()]
 
 	if (isHorizontalLine(node)) return [horizontalLine()]
+
+	if(isEmptyDiv(node)) return []
 
 	throw new Error("Unknown node type" + JSON.stringify(node))
 }

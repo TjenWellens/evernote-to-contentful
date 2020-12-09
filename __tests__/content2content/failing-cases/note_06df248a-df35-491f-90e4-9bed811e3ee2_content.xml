@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>A friend recently asked "how can I change my team to collaborate and communicate instead of everyone working by
+		themselves?" 
+	</div>
+	<div>This is a small team, and one developer has become the manager but seems to have no interest in the role. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>They seem to be pretty much pre-agile in the Model: Agile Fluency Model</div>
+	<div>They barely have any form of collaboration or communication it seems. </div>
+	<div>
+		<br/>
+	</div>
+	<div>My first reaction was: "go find another team, it's not worth to spend all your effort here" </div>
+	<div>This is based on my own experience of trying to make a work unit into a team and failing to do this because
+		they did not want to be a team. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>And while I do believe this is the best advice I can give... I also remember myself back then. And 'give up
+		without trying' was not even considered. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>Ending up with:</div>
+	<div>Story: I kept trying to change the workgroup's culture until I burnt out </div>
+	<ul>
+		<li>
+			<div>
+				<a href="evernote:///view/30809684/s230/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/"
+				   style="color: rgb(105, 170, 53);">Model: workgroup vs team
+				</a>
+			</div>
+		</li>
+		<li>
+			<div>Story: A small bubble of matching team culture inside a workgroup of mismatching culture is a breath of
+				fresh air
+			</div>
+		</li>
+		<ul>
+			<li>
+				<div>Story: 'retrospective driven improvement' is awesome</div>
+			</li>
+			<li>
+				<div>Story: retrospectives are teambuilding</div>
+			</li>
+			<li>
+				<div>Story: So 'pair programming' can work on the job </div>
+			</li>
+			<li>
+				<div>Story: 'automate relentlessly' is awesome</div>
+			</li>
+		</ul>
+		<li>
+			<div>Story: a team culture bubble bursts if the members change, and each new bubble starts again from zero
+			</div>
+		</li>
+		<ul>
+			<li>
+				<div>Pantera </div>
+			</li>
+			<li>
+				<div>Stijn, Christina, Sana, me</div>
+			</li>
+			<li>
+				<div>Sana's focus team</div>
+			</li>
+			<li>
+				<div>Competitor analysis </div>
+			</li>
+		</ul>
+		<li>
+			<div>Opinion: keep a team stable </div>
+		</li>
+		<li>
+			<div>Opinion: a workgroup is okay, a team is okay, the question is which do you want to work in? </div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>Story: Switching to a team makes an incredible difference</div>
+	<ul>
+		<li>
+			<div>Story: a team 'willing to experiment' is an amazing experience</div>
+		</li>
+		<li>
+			<div>Story: 'pair programming' is awesome</div>
+		</li>
+		<li>
+			<div>Story: 'team decisions' are awesome</div>
+		</li>
+		<li>
+			<div>Story: 'team popcorn hours' are awesome </div>
+		</li>
+		<li>
+			<div>Opinion: the smaller sliced a story, the better</div>
+		</li>
+		<li>
+			<div>
+				<a href="evernote:///view/30809684/s230/dfacd720-a049-4464-ab99-69ff3ab03c0c/dfacd720-a049-4464-ab99-69ff3ab03c0c/">
+					Opinion: best teambuilding happens on the job
+				</a>
+			</div>
+		</li>
+		<li>
+			<div>Story: even a great team can break when the environment changes really badly</div>
+		</li>
+		<li>
+			<div>
+				<br/>
+			</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>And while I still think it's great advice. I remember when I myself was in the same situation. I didn't want to
+		just leave. I wanted to change this team, to make it better. 
+	</div>
+	<div>It took me a long time to figure out that this team did not want to be changed, not one bit. And there were
+		many signs I choose to ignore, like predecessors trying the same and having given up after a couple of years. 
+	</div>
+	<div>Instead of changing a team into what I wanted it to be, I should have searched for a team that was close to
+		what I want my team to be and join that one. 
+	</div>
+	<div>This is what I did, and it was an amazing difference! When a team culture does not match me, everything I want
+		or try causes heaps of resistance. When it does match me, everything just seems to work with barely any effort. 
+	</div>
+	<div>A simple suggestion, accepted with a "Oh, sounds interesting, let's try that!" instead of resistance. </div>
+	<div>But it took me years to figure this out. </div>
+	<div>And I had people telling me exactly all that and more, when I asked for advice. But the only thing I wanted to
+		hear was strategies to make it work. I didn't wanna hear: "give up". 
+	</div>
+	<div>So I'm gonna assume the same here. </div>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>
+		<br/>
+	</div>
+	<div>How would I find an answer to this question?</div>
+	<ul>
+		<li>
+			<div>SoCraTes open space : ask this question there</div>
+		</li>
+		<li>
+			<div>SoCraTes slack : ask this question there</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>
+		<br/>
+	</div>
+	<div>How would I try with knowledge and skills I already have?</div>
+	<ul>
+		<li>
+			<div>Pair with people </div>
+		</li>
+		<li>
+			<div>Ask people about what they're working on</div>
+		</li>
+		<li>
+			<div>Review code</div>
+		</li>
+		<li>
+			<div>Ask for someone to review code</div>
+		</li>
+		<li>
+			<div>Do random games during the day</div>
+		</li>
+		<li>
+			<div>Ask for a daily sync meeting</div>
+		</li>
+		<li>
+			<div>Ask colleagues to help with architecture decisions </div>
+		</li>
+		<li>
+			<div>Popcorn hour : watch conference talks together</div>
+		</li>
+		<li>
+			<div>Design meetings </div>
+		</li>
+		<li>
+			<div>Maybe do a Kata / code Retreat together somehow</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>But most importantly, I would try to</div>
+	<ul>
+		<li>
+			<div>build on moments of communication that already exist</div>
+		</li>
+		<li>
+			<div>build more moments of communication</div>
+		</li>
+		<li>
+			<div>have some fun together </div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>
+		<br/>
+	</div>
+	<div>Resources that have revant parts </div>
+	<div>
+		<span style="font-weight: bold;">Podcast: soft skills engineering </span>
+	</div>
+	<div>An awesome podcast series which answers user questions. I bet this question has probably been asked already.
+		Probably even close to a literal match. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">Team Geek</span>
+	</div>
+	<div>This is where my journey started, so I'm a bit biased towards this book. Originally a couple of Google IO talks
+		by the 2 authors, which later became this book. It made me realize that software development is a team sport.
+		Before I used to program on my own. I did this for years! And the I saw 'the myth of the genius programmer '.
+		(that was one of the talks, and later a chapter in the book) 
+	</div>
+	<div>I kept watching all their talks, one by one. </div>
+	<div>Todo: link here</div>
+	<div>And it all made so much sense...</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">The software craftsman</span>
+	</div>
+	<div>This book has a section about how to start a culture of technical excellence in your own team / company. </div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">5 Dysfunctions of a team</span>
+	</div>
+	<div>This is more about teambuilding and improving Teamwork. Not so much about starting a culture change from bottom
+		up. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">Reinventing organizations</span>
+	</div>
+	<div>I only read the intro, but that blew me away. It classifies different organisational cultures based on a
+		trendline. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">the responsibility process</span>
+	</div>
+	<div>Change yourself first. </div>
+	<div>Changing yourself, changes your world. </div>
+	<div>Lead by example. </div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">how to win friends and influence people</span>
+	</div>
+	<div>Widely lauded book. I keep forgetting what's in it. Probably because not too much was paradigm shift to me by
+		the time I'd read it. But I do remember that every time I read it, I say to myself "I have to read this again!
+		I'm gonna forget this and it's such good stuff!" so I'll have to read it again. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">the 5 levels of leadership </span>
+	</div>
+	<div>This books has an interesting model in it about different levels of leadership towards a person. </div>
+	<div>It's interesting to see the possibilities. </div>
+	<div>And an important thing to remember that this is per individual relationship. So with one colleague, you can
+		have one level of leadership, while with another colleague another level. And any new colleagues always start at
+		the beginning. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>
+		<span style="font-weight: bold;">tribal leadership</span>
+	</div>
+	<div>This book talks more about the team / company culture in general instead of the individual relationships. 
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>Todo: books that focus on communication </div>
+	<ul>
+		<li>
+			<div>Vulnerability </div>
+		</li>
+		<li>
+			<div>Communication </div>
+		</li>
+		<li>
+			<div>Conflict</div>
+		</li>
+		<li>
+			<div>
+				<br/>
+			</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<hr/>
+	<div>What I have not read, but heard recommended. </div>
+	<div>What was recommended</div>
+	<ul>
+		<li>
+			<div>Leading change in "video: Why scaling agile does not work" </div>
+		</li>
+		<li>
+			<div>Debugging teams (same authors of Team Geek, but much more recently written, and heard good feedback
+				about it) 
+			</div>
+		</li>
+		<li>
+			<div>
+				<br/>
+			</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div></div>
+</en-note>
