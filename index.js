@@ -5,17 +5,28 @@ const {createEntryFromTag} = require("./lib.createEntryFromTag");
 const {createEntryFromNote} = require("./lib.createEntryFromNote");
 const {findUpdatedNoteIds} = require("./lib.findUpdates");
 const {findNoteById} = require("./lib.findPublishedBlogposts");
-
+const fs = require('fs');
 
 async function createNotes(noteIds, tags) {
+	fs.writeFileSync('error/_failed-ids.txt', "")
 	console.log(`creating/updating ${noteIds.length} notes...`)
 	let success = 0
 	let failed = 0
 	for (const id of noteIds) {
 		const note = await findNoteById(id)
 		await createEntryFromNote(note, tags)
-			.then(_ => success++)
-			.catch(_ => failed++)
+			.then(entry => {
+				console.log(`note created: "${note.title}" [${note.guid}]`)
+				success++
+				return entry
+			})
+			.catch(e => {
+				fs.appendFileSync('error/_failed-ids.txt', `${id}\n`)
+				fs.writeFileSync(`error/${id}.txt`, `message: ${e.message}\nstack: ${e.stack}`)
+				console.error(`'ERROR: Failed to create note "${note.title}" [${note.guid}]`)
+				failed++
+			})
+
 	}
 	console.log(`${success} notes created (${failed} failed)`)
 }
