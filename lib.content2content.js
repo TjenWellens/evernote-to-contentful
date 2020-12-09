@@ -191,7 +191,7 @@ function squashInlineNewline(children) {
 	if(children.length === 0) return children
 	const moreText = replaceNewlineWithText();
 	const squashed = squashText(moreText);
-	return replaceTrailingWhitespace(squashed)
+	return replaceLeadingWhitespace(replaceTrailingWhitespace(squashed))
 
 	function replaceLastText(input, fnReplacementText) {
 		const result = [...input]
@@ -204,8 +204,23 @@ function squashInlineNewline(children) {
 		return result;
 	}
 
+	function replaceFirstText(input, fnReplacementText) {
+		const result = [...input]
+		const firstItem = first(input);
+		const newItem = {
+			...firstItem,
+			_: fnReplacementText(firstItem._)
+		};
+		result.splice(0, 1, newItem);
+		return result;
+	}
+
 	function last(array) {
 		return array[array.length - 1];
+	}
+
+	function first(array) {
+		return array[0];
 	}
 
 	function squashText(children) {
@@ -241,6 +256,13 @@ function squashInlineNewline(children) {
 
 		return replaceLastText(children, text => text.replace(/\s+$/, ''))
 	}
+
+	function replaceLeadingWhitespace(children) {
+		if (!isText(first(children)))
+			return children
+
+		return replaceFirstText(children, text => text.replace(/^\s+/, ''))
+	}
 }
 
 function parseInlineNode(node) {
@@ -252,12 +274,23 @@ function parseInlineNode(node) {
 	}
 }
 
-function isTable(node) {
-	return node["#name"] === "table" || node["#name"] === "tr" || node["#name"] === "td" || node["#name"] === "th";
+function isTable(node, images) {
+	return node["#name"] === "table"
+}
+
+function isTableBody(node) {
+	return node["#name"] === "tbody"
+}
+
+function parseTable(node, images) {
+	if(!node.$$) throw new Error('no weird tables allowed')
+	const body = node.$$.find(isTableBody);
+	if(!body) throw new Error('no weird tables allowed')
+	return parseNode(body, images)
 }
 
 function parseNode(node, images) {
-	if(isTable(node)) throw new Error('tables are not supported')
+	if (isTable(node)) return parseTable(node, images)
 
 	if (isInlineNode(node)) return [parseInlineNode(node)]
 

@@ -112,7 +112,7 @@ clear="none"/>and this line
 				},
 			])
 		});
-		it('keep leading newline because should not happen anyway: newline + text = _text', () => {
+		it('remove leading newline: newline + text = text', () => {
 			expect(squashInlineNewline([
 				{
 					"$": {
@@ -127,7 +127,7 @@ clear="none"/>and this line
 			])).toEqual([
 				{
 					"#name": "__text__",
-					"_": "\nand some lines without new paragraph"
+					"_": "and some lines without new paragraph"
 				},
 			])
 		});
@@ -611,7 +611,7 @@ target="_blank">In progress blogpost</a>)
 })
 
 describe('should transform span', () => {
-	it('when it contains nbsp', async ()=>{
+	it('when it contains nbsp', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
@@ -640,7 +640,7 @@ describe('should transform span', () => {
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
 	})
-	it('when it contains media', async ()=>{
+	it('when it contains media', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
@@ -676,35 +676,43 @@ it('should transform empty content', async () => {
 	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note />`
-	const entryContent = [
-	]
+	const entryContent = []
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
 
-it('should crash fast when table', async () => {
-	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+describe('tables', () => {
+	it('should be treated as div', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <table width="100%" border="0" style="background-color: rgb(212, 221, 229);">
-  <colgroup>
-    <col/>
-  </colgroup>
-  <tbody>
-    <tr>
-      <td>
-        <h1>7 remedies for a lean purse</h1>
-      </td>
-    </tr>
-  </tbody>
+	<colgroup>
+		<col/>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+				5. Social Relationships: The Slide Into "Shy"
+			</td>
+		</tr>
+	</tbody>
 </table>
 </en-note>`
-	let error
-	try {
-		await content2content(noteContent)
-	} catch (e) {
-		error = e
-	}
-
-	expect(error).toBeTruthy()
-	expect(error.message).toEqual('tables are not supported')
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": '5. Social Relationships: The Slide Into "Shy"',
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 })
+
