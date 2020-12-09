@@ -62,7 +62,7 @@ function isIgnorable(node) {
 }
 
 function isEmptyDiv(node) {
-	return node["#name"] === "div" && !isNode(node) && !hasAttributes(node)
+	return node["#name"] === "div" && !isNode(node)
 }
 
 function isEmptySpan(node) {

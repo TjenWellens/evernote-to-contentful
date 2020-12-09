@@ -672,6 +672,23 @@ describe('should transform span', () => {
 	})
 })
 
+it('should ignore empty div', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div foo="bar"></div>
+</en-note>`
+	const hash = "373798d4ffbde8f490e01d418b9d2a01"
+	const assetId = "3n1RaUimNYsv0wGAtcEPn0";
+
+	const entryContent = []
+	const images = {
+		[hash]: assetId
+	}
+
+	expect(await content2content(noteContent, images)).toEqual(entryContent)
+})
+
 it('should transform empty content', async () => {
 	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
