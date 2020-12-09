@@ -252,7 +252,13 @@ function parseInlineNode(node) {
 	}
 }
 
+function isTable(node) {
+	return node["#name"] === "table" || node["#name"] === "tr" || node["#name"] === "td" || node["#name"] === "th";
+}
+
 function parseNode(node, images) {
+	if(isTable(node)) throw new Error('tables are not supported')
+
 	if (isInlineNode(node)) return [parseInlineNode(node)]
 
 	if (isTodoNode(node)) return [todo(node)]

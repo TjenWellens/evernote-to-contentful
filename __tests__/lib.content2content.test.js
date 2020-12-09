@@ -680,3 +680,31 @@ it('should transform empty content', async () => {
 	]
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
+
+it('should crash fast when table', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<table width="100%" border="0" style="background-color: rgb(212, 221, 229);">
+  <colgroup>
+    <col/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>
+        <h1>7 remedies for a lean purse</h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</en-note>`
+	let error
+	try {
+		await content2content(noteContent)
+	} catch (e) {
+		error = e
+	}
+
+	expect(error).toBeTruthy()
+	expect(error.message).toEqual('tables are not supported')
+})
