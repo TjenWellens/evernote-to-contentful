@@ -1,21 +1,6 @@
 const {squashInlineNewline} = require("../lib.content2content");
 const {content2content} = require("../lib.content2content");
 
-it('should transform note-content to rich text', async () => {
-	const fs = require('fs')
-	const {note} = require('./exampleNote')
-	const entryJson = fs.readFileSync('./__tests__/exampleContentfulEntry.json');
-	const entry = JSON.parse(entryJson)
-	const entryContent = entry.fields.content["en-US"].content
-
-	const images = {
-		"215f60a9a488d2683632fce8526d2959": "766297c1-ea9b-4f66-aad2-66c7b42c133f",
-		"373798d4ffbde8f490e01d418b9d2a01": "1b88f389-19df-4417-bde1-f759abc8a542",
-	}
-
-	expect(await content2content(note.content, images)).toEqual(entryContent)
-})
-
 describe('should transform paragraphs', () => {
 	it('simple line', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
@@ -623,4 +608,66 @@ target="_blank">In progress blogpost</a>)
 		},
 	]
 	expect(await content2content(noteContent)).toEqual(entryContent)
+})
+
+describe('should transform span', () => {
+	it('when it contains nbsp', async ()=>{
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>speed:<span> </span></div>
+</en-note>`
+		const hash = "373798d4ffbde8f490e01d418b9d2a01"
+		const assetId = "3n1RaUimNYsv0wGAtcEPn0";
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "speed:",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {
+			[hash]: assetId
+		}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+	it('when it contains media', async ()=>{
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><span><en-media hash="373798d4ffbde8f490e01d418b9d2a01" type="image/png"/></span></div>
+</en-note>`
+		const hash = "373798d4ffbde8f490e01d418b9d2a01"
+		const assetId = "3n1RaUimNYsv0wGAtcEPn0";
+
+		const entryContent = [
+			{
+				"data": {
+					"target": {
+						"sys": {
+							type: 'Link',
+							linkType: 'Asset',
+							id: assetId
+						},
+					}
+				},
+				"content": [],
+				"nodeType": "embedded-asset-block"
+			},
+		]
+		const images = {
+			[hash]: assetId
+		}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
 })

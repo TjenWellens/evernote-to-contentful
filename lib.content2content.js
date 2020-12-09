@@ -57,8 +57,20 @@ function hasAttributes(node) {
 	return node.$
 }
 
+function isEmpty(node) {
+	return !isNode(node) && !hasAttributes(node);
+}
+
+function isIgnorable(node) {
+	return isEmptyDiv(node) || isEmptySpan(node)
+}
+
 function isEmptyDiv(node) {
-	return node["#name"] === "div" && !isNode(node) && !hasAttributes(node)
+	return node["#name"] === "div" && isEmpty(node)
+}
+
+function isEmptySpan(node) {
+	return node["#name"] === "span" && isEmpty(node)
 }
 
 function isImage(node) {
@@ -269,7 +281,7 @@ function parseNode(node, images) {
 
 	if (isHorizontalLine(node)) return [horizontalLine()]
 
-	if(isEmptyDiv(node)) return []
+	if(isIgnorable(node)) return []
 
 	throw new Error("Unknown node type" + JSON.stringify(node))
 }
