@@ -112,7 +112,7 @@ async function createAssetFromEvernoteResource(resource) {
 		uploadId: upload.sys.id,
 		contentType:
 		mime,
-		fileName,
+		fileName: fileName || 'default-filename.jpg',
 		assetId: resourceGuid,
 		title: resourceGuid,
 		description,
