@@ -36,7 +36,7 @@ async function note2post() {
 	const notebook = await findNotebook("Blog")
 	const tags = await findTags(notebook)
 
-	const id = 'f8e6a7e0-3fdf-4555-84fb-f72668066c88'
+	const id = '0e0bc924-9a80-45a9-8e4e-a052306b652a'
 
 	await createNotes([id], tags)
 
