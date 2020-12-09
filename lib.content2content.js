@@ -174,8 +174,17 @@ function link(node) {
 	};
 }
 
+function isBold(node) {
+	return node["#name"] === "b"
+}
+
 function isInline(node) {
-	return isText(node) || isLink(node) || isNewline(node) || isTodo(node)
+	return isText(node) || isLink(node) || isNewline(node) || isTodo(node) || isBold(node)
+}
+
+function parseBold(node) {
+	if (!node.$$ || node.$$.length !== 1 || !isText(node.$$[0])) throw new Error("we don't support weird <b> yet")
+	return text(node.$$[0]);
 }
 
 function parseInline(node) {
@@ -183,6 +192,7 @@ function parseInline(node) {
 	if (isLink(node)) return link(node)
 	if (isNewline(node)) return inlineNewline(node)
 	if (isTodo(node)) return todo(node)
+	if (isBold(node)) return parseBold(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
 }
 

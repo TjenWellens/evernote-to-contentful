@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+
+<en-note>
+	<div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/8475bbaf-a549-4071-b048-7d60974d823c/8475bbaf-a549-4071-b048-7d60974d823c/"
+			   style="color: rgb(105, 170, 53);">Book: Antifragile - Nicolas Taleb
+			</a>
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/60a23141-da26-48dd-94ed-bb5ee1135162/60a23141-da26-48dd-94ed-bb5ee1135162/"
+			   style="color: rgb(105, 170, 53);">Paper: Resilience Engineering: Learning to Embrace Failure - Acm Queue
+			</a>
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/"
+			   style="color: rgb(105, 170, 53);">
+				<b>Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis</b>
+			</a>
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/845bf4a3-2a85-453e-bb69-ccdd6561cf3e/845bf4a3-2a85-453e-bb69-ccdd6561cf3e/"
+			   style="color: rgb(105, 170, 53);">
+				<b>Book: Continuous Delivery - Jez Humble, David Farley</b>
+			</a>
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/bec1565e-8251-4649-bec6-ac632767160b/bec1565e-8251-4649-bec6-ac632767160b/"
+			   style="color: rgb(105, 170, 53);">
+				<b>Paper: Online Experimentation at Microsoft - Kohavi, Crook, Longbotham</b>
+			</a>
+		</div>
+		<div><en-todo checked="false"/>Paper: Standis Group Study Reported at XP2002 by Jim Johnson, Chairman
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/5b54fd90-67fa-40fe-ac33-f7aee4d7a8da/5b54fd90-67fa-40fe-ac33-f7aee4d7a8da/"
+			   style="color: rgb(105, 170, 53);">Book: Sprint - Jake Knapp, John Zeratsky, Brad Kowitz
+			</a>
+		</div>
+		<div>
+			<en-todo checked="false"/>
+			<a href="evernote:///view/30809684/s230/8a1392ea-88ac-49b9-8fc3-2630ade6c466/8a1392ea-88ac-49b9-8fc3-2630ade6c466/"
+			   style="color: rgb(105, 170, 53);">Video: The Design Sprint - Google I/O 2014
+			</a>
+		</div>
+		<table border="0" style="background-color: rgb(212, 221, 229);" width="100%">
+			<colgroup>
+				<col/>
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>
+						<h1>[notes] Video: The Future of Software Engineering - Mary Poppendieck</h1>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>Video: The Future of Software Engineering - Mary Poppendieck</div>
+		<div>https://www.youtube.com/watch?v=6K4ljFZWgW8</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>1) scale out</div>
+		<div>more servers</div>
+		<div>CAP theorem</div>
+		<div>less communication</div>
+		<div>autonomous teams</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>2) infrastructure as code</div>
+		<div>conway&apos;s law: org structure == architecture</div>
+		<div>autonomous teams: independent deployment</div>
+		<div>ops: self-service</div>
+		<div>there is a cloud in your future</div>
+		<div>cheaper</div>
+		<div>more stable</div>
+		<div>more secure</div>
+		<div>more expandable</div>
+		<div>infrastructure as code</div>
+		<div>containers</div>
+		<div>serverless = event-driven</div>
+		<div>software-defined-networks</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>3) The New Technology Stack</div>
+		<div>dependency problem</div>
+		<div>
+			<en-media hash="e462e6921b3ddf4cc0108b9ae99dc8a4" type="image/png" width="2598"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>api &gt; db</div>
+		<div>
+			<en-media hash="96b5ecb73ab206115f4c3e58173e3dfd" type="image/png" width="2500"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>big data</div>
+		<div>
+			<en-media hash="e994dbd5e3e547e746175d348114b2c7" type="image/png" width="2464"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>resilience engineering</div>
+		<div>
+			<en-media hash="8c523d4bc4024db051050afaaa59109c" type="image/png" width="2522"/>
+		</div>
+		<div>Book: Antifragile - Nicolas Taleb</div>
+		<div>Resilience Engineering: Learning to Embrace Failure - Acm Queue, September 2012</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<en-media hash="1dcdc995a9557dc385bded79d11000cd" type="image/png" width="2524"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>===</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Devops</div>
+		<div>
+			<en-media hash="5749764d680556413185835da2f26b98" type="image/png" width="2628"/>
+		</div>
+		<div>Book: The Devops Handbook</div>
+		<div>Flow</div>
+		<div>Feedback</div>
+		<div>Experimentation &amp; Learning</div>
+		<div>
+			<br/>
+		</div>
+		<div>1) Flow</div>
+		<div>
+			<en-media hash="661db2fa92f511ccda0c1ec8277b32a4" type="image/png" width="2646"/>
+		</div>
+		<div>Book: Continuous Delivery - Jez Humble, David Farley</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>deploy all the time</div>
+		<div>release is flipping the switch</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>2) Feedback</div>
+		<div>
+			<en-media hash="e55e8e18a084d96d31a310f26ddd5dcf" type="image/png" width="2318"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<en-media hash="29711473a3b14c3a572dc63c400e2dfb" type="image/png" width="2586"/>
+		</div>
+		<div>Paper: Online Experimentation at Microsoft - Kohavi, Crook, Longbotham</div>
+		<div>Paper: Knowledge Discovery &amp; Data Mining - exp-platform.com/expMicrosoft.aspx</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<en-media hash="cbfe4856951a2112504e9f206d5bc0af" type="image/png" width="2660"/>
+		</div>
+		<div>Paper: Standis Group Study Reported at XP2002 by Jim Johnson, Chairman</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<a href="evernote:///view/30809684/s230/a6439a7d-5465-4f6f-b873-8f0b29714ef0/a6439a7d-5465-4f6f-b873-8f0b29714ef0/"
+			   style="color: rgb(105, 170, 53);">Model: Problem Solving Teams
+			</a>
+		</div>
+		<div>
+			<en-media hash="88693bde062f94d84888eac6e5392f86" type="image/png" width="2488"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>3) Experimentation &amp; Learning</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<en-media hash="91646394a8f82d4cd37c0309101b29bd" type="image/png" width="2612"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<ul>
+			<li>
+				<div>start with signals, not requirements</div>
+			</li>
+			<li>
+				<div>have a problem statement, not features</div>
+			</li>
+			<li>
+				<div>plan with hypotheses, not estimates</div>
+			</li>
+		</ul>
+		<div>if you have good problem solving teams, what good are estimates</div>
+		<div>within constraints</div>
+		<div>here is my constraints</div>
+		<div>here is my problem</div>
+		<div>experiments around a hypothesis, not backlog of stories</div>
+		<div>analysis and conclusion, not guesses</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<a href="evernote:///view/30809684/s230/d0e9d24c-9a39-4fa6-8e6f-0f8d22652149/d0e9d24c-9a39-4fa6-8e6f-0f8d22652149/"
+			   style="color: rgb(105, 170, 53);">Model: Design Sprint
+			</a>
+		</div>
+		<div>The hard part is:</div>
+		<div>What problems are we gonna solve?</div>
+		<div>
+			<en-media hash="d686bb807f87c6fc4417ced06f69422c" type="image/png" width="2638"/>
+		</div>
+		<div>Book: Sprint - Jake Knapp</div>
+		<div>prototype and test any idea in 5 days</div>
+		<div>before actually coding</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Video: Design Sprint Google IO 2014</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<a href="evernote:///view/30809684/s230/ec0bc2dd-3545-4225-a4aa-446445251655/ec0bc2dd-3545-4225-a4aa-446445251655/"
+			   style="color: rgb(105, 170, 53);">Model: Idea Generation
+			</a>
+		</div>
+		<div>idea generation (Tuesday)</div>
+		<div>
+			<en-media hash="7ec0e2ad3ade1d59bf08f44831f3e16c" type="image/png" width="2580"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Conformity Bias</div>
+		<div>
+			<en-media hash="35366ee3aefd435caba0fe2559f5e314" type="image/png" width="2656"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Wednesday: they vote</div>
+		<div>-&gt; don&apos;t like</div>
+		<div>-&gt; needs majority</div>
+		<div>-&gt; Attract people to ideas</div>
+		<div>if you can attract a few ppl to an idea</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>===</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>SUMMARY</div>
+		<div>
+			<en-media hash="c886d5c13c0ac8e35b86352e79e7dea8" type="image/png" width="2638"/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>===</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Q&amp;A</div>
+		<div>Site:
+			<a href="http://www.poppendieck.com/">www.poppendieck.com</a>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>Trend away from monolith and towards distributed systems.</div>
+		<div>Try and solve problems they don&apos;t have.</div>
+		<div>Over-engineer solutions.</div>
+		<div>-&gt; Speed of learning</div>
+		<div>-&gt; Need to migrate</div>
+		<div>-&gt; Find your own solution</div>
+		<div>hadoop took 8 years</div>
+		<div>amazon took 5 years</div>
+		<div>if you wanna do it in 6 months, you&apos;re crazy</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>What do you think about the role of regulation systems like laws and government in the cloud federated
+			world.
+		</div>
+		<div>-&gt; there will be regulations</div>
+		<div>-&gt; cloud ppl better figure it out</div>
+		<div>-&gt; cloud can be in many different places, and the location where will change rules</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<table border="0" style="background-color: rgb(212, 221, 229);" width="100%">
+			<colgroup>
+				<col/>
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>
+						<h1>Video: The Future of Software Engineering - Mary Poppendieck</h1>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<br/>
+		</div>
+		<div>
+			<br/>
+		</div>
+		<div style="font-size: 16px; min-width: 100%;">
+			<div style="font-size: inherit; vertical-align: baseline; background-color: transparent;">
+				<div style="vertical-align: baseline; background-color: transparent; font-size: 14px;">
+					<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+						<div style="margin: 0px; border: 0px; font-size: inherit; vertical-align: baseline; z-index: 200; width: 100%; position: relative; padding: 3em;">
+							<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+								<div style="margin: 0px; border: 0px; font-size: inherit; vertical-align: baseline; position: relative; overflow: hidden; padding: 0px 3em;">
+									<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+										<div style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 120%;">
+											<span style="font-size: 120%; color: rgb(73, 88, 101); font-family: Soleil, Cambria, Georgia, serif; font-weight: bold; line-height: 1.25;">
+												GOTO 2016 • The Future of Software Engineering • Mary Poppendieck
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<a href="https://www.youtube.com/watch%3Fv%3D6K4ljFZWgW8"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												https://www.youtube.com/watch?v=6K4ljFZWgW8
+											</a>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<a href="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												GOTO Conferences
+											</a>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												58,251 views views
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												Published on Nov 26, 2016
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; display: inline-flex;">
+											<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+												<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+													<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; position: relative;">
+														<div>
+															<span style="font-size: 14px;">
+																<en-media hash="b47dbaca52d8bcb22295cdd5914bc31a"
+																		  style="margin: 0px; padding: 0px; font: inherit; vertical-align: baseline; max-width: 640px; border: 1px solid rgb(231, 231, 231);"
+																		  type="image/jpeg" width="480"/>
+															</span>
+														</div>
+														<div style="margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background-size: 100px 71px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACNCAYAAADyzTVBAAAACXBIWXMAAAsTAAALEwEAmpwYAAA59GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wMy0xNlQxNjo1OTo0NS0wNzowMDwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTA1LTIyVDA3OjM3OjQ0LTA3OjAwPC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxNS0wNS0yMlQwNzozNzo0NC0wNzowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgICAgPHBob3Rvc2hvcDpDb2xvck1vZGU+MzwvcGhvdG9zaG9wOkNvbG9yTW9kZT4KICAgICAgICAgPHhtcE1NOkluc3RhbmNlSUQ+eG1wLmlpZDo3NzZhODY3MC01YzU5LTRkMDMtODI2ZC1hODZkOTc1OThlNzA8L3htcE1NOkluc3RhbmNlSUQ+CiAgICAgICAgIDx4bXBNTTpEb2N1bWVudElEPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyYjg4MjRiMS00MTE4LTExNzgtYmYwMS1kOTVmM2RhYWFhNGY8L3htcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+eG1wLmRpZDpkODQxZmFkZi0xNmQxLTQ2YzItYjBmOC1kNjI1Nzc4ZTI0OGQ8L3htcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkhpc3Rvcnk+CiAgICAgICAgICAgIDxyZGY6U2VxPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmFjdGlvbj5jcmVhdGVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6ZDg0MWZhZGYtMTZkMS00NmMyLWIwZjgtZDYyNTc3OGUyNDhkPC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE1LTAzLTE2VDE2OjU5OjQ1LTA3OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPnNhdmVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6Nzc2YTg2NzAtNWM1OS00ZDAzLTgyNmQtYTg2ZDk3NTk4ZTcwPC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE1LTA1LTIyVDA3OjM3OjQ0LTA3OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmNoYW5nZWQ+Lzwvc3RFdnQ6Y2hhbmdlZD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjAwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjE0MTwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+cPuivwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAANuklEQVR42uydf3BV1YHHP3kJJCEJ4Tf+wibESCcNrCJItqArg91Wmgl2wY5oydSVCQgxBNuypTiR0Y11Fl2onaS6AsqMM2WmrUthd7GdlWlLZQbRtTOGRXARJdAIxPx6SV6S95K3f9xzzU1MHi+P95L34/uZuXN/nXte8r33e8859/xK8vv9xDFJQLJZUsyS7FjSgVSzTjHrcY59+1wSkAX4zbFMwAukARMcvzXRrHvN9Vlm328WO55koC+E/ycZ6AA8ZhvABXSaJdnsdwA95nwv4DbHfWbbjqfb/B1uE7bd7HeasB4TptMc95n4vGZt7/fF6wOUEkV/iwsYbx5Ae5kKZAOTzEM5xexnmwd3otnOAjLM/zPePOQpZp08xL5tFhciGPzGBF5jCntxGqXH7NtLD9AKtBnjtRsjtgDN5lyH2W8y57vN0mXiHfs37CikIBnAV4Dp5oHPBWaZY9eZ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); background-position: center center; background-repeat: no-repeat no-repeat;"/>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+									</div>
+								</div>
+								<div style="margin:0px;padding:0px;border:0px;font:inherit;vertical-align:baseline;border-top:1px solid rgb(172, 178, 184);clear:both;"/>
+								<div style="margin: 0px; border: 0px; font-size: inherit; vertical-align: baseline; position: relative; overflow: hidden; padding: 0px 3em;">
+									<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 120%;">
+											<span style="font-size: 120%; color: rgb(73, 88, 101); font-family: Soleil, Cambria, Georgia, serif; font-weight: bold; line-height: 1.25;">
+												Description
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												This presentation was recorded at GOTO Berlin 2016.
+											</span>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23gotocon"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#gotocon
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23gotober"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#gotober
+											</a>
+											<a href="https://www.youtube.com/redirect%3Fredir_token%3DTl5XRR9FqiizcXNGFFQb_czp8oV8MTU1NDcyMTg2MkAxNTU0NjM1NDYy%26event%3Dvideo_description%26v%3D6K4ljFZWgW8%26q%3Dhttp://gotober.com"
+											   rel="nofollow"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;"
+											   target="_blank">http://gotober.com
+											</a>
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												Mary Poppendieck - Author of &apos;The Lean Mindset: Ask the Right
+												Questions&apos; ABSTRACT 2020 used to be far in the future. Today it’s
+												four years away. We no longer need to guess what breakthroughs await us
+												in that magic year, the future is hiding in plain sight: a reliable
+												Cloud, industry-disrupting Platforms, massive data [...] Download slides
+												and read the full abstract here:
+											</span>
+											<a href="https://www.youtube.com/redirect%3Fredir_token%3DTl5XRR9FqiizcXNGFFQb_czp8oV8MTU1NDcyMTg2MkAxNTU0NjM1NDYy%26event%3Dvideo_description%26v%3D6K4ljFZWgW8%26q%3Dhttps://gotocon.com/berlin-2016/presentations/show_talk.jsp%3Foid%3D7916"
+											   rel="nofollow"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;"
+											   target="_blank">https://gotocon.com/berlin-2016/prese...
+											</a>
+											<a href="https://www.youtube.com/redirect%3Fredir_token%3DTl5XRR9FqiizcXNGFFQb_czp8oV8MTU1NDcyMTg2MkAxNTU0NjM1NDYy%26event%3Dvideo_description%26v%3D6K4ljFZWgW8%26q%3Dhttps://twitter.com/gotober"
+											   rel="nofollow"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;"
+											   target="_blank">https://twitter.com/gotober
+											</a>
+											<a href="https://www.youtube.com/redirect%3Fredir_token%3DTl5XRR9FqiizcXNGFFQb_czp8oV8MTU1NDcyMTg2MkAxNTU0NjM1NDYy%26event%3Dvideo_description%26v%3D6K4ljFZWgW8%26q%3Dhttps://www.facebook.com/GOTOConference"
+											   rel="nofollow"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;"
+											   target="_blank">https://www.facebook.com/GOTOConference
+											</a>
+											<a href="https://www.youtube.com/redirect%3Fredir_token%3DTl5XRR9FqiizcXNGFFQb_czp8oV8MTU1NDcyMTg2MkAxNTU0NjM1NDYy%26event%3Dvideo_description%26v%3D6K4ljFZWgW8%26q%3Dhttp://gotocon.com"
+											   rel="nofollow"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;"
+											   target="_blank">http://gotocon.com
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23ComputerScience"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#ComputerScience
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23disruption"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#disruption
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23cloud"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#cloud
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23IoT"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#IoT
+											</a>
+											<a href="https://www.youtube.com/results%3Fsearch_query%3D%23futurology"
+											   style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(19, 95, 175); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												#futurology
+											</a>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+									</div>
+								</div>
+								<div style="margin:0px;padding:0px;border:0px;font:inherit;vertical-align:baseline;border-top:1px solid rgb(172, 178, 184);clear:both;"/>
+								<div style="margin: 0px; border: 0px; font-size: inherit; vertical-align: baseline; position: relative; overflow: hidden; padding: 0px 3em;">
+									<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 120%;">
+											<span style="font-size: 120%; color: rgb(73, 88, 101); font-family: Soleil, Cambria, Georgia, serif; font-weight: bold; line-height: 1.25;">
+												Top Comments
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Steve Bar Yakov Gindi
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| at 42:15 &quot;We need to move from Delivery Teams to Problem Solving
+												Teams&quot; Best MOTTO for the year!
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Alex Ellis
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| Looks like an interesting talk. Anyone else notice that her arm keeps
+												disappearing?
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Hong
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| if we can see the slides more often, it will be great, or at least put
+												slides on half of the screen, what is the point of showing the speaker
+												all the time with a green background?
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Aaron Hawley
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| GE sold off Predix. Maybe that&apos;s not a failure, and maybe Amazon
+												has monopoly power in Cloud, but the sense was that it was a failure.
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												1 month ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Ricardo S
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| amazing talk ...&nbsp;a lot to think about...
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												M Rizky
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| very inspirational talk - need a lot of things to learn I guess
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												6 months ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Arseni Shylau
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| wasn&apos;t it Scale Up moves to Scale Out (in the first half of the
+												speech) and then in the final summary slide Scale Out &gt;&gt; Scale Up?
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Master Miscellaneous
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| Great talk. Really enjoyed listening.
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												2 years ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Bryon Lape
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| Stimulus, Response...I swear some guy named Mills came up with that in
+												the 70s.....
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												1 year ago
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.5;">
+												Dan Shepherd
+											</span>
+											<span style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												| With regard to the cloud based architectures. The main problems I can
+												see is that sometimes the API&apos;s can change or even go out of
+												business - I had that with using Parse.com in a number of mobile
+												applications, all of a sudden the back end had to be replaced for a
+												number of applications not through my doing. Luckily they open sourced
+												their system, so I was able to just host it elsewhere and configure it
+												again, but this is not really ideal. The other thing is cost, it may be
+												cheaper to use cloud services but these are normally rental rather than
+												one off purchases so for smaller businesses this can be more expensive
+												in the long term - so there is still dependency - its dependency on the
+												fat cat, i.e google or amazon etc. What happens if you have a free
+												application that by fortune becomes very popular? All of a sudden your
+												costs go up because you have to pay for the cloud services to keep up
+												with the demand, but still your application doesn&apos;t generate any
+												revenue - what you are left with is software that generates dept.
+											</span>
+										</div>
+										<div style="margin: 0px; padding: 0px; border: 0px; font-size: inherit; vertical-align: baseline;">
+											<span style="font-size: 14px; color: rgb(73, 88, 101); font-family: Soleil, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 1.5;">
+												1 year ago (edited)
+											</span>
+										</div>
+										<div>
+											<br/>
+										</div>
+										<div>
+											<br/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<br/>
+		</div>
+	</div>
+</en-note>

@@ -700,3 +700,71 @@ describe('tables', () => {
 	})
 })
 
+describe('<b>', ()=>{
+	it('should treat it like any text', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<b>Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis</b>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+	it('should work inline', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<a href="evernote:///view/30809684/s230/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/"
+   style="color: rgb(105, 170, 53);">
+	<b>Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis</b>
+</a>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis"
+							}
+						],
+						"data": {
+							"uri": "evernote:///view/30809684/s230/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/"
+						},
+						"nodeType": "hyperlink"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+})
+
