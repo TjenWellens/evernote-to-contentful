@@ -284,7 +284,11 @@ function parseNode(node, images) {
 
 async function content2content(noteContent, images) {
 	const parsedNodeContent = await parser.parseStringPromise(noteContent)
-	return parsedNodeContent["en-note"].$$.flatMap(node => parseNode(node, images))
+	const content = parsedNodeContent["en-note"];
+	if(!content.$$) {
+		return []
+	}
+	return content.$$.flatMap(node => parseNode(node, images))
 }
 
 function richText(content) {
