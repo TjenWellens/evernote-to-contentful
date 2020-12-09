@@ -57,20 +57,16 @@ function hasAttributes(node) {
 	return node.$
 }
 
-function isEmpty(node) {
-	return !isNode(node) && !hasAttributes(node);
-}
-
 function isIgnorable(node) {
 	return isEmptyDiv(node) || isEmptySpan(node)
 }
 
 function isEmptyDiv(node) {
-	return node["#name"] === "div" && isEmpty(node)
+	return node["#name"] === "div" && !isNode(node) && !hasAttributes(node)
 }
 
 function isEmptySpan(node) {
-	return node["#name"] === "span" && isEmpty(node)
+	return node["#name"] === "span" && !isNode(node)
 }
 
 function isImage(node) {
