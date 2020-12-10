@@ -20,6 +20,14 @@ describe('real world cases should parse', () => {
 		expect(result).toEqual(JSON.parse(expectedContent))
 	})
 
+	test('check case dd05b0c8-9954-424c-a8a5-a3763ae5be6e', async () => {
+		const noteContent = fs.readFileSync(`${basePath}/note_dd05b0c8-9954-424c-a8a5-a3763ae5be6e_content.xml`)
+		const expectedContent = fs.readFileSync(`${basePath}/note_dd05b0c8-9954-424c-a8a5-a3763ae5be6e_expected.json`)
+		getAssetIdForHash.mockImplementation(() => '931c5646-2f71-4646-b32d-78f6b5c61fc8')
+		const result = await content2content(noteContent, images)
+		expect(result).toEqual(JSON.parse(expectedContent))
+	})
+
 	test.each([
 		['3ed9cba4-96c2-4791-8c18-4bad86a8f09f'],
 		['f8e6a7e0-3fdf-4555-84fb-f72668066c88'],
@@ -31,7 +39,6 @@ describe('real world cases should parse', () => {
 		['5dc19a5e-12d8-47b4-9bac-dec0d8fc65e3'],
 		['eef32f08-24e5-4640-b791-449dba4ac52e'],
 		['e862e475-4415-4f9d-ab5f-c7c2fa91fb9b'],
-		['818228e3-3bf4-4b51-b48d-6c399b01e0ce'],
 	])('parse case %s', async (id) => {
 		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
 		const result = await content2content(noteContent, images)

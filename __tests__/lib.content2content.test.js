@@ -510,7 +510,31 @@ describe('should transform todos', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
-
+	it('todo with inline elements as content', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<en-todo checked="true"/>
+<span style="font-weight: bold;">Rules of play </span>
+</div>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "[ ] Rules of play",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 })
 
 it('should transform horizontal lines', async () => {
@@ -618,18 +642,24 @@ describe('should transform span', () => {
 
 		const entryContent = [
 			{
-				"data": {
-					"target": {
-						"sys": {
-							type: 'Link',
-							linkType: 'Asset',
-							id: assetId
+				"content": [
+					{
+						"content": [],
+						"data": {
+							"target": {
+								"sys": {
+									"id": "3n1RaUimNYsv0wGAtcEPn0",
+									"linkType": "Asset",
+									"type": "Link"
+								}
+							}
 						},
+						"nodeType": "embedded-asset-block"
 					}
-				},
-				"content": [],
-				"nodeType": "embedded-asset-block"
-			},
+				],
+				"data": {},
+				"nodeType": "paragraph"
+			}
 		]
 		const images = {
 			[hash]: assetId

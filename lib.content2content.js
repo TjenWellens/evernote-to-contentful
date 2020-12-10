@@ -135,10 +135,6 @@ function todo(node) {
 	return _text(" [ ] ");
 }
 
-function isTodoNode(node) {
-	return isNode(node) && node.$$.some(isTodo)
-}
-
 function isHorizontalLine(node) {
 	return node["#name"] === "hr";
 }
@@ -168,12 +164,12 @@ function isLink(node) {
 	return node["#name"] === "a";
 }
 
-function link(node) {
+function link(node, images) {
 	return {
 		"data": {
 			"uri": node.$.href
 		},
-		"content": _parseInlineNodeContent(node),
+		"content": _parseInlineNodeContent(node, images),
 		"nodeType": "hyperlink"
 	};
 }
@@ -183,21 +179,23 @@ function isBold(node) {
 }
 
 function isInline(node) {
-	return isText(node) || isLink(node) || isNewline(node) || isTodo(node) || isBold(node)
+	return isText(node) || isLink(node) || isNewline(node) || isTodo(node) || isBold(node) || isSpan(node)
 }
 
 function isFont(node) {
 	return node["#name"] === "font";
 }
 
-function parseInline(node) {
+function parseInline(node, images) {
+	if (isIgnorable(node)) return []
 	if (isText(node)) return [text(node)]
-	if (isLink(node)) return [link(node)]
+	if (isLink(node)) return [link(node, images)]
 	if (isNewline(node)) return [inlineNewline(node)]
 	if (isTodo(node)) return [todo(node)]
-	if (isBold(node)) return _parseInlineNodeContent(node)
-	if (isSpan(node)) return _parseInlineNodeContent(node)
-	if (isFont(node)) return _parseInlineNodeContent(node)
+	if (isBold(node)) return _parseInlineNodeContent(node, images)
+	if (isSpan(node)) return _parseInlineNodeContent(node, images)
+	if (isFont(node)) return _parseInlineNodeContent(node, images)
+	if (isImage(node)) return [image(node, images)]
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
 }
 
@@ -369,8 +367,8 @@ function squashInlineTextAndCleanupWhitespace(children) {
 	}
 }
 
-function _parseInlineNodeContent(node) {
-	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.flatMap(parseInline));
+function _parseInlineNodeContent(node, images) {
+	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.flatMap(node => parseInline(node, images)));
 
 	return contentSquashed
 
@@ -414,10 +412,10 @@ function _parseInlineNodeContent(node) {
 	}
 }
 
-function parseInlineNode(node) {
+function parseInlineNode(node, images) {
 	return {
 		"data": {},
-		"content": _parseInlineNodeContent(node),
+		"content": _parseInlineNodeContent(node, images),
 		"nodeType": "paragraph"
 	}
 }
@@ -440,9 +438,7 @@ function parseTable(node, images) {
 function parseNode(node, images) {
 	if (isTable(node)) return parseTable(node, images)
 
-	if (isInlineNode(node)) return [parseInlineNode(node)]
-
-	if (isTodoNode(node)) return [todo(node)]
+	if (isInlineNode(node)) return [parseInlineNode(node, images)]
 
 	if (isImageNode(node)) {
 		// evernote always adds a newline between text and image
