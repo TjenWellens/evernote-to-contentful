@@ -1,4 +1,5 @@
 const xml2js = require('xml2js');
+const {yankImageToRoot} = require("./lib.content2content.yankImageToRoot");
 const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
 
 const parser = new xml2js.Parser({
@@ -413,11 +414,11 @@ function _parseInlineNodeContent(node, images) {
 }
 
 function parseInlineNode(node, images) {
-	return {
+	return yankImageToRoot({
 		"data": {},
 		"content": _parseInlineNodeContent(node, images),
 		"nodeType": "paragraph"
-	}
+	})
 }
 
 function isTable(node, images) {
