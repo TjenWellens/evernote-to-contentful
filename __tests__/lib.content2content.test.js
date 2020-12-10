@@ -810,3 +810,70 @@ it('should work with span', async () => {
 	]
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
+
+describe('font', () => {
+
+	it('ignore font tag when directly in div', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<font style="font-size: 36px;">Books</font>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "Books",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+	it('ignore nested font tag', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><a shape="rect"
+href="evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+target="_blank"><font style="font-size: 36px;">Books</font></a>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {
+							"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+						},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Books",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "hyperlink"
+					},
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+})

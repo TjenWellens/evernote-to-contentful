@@ -191,6 +191,10 @@ function parseBold(node) {
 	return text(node.$$[0]);
 }
 
+function isFont(node) {
+	return node["#name"] === "font";
+}
+
 function parseInline(node) {
 	if (isText(node)) return [text(node)]
 	if (isLink(node)) return [link(node)]
@@ -198,6 +202,7 @@ function parseInline(node) {
 	if (isTodo(node)) return [todo(node)]
 	if (isBold(node)) return [parseBold(node)]
 	if (isSpan(node)) return _parseInlineNodeContent(node)
+	if (isFont(node)) return _parseInlineNodeContent(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
 }
 
