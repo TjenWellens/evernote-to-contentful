@@ -3,7 +3,7 @@ function isImage(entry) {
 }
 
 function hasOneChild(entry) {
-	return entry.content && entry.content.length > 0;
+	return entry.content && entry.content.length === 1;
 }
 
 function getFirstChild(entry) {
