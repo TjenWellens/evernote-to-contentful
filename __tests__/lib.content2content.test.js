@@ -712,23 +712,17 @@ describe('should transform span', () => {
 
 		const entryContent = [
 			{
-				"content": [
-					{
-						"content": [],
-						"data": {
-							"target": {
-								"sys": {
-									"id": "3n1RaUimNYsv0wGAtcEPn0",
-									"linkType": "Asset",
-									"type": "Link"
-								}
-							}
-						},
-						"nodeType": "embedded-asset-block"
+				"content": [],
+				"data": {
+					"target": {
+						"sys": {
+							"id": "3n1RaUimNYsv0wGAtcEPn0",
+							"linkType": "Asset",
+							"type": "Link"
+						}
 					}
-				],
-				"data": {},
-				"nodeType": "paragraph"
+				},
+				"nodeType": "embedded-asset-block"
 			}
 		]
 		const images = {
