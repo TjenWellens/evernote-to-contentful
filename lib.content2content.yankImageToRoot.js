@@ -3,7 +3,7 @@ function isImage(entry) {
 }
 
 function hasChildren(entry) {
-	return entry.content;
+	return entry.content && entry.content.length > 0;
 }
 
 function yankImageToRoot(entry) {

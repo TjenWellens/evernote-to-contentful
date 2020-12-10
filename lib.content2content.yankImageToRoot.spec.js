@@ -60,3 +60,20 @@ it('should work with text entry', () => {
 	}
 	expect(yankImageToRoot(input)).toEqual(input)
 })
+
+it('should work with image entry', () => {
+	const input = {
+		"content": [],
+		"data": {
+			"target": {
+				"sys": {
+					"id": "3n1RaUimNYsv0wGAtcEPn0",
+					"linkType": "Asset",
+					"type": "Link"
+				}
+			}
+		},
+		"nodeType": "embedded-asset-block"
+	}
+	expect(yankImageToRoot(input)).toEqual(input)
+})
