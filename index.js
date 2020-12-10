@@ -14,6 +14,7 @@ async function createNotes(noteIds, tags) {
 	let failed = 0
 	for (const id of noteIds) {
 		const note = await findNoteById(id)
+		console.log(`creating note... "${note.title}" [${note.guid}]`)
 		await createEntryFromNote(note, tags)
 			.then(entry => {
 				console.log(`note created: "${note.title}" [${note.guid}]`)
