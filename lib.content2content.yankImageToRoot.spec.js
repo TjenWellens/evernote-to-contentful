@@ -15,3 +15,38 @@ it('should return the same when no image', () => {
 	}
 	expect(yankImageToRoot(input)).toEqual(input)
 })
+
+it('should yank image one level', () => {
+	const input = {
+		"content": [
+			{
+				"content": [],
+				"data": {
+					"target": {
+						"sys": {
+							"id": "2pWcZnigT6iUOMDJlEZyLr",
+							"linkType": "Asset",
+							"type": "Link"
+						}
+					}
+				},
+				"nodeType": "embedded-asset-block"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	}
+	expect(yankImageToRoot(input)).toEqual({
+		"content": [],
+		"data": {
+			"target": {
+				"sys": {
+					"id": "2pWcZnigT6iUOMDJlEZyLr",
+					"linkType": "Asset",
+					"type": "Link"
+				}
+			}
+		},
+		"nodeType": "embedded-asset-block"
+	})
+})
