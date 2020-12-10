@@ -29,6 +29,9 @@ describe('real world cases should parse', () => {
 		['690ab66a-dc65-4c46-a7f7-932d85566942'],
 		['b5c91703-724f-4174-83a0-5fa8f99fdd9d'],
 		['5dc19a5e-12d8-47b4-9bac-dec0d8fc65e3'],
+		['eef32f08-24e5-4640-b791-449dba4ac52e'],
+		['e862e475-4415-4f9d-ab5f-c7c2fa91fb9b'],
+		['818228e3-3bf4-4b51-b48d-6c399b01e0ce'],
 	])('parse case %s', async (id) => {
 		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
 		const result = await content2content(noteContent, images)

@@ -766,6 +766,30 @@ describe('<b>', ()=>{
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
 	})
+	it('should work with inline stuff in it', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<b>
+<font style="font-size: 36px;">Books</font>
+</b>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					_text("Books")
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
 })
 
 it('should work with span', async () => {

@@ -186,11 +186,6 @@ function isInline(node) {
 	return isText(node) || isLink(node) || isNewline(node) || isTodo(node) || isBold(node)
 }
 
-function parseBold(node) {
-	if (!node.$$ || node.$$.length !== 1 || !isText(node.$$[0])) throw new Error("we don't support weird <b> yet")
-	return text(node.$$[0]);
-}
-
 function isFont(node) {
 	return node["#name"] === "font";
 }
@@ -200,7 +195,7 @@ function parseInline(node) {
 	if (isLink(node)) return [link(node)]
 	if (isNewline(node)) return [inlineNewline(node)]
 	if (isTodo(node)) return [todo(node)]
-	if (isBold(node)) return [parseBold(node)]
+	if (isBold(node)) return _parseInlineNodeContent(node)
 	if (isSpan(node)) return _parseInlineNodeContent(node)
 	if (isFont(node)) return _parseInlineNodeContent(node)
 	throw new Error('Unknown inline node type ' + JSON.stringify(node))
