@@ -3,9 +3,8 @@ function isImage(entry) {
 }
 
 function yankImageToRoot(entry) {
-	const child = entry.content[0];
-	if (isImage(child))
-		return child
+	if (entry.content && isImage(entry.content[0]))
+		return entry.content[0]
 	return entry
 }
 

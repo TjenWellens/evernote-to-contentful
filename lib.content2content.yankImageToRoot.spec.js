@@ -50,3 +50,13 @@ it('should yank image one level', () => {
 		"nodeType": "embedded-asset-block"
 	})
 })
+
+it('should work with text entry', () => {
+	const input = {
+		"data": {},
+		"marks": [],
+		"value": "Here is an image",
+		"nodeType": "text"
+	}
+	expect(yankImageToRoot(input)).toEqual(input)
+})
