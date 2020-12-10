@@ -28,6 +28,14 @@ describe('real world cases should parse', () => {
 		expect(result).toEqual(JSON.parse(expectedContent))
 	})
 
+	test('check case 3ed9cba4-96c2-4791-8c18-4bad86a8f09f', async () => {
+		const noteContent = fs.readFileSync(`${basePath}/note_3ed9cba4-96c2-4791-8c18-4bad86a8f09f_content.xml`)
+		const expectedContent = fs.readFileSync(`${basePath}/note_3ed9cba4-96c2-4791-8c18-4bad86a8f09f_expected.json`)
+		getAssetIdForHash.mockImplementation(() => 'foo-asset-id')
+		const result = await content2content(noteContent, images)
+		expect(result).toEqual(JSON.parse(expectedContent))
+	})
+
 	test.each([
 		['3ed9cba4-96c2-4791-8c18-4bad86a8f09f'],
 		['f8e6a7e0-3fdf-4555-84fb-f72668066c88'],

@@ -284,6 +284,76 @@ describe('should transform images', () => {
 
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
 	})
+	it('nested inline images should go to root', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>Digital Fluency Model</div>
+<div><span><en-media hash="cfee0b80d905f0311a59e39dee9b3af1" type="image/png"/></span></div>
+<div><br/></div>
+<div>How do you adopt digital capabilities as an organisation</div>
+</en-note>`
+		const hash = "cfee0b80d905f0311a59e39dee9b3af1"
+		const assetId = "2pWcZnigT6iUOMDJlEZyLr";
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "Digital Fluency Model",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {
+					"target": {
+						"sys": {
+							"type": "Link",
+							"linkType": "Asset",
+							"id": "2pWcZnigT6iUOMDJlEZyLr"
+						}
+					}
+				},
+				"content": [],
+				"nodeType": "embedded-asset-block"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "How do you adopt digital capabilities as an organisation",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+
+		const images = {
+			[hash]: assetId,
+		}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
 })
 
 describe('should transform list', () => {
