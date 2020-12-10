@@ -1,6 +1,11 @@
+function isImage(entry) {
+	return entry.nodeType === "embedded-asset-block";
+}
+
 function yankImageToRoot(entry) {
-	if(entry.content[0].nodeType === "embedded-asset-block")
-		return entry.content[0]
+	const child = entry.content[0];
+	if (isImage(child))
+		return child
 	return entry
 }
 
