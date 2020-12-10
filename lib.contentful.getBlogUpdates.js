@@ -13,7 +13,7 @@ async function* getEntriesGenerator(preferredPageSize = 100) {
 			content_type: process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID,
 			select: 'sys.id,sys.updatedAt,fields.updateSequenceNum',
 			limit: preferredPageSize,
-			skip: page * entryCount()
+			skip: entryCount()
 		})
 		for (const entry of res.items) {
 			yield entry

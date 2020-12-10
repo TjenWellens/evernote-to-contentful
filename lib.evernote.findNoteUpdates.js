@@ -24,7 +24,7 @@ async function* getNotesGenerator(notebook, preferredPageSize = 100) {
 	let page = 0
 	let res
 	do {
-		res = await noteStore.findNotesMetadata(filter, page * entryCount(), preferredPageSize, spec)
+		res = await noteStore.findNotesMetadata(filter, entryCount(), preferredPageSize, spec)
 		for (const entry of res.notes) {
 			yield entry
 		}
