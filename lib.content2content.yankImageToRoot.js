@@ -2,13 +2,17 @@ function isImage(entry) {
 	return entry.nodeType === "embedded-asset-block";
 }
 
-function hasChildren(entry) {
+function hasOneChild(entry) {
 	return entry.content && entry.content.length > 0;
 }
 
+function getFirstChild(entry) {
+	return entry.content[0];
+}
+
 function yankImageToRoot(entry) {
-	if (hasChildren(entry) && isImage(entry.content[0]))
-		return entry.content[0]
+	if (hasOneChild(entry) && isImage(getFirstChild(entry)))
+		return getFirstChild(entry)
 	return entry
 }
 
