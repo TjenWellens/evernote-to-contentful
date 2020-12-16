@@ -45,19 +45,6 @@ describe('compareUpdates should', () => {
 	it('all notes to be stable', () => {
 		const updateSequenceNum = 500;
 		const id = "a";
-		const notes = [{id, updateSequenceNum: updateSequenceNum - 20}];
-		const posts = [{id, updateSequenceNum: updateSequenceNum}];
-		expect(compareUpdates(notes, posts)).toEqual({
-			stable: [id],
-			updated: [],
-			created: [],
-			removed: [],
-		})
-	})
-
-	it('all notes to be stable when the update number is the same', () => {
-		const updateSequenceNum = 500;
-		const id = "a";
 		const notes = [{id, updateSequenceNum: updateSequenceNum}];
 		const posts = [{id, updateSequenceNum: updateSequenceNum}];
 		expect(compareUpdates(notes, posts)).toEqual({

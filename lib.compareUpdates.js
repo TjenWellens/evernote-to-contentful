@@ -61,13 +61,17 @@ function sortToCategory(mergeItem) {
 	function updated(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && comparable(evernoteItem) > comparable(contentfulItem)
+		return evernoteItem && contentfulItem && !areEqualInUpdate(evernoteItem, contentfulItem)
+	}
+
+	function areEqualInUpdate(evernoteItem, contentfulItem) {
+		return comparable(evernoteItem) === comparable(contentfulItem);
 	}
 
 	function stable(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && comparable(evernoteItem) <= comparable(contentfulItem)
+		return evernoteItem && contentfulItem && areEqualInUpdate(evernoteItem, contentfulItem)
 	}
 }
 
