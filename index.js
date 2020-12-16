@@ -28,7 +28,6 @@ async function createNotes(noteIds, tags) {
 				stack: ${e.stack}
 				`)
 				fs.writeFileSync(`note_${id}_content.xml`, note.content)
-				process.exit(1)
 				failed++
 			})
 
