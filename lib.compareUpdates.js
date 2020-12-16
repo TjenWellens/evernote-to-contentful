@@ -88,10 +88,10 @@ function createReduceToIdsPerCategory(equallyUpdated) {
 	return reduceToIdsPerCategory
 }
 
-function compareUpdates(notes, posts) {
-	const merged = flattenArrayOnId([...notes.map(mark('evernote')), ...posts.map(mark('contentful'))])
+function compareUpdates(evernoteItems, contentfulItems, equallyUpdated) {
+	const merged = flattenArrayOnId([...evernoteItems.map(mark('evernote')), ...contentfulItems.map(mark('contentful'))])
 
-	return merged.reduce(createReduceToIdsPerCategory(notesAreEquallyUpdated), {
+	return merged.reduce(createReduceToIdsPerCategory(equallyUpdated), {
 		[CAT_STABLE]: [],
 		[CAT_UPDATED]: [],
 		[CAT_CREATED]: [],
@@ -103,8 +103,12 @@ function compareUpdates(notes, posts) {
 	}
 }
 
+function compareNoteUpdates(notes, posts) {
+	return compareUpdates(notes, posts, notesAreEquallyUpdated)
+}
+
 module.exports = {
-	compareUpdates,
+	compareUpdates: compareNoteUpdates,
 	createIdMap,
 	flattenArrayOnId,
 }
