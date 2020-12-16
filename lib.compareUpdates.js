@@ -31,6 +31,10 @@ function notesAreEquallyUpdated(evernoteItem, contentfulItem) {
 	return evernoteItem.updateSequenceNum === contentfulItem.updateSequenceNum;
 }
 
+function tagsAreEquallyUpdated(evernoteItem, contentfulItem) {
+	return evernoteItem.name === contentfulItem.name;
+}
+
 function sortToCategory(mergeItem, equallyUpdated) {
 	if (created(mergeItem.items)) return CAT_CREATED
 
@@ -107,8 +111,13 @@ function compareNoteUpdates(notes, posts) {
 	return compareUpdates(notes, posts, notesAreEquallyUpdated)
 }
 
+function compareTagUpdates(notes, posts) {
+	return compareUpdates(notes, posts, tagsAreEquallyUpdated)
+}
+
 module.exports = {
 	compareNoteUpdates,
+	compareTagUpdates,
 	createIdMap,
 	flattenArrayOnId,
 }
