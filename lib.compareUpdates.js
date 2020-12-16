@@ -108,7 +108,7 @@ function compareNoteUpdates(notes, posts) {
 }
 
 module.exports = {
-	compareUpdates: compareNoteUpdates,
+	compareNoteUpdates,
 	createIdMap,
 	flattenArrayOnId,
 }

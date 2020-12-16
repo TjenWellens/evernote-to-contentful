@@ -1,14 +1,14 @@
 const {flattenArrayOnId} = require("./lib.compareUpdates");
 const {createIdMap} = require("./lib.compareUpdates");
-const {compareUpdates} = require("./lib.compareUpdates");
+const {compareNoteUpdates} = require("./lib.compareUpdates");
 
-describe('compareUpdates should', () => {
+describe('compareNoteUpdates should', () => {
 	it('all notes to be new', () => {
 		const updateSequenceNum = 500;
 		const id = "a";
 		const notes = [{id, updateSequenceNum: updateSequenceNum}];
 		const posts = [];
-		expect(compareUpdates(notes, posts)).toEqual({
+		expect(compareNoteUpdates(notes, posts)).toEqual({
 			stable: [],
 			updated: [],
 			created: [id],
@@ -21,7 +21,7 @@ describe('compareUpdates should', () => {
 		const id = "a";
 		const notes = [];
 		const posts = [{id, updateSequenceNum: updateSequenceNum}];
-		expect(compareUpdates(notes, posts)).toEqual({
+		expect(compareNoteUpdates(notes, posts)).toEqual({
 			stable: [],
 			updated: [],
 			created: [],
@@ -34,7 +34,7 @@ describe('compareUpdates should', () => {
 		const id = "a";
 		const notes = [{id, updateSequenceNum: updateSequenceNum}];
 		const posts = [{id, updateSequenceNum: updateSequenceNum - 20}];
-		expect(compareUpdates(notes, posts)).toEqual({
+		expect(compareNoteUpdates(notes, posts)).toEqual({
 			stable: [],
 			updated: [id],
 			created: [],
@@ -47,7 +47,7 @@ describe('compareUpdates should', () => {
 		const id = "a";
 		const notes = [{id, updateSequenceNum: updateSequenceNum}];
 		const posts = [{id, updateSequenceNum: updateSequenceNum}];
-		expect(compareUpdates(notes, posts)).toEqual({
+		expect(compareNoteUpdates(notes, posts)).toEqual({
 			stable: [id],
 			updated: [],
 			created: [],
