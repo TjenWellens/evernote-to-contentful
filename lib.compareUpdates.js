@@ -27,7 +27,11 @@ const CAT_REMOVED = 'removed'
 const CAT_UPDATED = 'updated'
 const CAT_STABLE = 'stable'
 
-function sortToCategory(mergeItem) {
+function notesAreEquallyUpdated(evernoteItem, contentfulItem) {
+	return evernoteItem.updateSequenceNum === contentfulItem.updateSequenceNum;
+}
+
+function sortToCategory(mergeItem, equallyUpdated) {
 	if (created(mergeItem.items)) return CAT_CREATED
 
 	if (removed(mergeItem.items)) return CAT_REMOVED
@@ -57,37 +61,37 @@ function sortToCategory(mergeItem) {
 	function updated(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && !notesAreEquallyUpdated(evernoteItem, contentfulItem)
-	}
-
-	function notesAreEquallyUpdated(evernoteItem, contentfulItem) {
-		return evernoteItem.updateSequenceNum === contentfulItem.updateSequenceNum;
+		return evernoteItem && contentfulItem && !equallyUpdated(evernoteItem, contentfulItem)
 	}
 
 	function stable(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && notesAreEquallyUpdated(evernoteItem, contentfulItem)
+		return evernoteItem && contentfulItem && equallyUpdated(evernoteItem, contentfulItem)
 	}
 }
 
-function reduceToIdsPerCategory(result, mergeItem) {
-	const id = mergeItem.id
+function createReduceToIdsPerCategory(equallyUpdated) {
+	function reduceToIdsPerCategory(result, mergeItem) {
+		const id = mergeItem.id
 
-	const category = sortToCategory(mergeItem)
-	return {
-		...result,
-		[category]: [
-			...result[category],
-			id
-		]
+		const category = sortToCategory(mergeItem, equallyUpdated)
+		return {
+			...result,
+			[category]: [
+				...result[category],
+				id
+			]
+		}
 	}
+
+	return reduceToIdsPerCategory
 }
 
 function compareUpdates(notes, posts) {
 	const merged = flattenArrayOnId([...notes.map(mark('evernote')), ...posts.map(mark('contentful'))])
 
-	return merged.reduce(reduceToIdsPerCategory, {
+	return merged.reduce(createReduceToIdsPerCategory(notesAreEquallyUpdated), {
 		[CAT_STABLE]: [],
 		[CAT_UPDATED]: [],
 		[CAT_CREATED]: [],
