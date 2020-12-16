@@ -1,3 +1,7 @@
+const {compareTagUpdates} = require("./lib.compareUpdates");
+const {getTagUpdates: getContentfulTagUpdates} = require("./lib.contentful.getTagUpdates");
+const {getTagUpdates: getEvernoteTagUpdates} = require("./lib.evernote.getTagUpdates");
+
 const {compareNoteUpdates} = require("./lib.compareUpdates");
 
 const {getNotesUpdates} = require("./lib.evernote.findNoteUpdates");
@@ -10,6 +14,14 @@ async function findUpdatedNoteIds(notebook) {
 	return compareNoteUpdates(notes, posts);
 }
 
+async function findUpdatedTagIds(notebook) {
+	const notes = await getEvernoteTagUpdates(notebook)
+	const posts = await getContentfulTagUpdates()
+
+	return compareTagUpdates(notes, posts);
+}
+
 module.exports = {
 	findUpdatedNoteIds,
+	findUpdatedTagIds,
 }

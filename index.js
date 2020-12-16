@@ -6,6 +6,7 @@ const {createEntryFromNote} = require("./lib.createEntryFromNote");
 const {findUpdatedNoteIds} = require("./lib.findUpdates");
 const {findNoteById} = require("./lib.findPublishedBlogposts");
 const fs = require('fs');
+const {findUpdatedTagIds} = require("./lib.findUpdates");
 
 async function createNotes(noteIds, tags) {
 	fs.writeFileSync('error/_failed-ids.txt', "")
@@ -49,8 +50,16 @@ async function createTags(tags) {
 
 async function note2post() {
 	const notebook = await findNotebook("Blog")
+
+	const tagUpdates = await findUpdatedTagIds(notebook)
+	console.log(`tags found:
+	stable: ${tagUpdates.stable.length}
+	updated: ${tagUpdates.updated.length}
+	created: ${tagUpdates.created.length}
+	removed: ${tagUpdates.removed.length}
+	`)
 	const tags = await findTags(notebook)
-	await createTags(tags)
+	await createTags([...tagUpdates.created, ...tagUpdates.updated])
 
 	// const notes = await findNotes(notebook)
 	const {stable, updated, created, removed} = await findUpdatedNoteIds(notebook)
