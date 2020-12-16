@@ -54,24 +54,20 @@ function sortToCategory(mergeItem) {
 		return !items.some(evernote) && items.some(contentful)
 	}
 
-	function comparable({updateSequenceNum}) {
-		return updateSequenceNum;
-	}
-
 	function updated(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && !areEqualInUpdate(evernoteItem, contentfulItem)
+		return evernoteItem && contentfulItem && !notesAreEquallyUpdated(evernoteItem, contentfulItem)
 	}
 
-	function areEqualInUpdate(evernoteItem, contentfulItem) {
-		return comparable(evernoteItem) === comparable(contentfulItem);
+	function notesAreEquallyUpdated(evernoteItem, contentfulItem) {
+		return evernoteItem.updateSequenceNum === contentfulItem.updateSequenceNum;
 	}
 
 	function stable(items) {
 		const evernoteItem = evernote(items.find(evernote));
 		const contentfulItem = contentful(items.find(contentful));
-		return evernoteItem && contentfulItem && areEqualInUpdate(evernoteItem, contentfulItem)
+		return evernoteItem && contentfulItem && notesAreEquallyUpdated(evernoteItem, contentfulItem)
 	}
 }
 
