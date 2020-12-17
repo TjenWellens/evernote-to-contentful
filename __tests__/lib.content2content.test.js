@@ -759,8 +759,9 @@ it('should transform empty content', async () => {
 })
 
 describe('tables', () => {
-	it('should be treated as div', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+	describe('evernote tables', () => {
+		it('should be treated as div', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <table width="100%" border="0" style="background-color: rgb(212, 221, 229);">
@@ -776,21 +777,65 @@ describe('tables', () => {
 	</tbody>
 </table>
 </en-note>`
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					{
-						"data": {},
-						"marks": [],
-						"value": '5. Social Relationships: The Slide Into "Shy"',
-						"nodeType": "text"
-					}
-				],
-				"nodeType": "paragraph"
-			},
-		]
-		expect(await content2content(noteContent)).toEqual(entryContent)
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": '5. Social Relationships: The Slide Into "Shy"',
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+	})
+	describe('html tables', () => {
+		it('should be treated as div', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<table width="100%" bgcolor="#D4DDE5" border="0">
+<tr>
+<td>
+<h1>fallacy 11</h1>
+<b>Source URL:</b>
+</td>
+</tr>
+</table>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": 'fallacy 11',
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": 'Source URL:',
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
 	})
 })
 
