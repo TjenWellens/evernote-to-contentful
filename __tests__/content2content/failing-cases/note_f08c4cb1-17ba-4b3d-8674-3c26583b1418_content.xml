@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>Course: Advanced Distributed System Design - Udi Dahan</h1>
+			</td>
+		</tr>
+	</table>
+	<div>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>Table of Contents</h1>
+			</td>
+		</tr>
+	</table>
+	<h1>
+		<span style="font-weight: bold;">Course Curriculum
+		</span>
+	</h1>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Important info about the course
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/texts/2356498-welcome-to-the-course">
+						Welcome to the course
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/pdfs/2356499-distributed-system-design-slides">
+						Distributed System Design- Slides
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Fallacies of Distributed Computing
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356500-introduction-systems-vs-applications">
+						Introduction: Systems vs. Applications
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356501-fallacy-1-the-network-is-reliable">
+						Fallacy #1: The network is reliable
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356502-fallacy-2-latency-isn-t-a-problem">
+						Fallacy #2: Latency isn’t a problem
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356503-fallacy-3-bandwidth-isn-t-a-problem">
+						Fallacy #3: Bandwidth isn’t a problem
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356504-fallacy-4-the-network-is-secure">
+						Fallacy #4: The network is secure
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356505-fallacy-5-the-network-topology-won-t-change">
+						Fallacy #5: The network topology won’t change
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356506-fallacy-6-the-admin-will-know-what-to-do">
+						Fallacy #6: The admin will know what to do
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356507-fallacy-7-transport-cost-isn-t-a-problem">
+						Fallacy #7: Transport cost isn’t a problem
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356508-fallacy-8-the-network-is-homogeneous">
+						Fallacy #8: The network is homogeneous
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356509-summary-8-fallacies-of-distributed-computing">
+						Summary: 8 fallacies of distributed computing
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356510-fallacy-9-the-system-is-atomic">
+						Fallacy #9: The system is atomic
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356511-fallacy-10-the-system-is-finished">
+						Fallacy #10 : The system is finished
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356512-fallacy-10-towards-a-better-development-process">
+						Fallacy #10: Towards a better development process
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356513-fallacy-11-the-business-logic-can-and-should-be-centralized">
+						Fallacy #11 : The business logic can and should be centralized
+
+					</a>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356513-fallacy-11-the-business-logic-can-and-should-be-centralized"
+					   style="font-weight: bold;">
+						FREE PREVIEW
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Coupling
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356514-coupling-in-applications-afferent-and-efferent">
+						Coupling in applications: afferent and efferent
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356515-coupling-in-systems-platform-temporal-and-spatial">
+						Coupling in systems: platform, temporal and spatial
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356516-coupling-solutions-platform">
+						Coupling solutions: platform
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356517-coupling-solutions-temporal-and-spatial">
+						Coupling solutions: temporal and spatial
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356518-coupling-summary-and-q-a">
+						Coupling: summary and Q&amp;A
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Intro to messaging
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356519-why-messaging">
+						Why messaging?
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356520-one-way-fire-forget">
+						One-way, fire &amp; forget
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356521-performance-messaging-vs-rpc">
+						Performance: messaging vs RPC
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356522-service-interfaces-vs-strongly-typed-messages">
+						Service interfaces vs strongly-typed messages
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356523-fault-tolerance">
+						Fault tolerance
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356524-auditing">
+						Auditing
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356525-web-services-invocation">
+						Web Services invocation
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Exercise: selling messaging to your organization
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356526-exercise-selling-messaging-to-your-organization-overview">
+						Exercise: selling messaging to your organization - overview
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356527-exercise-selling-messaging-to-your-organization-discussion-part-1">
+						Exercise: selling messaging to your organization - discussion (part 1)
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356528-exercise-selling-messaging-to-your-organization-discussion-part-2">
+						Exercise: selling messaging to your organization - discussion (part 2)
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356529-exercise-selling-messaging-to-your-organization-summary">
+						Exercise: selling messaging to your organization - summary
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Messaging patterns
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356530-dealing-with-out-of-order-messages">
+						Dealing with out of order messages
+
+					</a>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356530-dealing-with-out-of-order-messages"
+					   style="font-weight: bold;">
+						FREE PREVIEW
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356531-request-response">
+						Request-response
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356532-publish-subscribe">
+						Publish-subscribe
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356533-publish-subscribe-topics">
+						Publish-subscribe: topics
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356534-exercise-dealing-with-out-of-order-messages-overview">
+						Exercise: dealing with out of order messages - overview
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356535-exercise-dealing-with-out-of-order-messages-solutions">
+						Exercise: dealing with out of order messages - solutions
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356536-visualization">
+						Visualization
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356537-messaging-patterns-summary">
+						Messaging patterns: summary
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Architectural styles: Bus and Broker
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356538-intro-to-architectural-styles">
+						Intro to architectural styles
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356539-architectural-styles-broker">
+						Architectural styles: Broker
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356540-architectural-styles-bus">
+						Architectural styles: Bus
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356541-architectural-styles-bus-vs-broker">
+						Architectural styles: Bus vs Broker
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Intro to SOA
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356542-soa-tenets">
+						SOA tenets
+
+					</a>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356542-soa-tenets"
+					   style="font-weight: bold;">
+						FREE PREVIEW
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356543-service-example">
+						Service example
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356544-q-a">
+						Q&amp;A
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356545-services-modelling-workflows-boundaries-and-business-capabilities">
+						Services modelling: Workflows, boundaries and business capabilities
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356546-ui-composition-and-branding-service">
+						UI composition and Branding service
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356547-it-ops-service">
+						IT/Ops service
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Exercise: services modelling
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356548-exercise-services-modelling-hotel-overview">
+						Exercise: services modelling (hotel) - overview
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356549-exercise-services-modelling-hotel-solutions">
+						Exercise: services modelling (hotel) - solutions
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356550-soa-modelling-process-and-approach">
+						SOA modelling process and approach
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356551-domain-analysis-hotel">
+						Domain analysis: Hotel
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356552-domain-analysis-hotel-payment">
+						Domain analysis: Hotel - payment
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356553-domain-analysis-hotel-booking">
+						Domain analysis: Hotel - booking
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356554-domain-analysis-hotel-check-in">
+						Domain analysis: Hotel - check-in
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Advanced SOA
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356555-business-components">
+						Business components
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356556-autonomous-components">
+						Autonomous components
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356557-autonomous-components-deployment">
+						Autonomous components: deployment
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356558-service-boundaries">
+						Service boundaries
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356559-reporting">
+						Reporting
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356560-referential-integrity">
+						Referential integrity
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356561-team-structure">
+						Team structure
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			CQRS
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356562-intro-to-cqrs">
+						Intro to CQRS
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356563-non-collaborative-domains">
+						Non-collaborative domains
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356564-collaborative-domains">
+						Collaborative domains
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356565-cqrs-theory">
+						CQRS theory
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356566-cqrs-in-action">
+						CQRS in action
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356567-cqrs-summary">
+						CQRS: summary
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356568-q-a-event-sourcing">
+						Q&amp;A: event sourcing
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356569-q-a-search-reporting-and-requirements-vs-user-wishes">
+						Q&amp;A: search, reporting, and requirements vs user wishes
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356570-engine-pattern">
+						Engine pattern
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356571-q-a-engine-pattern">
+						Q&amp;A: engine pattern
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			SOA: operational aspects
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356572-deployment">
+						Deployment
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356573-monitoring">
+						Monitoring
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356574-scaling">
+						Scaling
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356575-fault-tolerance-backups-disaster-recovery">
+						Fault-tolerance, backups, disaster recovery
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356576-versioning">
+						Versioning
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Sagas/Long-running business processes modelling
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356577-sagas-long-running-processes">
+						Sagas: long-running processes
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356578-sagas-request-response">
+						Sagas: request-response
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356579-sagas-event-driven">
+						Sagas: event-driven
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356580-sagas-time-component">
+						Sagas: time component
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Exercise: saga design
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356581-exercise-saga-design-overview">
+						Exercise: saga design - overview
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356582-exercise-saga-design-solutions">
+						Exercise: saga design - solutions
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			SOA: modelling
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356583-domain-models">
+						Domain models
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356584-testing-domain-models">
+						Testing domain models
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356585-domain-models-deployment">
+						Domain models deployment
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356586-concurrency-models">
+						Concurrency models
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356587-realistic-concurrency">
+						Realistic concurrency
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356588-domain-models-sagas">
+						Domain models: sagas
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Organizational transition to SOA
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356589-the-rewrite-tax">
+						The rewrite tax
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356590-phase-1-good-programming-practices">
+						Phase 1: Good programming practices
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356591-phase-2-pub-sub">
+						Phase 2: Pub/sub
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356592-phase-3-carve-out-pieces">
+						Phase 3: carve out pieces
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356593-phase-4-attack-the-database">
+						Phase 4: attack the database
+
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<span style="font-weight: bold;">
+			Web Services and User Interfaces
+		</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div>
+		<ul>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356594-caching">
+						Caching
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356595-content-delivery-networks">
+						Content Delivery Networks
+
+					</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="https://learn-particular.thinkific.com/courses/take/adsd-online/lessons/2356596-personalization">
+						Personalization
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>fallacy 11</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	[ ] Article: "4+1 views of software architecture"
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="7c4f2317b649d2ce785b85669b7c1e72"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>def: Application</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="3c133962094e86665563207505c5e875"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>def: System</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="04cacd679d9a2f2935c72147ba3af294"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>application !-&gt; connectivity</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="d1f3824a0487e6e80dd1b33a00d1492a"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>8 fallacies of distributed computing</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="8d43e7d25f0774f0a8e7f1ebd8db8bc7"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>latency table</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="140ff8ee95a833bb678e8a716af76a12"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>backward compatibility is a requirement for CD</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	unless you have multiple versions &amp; backward compatibility, dont do CD<br></br>CD will become Cdowntime
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="78998acc253bb414394b954d5b097955"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>functionally separate vs physically separate</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	functionally separate vs physically separate
+	<br></br>
+	<br></br>you can deploy monolith what is logically decoupled
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="86b08c179dc89b546a8b48617084a180"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>Product vs Project</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	maintenance is a bad metaphor, project is better
+	<br></br>
+	<br></br>maintenance: less skill needed, no big architecture changes
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="e8ce0dc298eb6638683e598f50f3363c"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>role: Business Analist</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="803fa3f79ebc115dca5ef8f69ea356fd"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>role: Architect</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="e97e4d3ef94866ac07c3cecaa36d1bcc"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>role: Project Manager</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="09d0af248bc8fa2572a325ceae7f99a2"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>Estimates</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	Given a<br></br>- well-formed team<br></br>(worked together)<br></br>- with required skills<br></br>(has done such
+	things before)<br></br>- of size S
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="4e1759e3355727f9e2e3b33f4797818a"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>decentralize business logic</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="7908da7756e49f54569f0ef271c13502"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>3 more fallacies</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="36528a213850706007c90d5bef02fc63"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>Coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="73a3e1f4976c36c9469debafeeb8c882"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>incoming vs outgoing coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="4ca99684f72fd34e416475ec78b226de"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>def: incoming coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="00e4c9085c63d2b516b18242047955f0"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>def: outgoing coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="4c6d6ae92aa9b936f9477108b4490f31"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>clarity: incoming vs outgoing</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="29b6a631983a8ac22be66c4f17071942"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>count coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	X-&gt;Y<br></br>x outboing 1<br></br>y incoming 1
+	<br></br>
+	<br></br>A-&gt;B<br></br>x outgoing 5 "is this class single responsibility principle"<br></br>y incoming 1 "how many
+	classes do I have to change"
+	<br></br>
+	<br></br>
+	<br></br>static analysis tool
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="6e483cb388c88a62a7ccba2d070d6c83"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>hidden coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="c3f310b87315d860405cc111212c9f24"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>3 aspects of coupling</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="8934d90966c9c833ea60cbb406d65b2d"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect 1: platform (aka interoperability)</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip: true;">
+		<br clear="none"></br>
+		<en-media hash="62538273ae7d897bc41bd6a2afa932be" type="image/jpeg"></en-media>
+		<br clear="none"></br>
+	</div>
+	<div style="-evernote-webclip: true;">text-based representation on the wire</div>
+	<div style="-evernote-webclip: true;">http, smtp, udp, ...</div>
+	<div style="-evernote-webclip: true;">
+		<br clear="none"></br>
+	</div>
+	<div style="-evernote-webclip: true;">soap / wsdl / rest</div>
+	<div style="-evernote-webclip: true;">
+		<br clear="none"></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>apect 2: time</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="164b08a169b7c4b3a657b278a1e7d3a5"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect time: Pub-Sub explicit caching</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div>make explicit in A that caching is happening</div>
+	<hr></hr>
+	<div style="-evernote-webclip: true;">
+		<br clear="none"></br>
+		<en-media hash="fa21386738988be596be68bfbd74679b" type="image/jpeg"></en-media>
+		<br clear="none"></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect time: Pub-Sub constraints</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="01a29a76473cb54ed8ba6488232ecf3a"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect time: Pub-Sub add validity period to data</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="1d173825df58ac77adeff8dc9d2ed5de"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect time: Pub-Sub consitency</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<br></br>if pub sub not OK time-constraint,<br></br>then RPC also not OK (can use cache)<br></br>-&gt; transaction
+	across A and B needed
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="1a1f2947759209e1d06a1e6be615ae91"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect space: routing</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="4e8301eac8b24840cce89fd2a8d32bb1"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>aspect time: logical owner</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	logical owner
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="16e764c952c8b21740ac924b389c3bbc"></en-media>
+		<br></br>
+	</div>
+
+	<table width="100%" bgcolor="#D4DDE5" border="0">
+		<tr>
+			<td>
+				<h1>coupling 5 dimensions tradeoffs</h1>
+				<b>Source URL:</b>
+				<a href="https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides">
+					https://learn.particular.net/courses/take/adsd-online-free/pdfs/11460613-distributed-system-design-slides
+				</a>
+				<br/>
+			</td>
+		</tr>
+	</table>
+	tradeoffs between dimensions<br></br>per ''layer"<br></br>keep LOGIC away from all the other<br></br>"is the
+	coupling reasonable for it's responsibility"<br></br>eg. fromend webapi, platform low, even if HTTP response which
+	is time high coupling<br></br>internal component: low temporal at cost of higher platform (pub-sub platform
+	framework)
+	<hr></hr>
+	<div style="-evernote-webclip:true">
+		<br></br>
+		<en-media type="image/jpeg" hash="f29ea5d613e5e0f598bad3c079c2b788"></en-media>
+		<br></br>
+	</div>
+</en-note>

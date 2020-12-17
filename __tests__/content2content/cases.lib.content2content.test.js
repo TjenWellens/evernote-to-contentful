@@ -51,4 +51,10 @@ describe('real world cases should parse', () => {
 		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
 		const result = await content2content(noteContent, images)
 	})
+
+	test('parse case f08c4cb1-17ba-4b3d-8674-3c26583b1418', async () => {
+		const id = 'f08c4cb1-17ba-4b3d-8674-3c26583b1418'
+		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
+		const result = await content2content(noteContent, images)
+	})
 })

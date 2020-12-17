@@ -428,9 +428,30 @@ function isTable(node) {
 function parseTable(node, images) {
 	if (isEvernoteTable(node)) return parseEvernoteTable(node, images)
 
-	if (isHtmlTable(node)) throw new Error('no html tables allowed')
+	if (isHtmlTable(node)) return parseHtmlTable(node, images)
 
 	throw new Error('no weird tables allowed')
+
+	function parseHtmlTable(node, images) {
+		const rows = node.$$ || []
+		if (rows.length !== 1) throw new Error('only simple tables with one row allowed')
+		return rows.flatMap(row => parseHtmlTableRow(row, images))
+
+		function parseHtmlTableRow(row, images) {
+			const columns = row.$$
+			if (!columns.every(isTableColumn)) throw new Error('html table can only have columns in a row')
+			if (columns.length !== 1) throw new Error('only simple tables with one column allowed')
+			return columns.flatMap(column => parseHtmlTableColumn(column, images))
+		}
+
+		function parseHtmlTableColumn(column, images) {
+			return parseNode(column, images)
+		}
+
+		function isTableColumn(node) {
+			return node["#name"] === "td"
+		}
+	}
 
 	function parseEvernoteTable(node, images) {
 		const body = node.$$.find(isTableBody);
