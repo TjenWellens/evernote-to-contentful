@@ -426,8 +426,9 @@ function isTable(node) {
 }
 
 function parseTable(node, images) {
-	if (!isEvernoteTable(node)) throw new Error('no weird tables allowed')
-	return parseEvernoteTable(node, images)
+	if (isEvernoteTable(node)) return parseEvernoteTable(node, images)
+
+	throw new Error('no weird tables allowed')
 
 	function parseEvernoteTable(node, images) {
 		const body = node.$$.find(isTableBody);
