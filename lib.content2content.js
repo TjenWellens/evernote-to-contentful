@@ -428,6 +428,8 @@ function isTable(node) {
 function parseTable(node, images) {
 	if (isEvernoteTable(node)) return parseEvernoteTable(node, images)
 
+	if (isHtmlTable(node)) throw new Error('no html tables allowed')
+
 	throw new Error('no weird tables allowed')
 
 	function parseEvernoteTable(node, images) {
@@ -450,6 +452,14 @@ function parseTable(node, images) {
 
 	function isEvernoteTable(node) {
 		return node.$$ && node.$$.every(isEvernoteTableChildElement)
+	}
+
+	function isTableRow(node) {
+		return node["#name"] === "tr"
+	}
+
+	function isHtmlTable(node) {
+		return node.$$ && node.$$.every(isTableRow)
 	}
 }
 
