@@ -421,19 +421,35 @@ function parseInlineNode(node, images) {
 	})
 }
 
-function isTable(node, images) {
+function isTable(node) {
 	return node["#name"] === "table"
 }
 
-function isTableBody(node) {
-	return node["#name"] === "tbody"
-}
-
 function parseTable(node, images) {
-	if (!node.$$) throw new Error('no weird tables allowed')
-	const body = node.$$.find(isTableBody);
-	if (!body) throw new Error('no weird tables allowed')
-	return parseNode(body, images)
+	if (!isEvernoteTable(node)) throw new Error('no weird tables allowed')
+	return parseEvernoteTable(node, images)
+
+	function parseEvernoteTable(node, images) {
+		const body = node.$$.find(isTableBody);
+		if (!body) throw new Error('no weird tables allowed')
+		return parseNode(body, images)
+	}
+
+	function isTableBody(node) {
+		return node["#name"] === "tbody"
+	}
+
+	function isEvernoteTableChildElement(node) {
+		return isTableBody(node) || isTableColGroup(node)
+	}
+
+	function isTableColGroup(node) {
+		return node["#name"] === "colgroup";
+	}
+
+	function isEvernoteTable(node) {
+		return node.$$ && node.$$.every(isEvernoteTableChildElement)
+	}
 }
 
 function parseNode(node, images) {
