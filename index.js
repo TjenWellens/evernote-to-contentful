@@ -35,7 +35,8 @@ async function createNotes(noteIds, tags) {
 	console.log(`${success} notes created (${failed} failed)`)
 }
 
-async function createTags(tags) {
+async function createTags(tagIds, allTags) {
+	const tags = allTags.filter(tag => tagIds.includes(tag.guid));
 	console.log(`creating ${tags.length} tags...`)
 	let success = 0
 	let failed = 0
@@ -58,7 +59,7 @@ async function note2post() {
 	removed: ${tagUpdates.removed.length}
 	`)
 	const tags = await findTags(notebook)
-	await createTags([...tagUpdates.created, ...tagUpdates.updated])
+	await createTags([...tagUpdates.created, ...tagUpdates.updated], tags)
 
 	// const notes = await findNotes(notebook)
 	const {stable, updated, created, removed} = await findUpdatedNoteIds(notebook)
