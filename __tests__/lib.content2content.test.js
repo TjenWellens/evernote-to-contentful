@@ -1040,3 +1040,38 @@ target="_blank"><font style="font-size: 36px;">Books</font></a>
 		expect(await content2content(noteContent, images)).toEqual(entryContent)
 	})
 })
+
+describe('code block', () => {
+
+	it('should create code', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+<div>flexibly move deployment boundaries</div>
+</div>
+</en-note>`
+
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [
+							{
+								"type": "code"
+							}
+						],
+						"value": "flexibly move deployment boundaries",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		const images = {}
+
+		expect(await content2content(noteContent, images)).toEqual(entryContent)
+	})
+})
