@@ -1,0 +1,114 @@
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+	<div>I was working in a new project that had a microservice architecture at TomTom since January.</div>
+	<div>I was enrolled in the <a
+			href="evernote:///view/30809684/s230/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/"
+			style="color: #69aa35;">Course: Cloud Native Entrepreneur - Patrick Lee Scott</a> since December. In this
+		course he teaches about cloud native (microservices and devops) and entrepreneurship.
+	</div>
+	<div>I was thinking about solving my problem of better highlighting / note-taking while reading.</div>
+	<div>I enrolled in the <a
+			href="evernote:///view/30809684/s230/f08c4cb1-17ba-4b3d-8674-3c26583b1418/f08c4cb1-17ba-4b3d-8674-3c26583b1418/"
+			style="color: #69aa35;">Course: Advanced Distributed System Design - Udi Dahan</a> where I picked up the
+		idea that deciding which things are deployed on the same machine can be decided later
+	</div>
+	<div>Oh and a year I learned CQRS and eventsourcing, mainly from Greg Young's materials</div>
+	<div>
+		<br/>
+	</div>
+	<div>So I was building an architecture experiment / pet project in a mash of these styles</div>
+	<ul>
+		<li>
+			<div>TomTom project microservices
+				<br/>
+			</div>
+		</li>
+		<li>
+			<div>Patrick Lee Scott microservices
+				<br/>
+			</div>
+		</li>
+		<li>
+			<div>Udi Dahan's SOA &amp; decouple functional and deployment model</div>
+		</li>
+		<li>
+			<div>Greg Young's eventsourcing + CQRS</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>I learned a lot from this architecture style experiment. And I was even able to contribute learnings from this
+		to the project I was working on at TomTom.
+	</div>
+	<div>
+		<br/>
+	</div>
+	<div>I especially liked Udi's idea of deciding later which functionality runs where.</div>
+	<div>Especially combined with Patrick's microservice patterns causing tiny functional pieces and unidirectional data
+		flow.
+	</div>
+	<div>This allowed me to flexibly move deployment-service-boundaries.</div>
+	<div>But it did come at a cost of having to invent quite a bit of boilerplate code.</div>
+	<div>I didn't mind because I quite liked refactoring this to common libraries.</div>
+	<div>And I ended up with a lot of reusable pieces, used by multiple microservice patterns.</div>
+	<div>
+		<br/>
+	</div>
+	<div>Okay, this is getting confusing, because the definition for (micro)service I usually use:</div>
+	<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+		<div>
+			<span style="font-size: 12px; color: rgb(51, 51, 51); font-family: Monaco;">single unit of deployment</span>
+		</div>
+	</div>
+	<div>This get's really fuzzy when combined with</div>
+	<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+		<div>flexibly move deployment boundaries</div>
+	</div>
+	<div>So in my first draft of the previous paragraph, I mixed logical-(micro)service and deployment-(micro)service.
+	</div>
+	<div>I'll write some posts about this in the future for more clarity:</div>
+	<ul>
+		<li>
+			<div>
+				<a href="evernote:///view/30809684/s230/e33f6643-ef8e-468f-9a33-7ca31ebf0909/e33f6643-ef8e-468f-9a33-7ca31ebf0909/"
+				   style="color: #69aa35;">Pattern: decouple logical and deployment boundary
+				</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<a href="evernote:///view/30809684/s230/d3b49e90-4ac4-4593-950c-7d318af98a00/d3b49e90-4ac4-4593-950c-7d318af98a00/"
+				   style="color: #69aa35;">Model: logical vs deployment boundary
+				</a>
+			</div>
+		</li>
+	</ul>
+	<div>
+		<br/>
+	</div>
+	<div>The cost of running this in production was $100 per month.</div>
+	<div>Which was way too much for this pet project.</div>
+	<div>So I ended up only running it locally in a minikube.</div>
+	<div>The backend was extremely over-engineered for the problem it solved.</div>
+	<div>But that was intentional as I wanted to learn the architecture style.</div>
+	<div>More than solve I wanted to solve the problem, at that time.</div>
+	<div>
+		<br/>
+	</div>
+	<div>Later I got more serious about the problem to be solved: "improve note taking while reading" (see <a
+			href="evernote:///view/30809684/s230/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/">
+		Mindmark.it - the origin story</a>) 
+	</div>
+	<div>And after a while I discovered a pivot that would provide much more valuable.</div>
+	<div>It would require me to rewrite the whole thing.</div>
+	<div>The goal now is "improved note-taking", instead of "experiment with this architecture style".</div>
+	<div>So I decided to also simplify the backend to a classic consistent monolith.</div>
+	<div>This is much simpler and matches the current complexity of the problem.</div>
+	<div>And much cheaper, which is important because this time I actually want to have a production environment so I
+		can use it!
+	</div>
+	<div>
+		<br/>
+	</div>
+</en-note>

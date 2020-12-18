@@ -1,0 +1,666 @@
+[
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I was working in a new project that had a microservice architecture at TomTom since January."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I was enrolled in the "
+			},
+			{
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"nodeType": "text",
+						"value": "Course: Cloud Native Entrepreneur - Patrick Lee Scott"
+					}
+				],
+				"data": {
+					"uri": "evernote:///view/30809684/s230/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/"
+				},
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": " since December. In this\n\t\tcourse he teaches about cloud native (microservices and devops) and entrepreneurship."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I was thinking about solving my problem of better highlighting / note-taking while reading."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I enrolled in the "
+			},
+			{
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"nodeType": "text",
+						"value": "Course: Advanced Distributed System Design - Udi Dahan"
+					}
+				],
+				"data": {
+					"uri": "evernote:///view/30809684/s230/f08c4cb1-17ba-4b3d-8674-3c26583b1418/f08c4cb1-17ba-4b3d-8674-3c26583b1418/"
+				},
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": " where I picked up the\n\t\tidea that deciding which things are deployed on the same machine can be decided later"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Oh and a year I learned CQRS and eventsourcing, mainly from Greg Young's materials"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "So I was building an architecture experiment / pet project in a mash of these styles"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "TomTom project microservices"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Patrick Lee Scott microservices"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Udi Dahan's SOA & decouple functional and deployment model"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"nodeType": "text",
+								"value": "Greg Young's eventsourcing + CQRS"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I learned a lot from this architecture style experiment. And I was even able to contribute learnings from this\n\t\tto the project I was working on at TomTom."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I especially liked Udi's idea of deciding later which functionality runs where."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Especially combined with Patrick's microservice patterns causing tiny functional pieces and unidirectional data\n\t\tflow."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This allowed me to flexibly move deployment-service-boundaries."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "But it did come at a cost of having to invent quite a bit of boilerplate code."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I didn't mind because I quite liked refactoring this to common libraries."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And I ended up with a lot of reusable pieces, used by multiple microservice patterns."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Okay, this is getting confusing, because the definition for (micro)service I usually use:"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "single unit of deployment"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This get's really fuzzy when combined with"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "flexibly move deployment boundaries"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "So in my first draft of the previous paragraph, I mixed logical-(micro)service and deployment-(micro)service."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "I'll write some posts about this in the future for more clarity:"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"nodeType": "text",
+										"value": "Pattern: decouple logical and deployment boundary"
+									}
+								],
+								"data": {
+									"uri": "evernote:///view/30809684/s230/e33f6643-ef8e-468f-9a33-7ca31ebf0909/e33f6643-ef8e-468f-9a33-7ca31ebf0909/"
+								},
+								"nodeType": "hyperlink"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			},
+			{
+				"content": [
+					{
+						"content": [
+							{
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"nodeType": "text",
+										"value": "Model: logical vs deployment boundary"
+									}
+								],
+								"data": {
+									"uri": "evernote:///view/30809684/s230/d3b49e90-4ac4-4593-950c-7d318af98a00/d3b49e90-4ac4-4593-950c-7d318af98a00/"
+								},
+								"nodeType": "hyperlink"
+							}
+						],
+						"data": {},
+						"nodeType": "paragraph"
+					}
+				],
+				"data": {},
+				"nodeType": "list-item"
+			}
+		],
+		"data": {},
+		"nodeType": "unordered-list"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "The cost of running this in production was $100 per month."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Which was way too much for this pet project."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "So I ended up only running it locally in a minikube."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "The backend was extremely over-engineered for the problem it solved."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "But that was intentional as I wanted to learn the architecture style."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "More than solve I wanted to solve the problem, at that time."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "Later I got more serious about the problem to be solved: \"improve note taking while reading\" (see "
+			},
+			{
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"nodeType": "text",
+						"value": "Mindmark.it - the origin story"
+					}
+				],
+				"data": {
+					"uri": "evernote:///view/30809684/s230/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/"
+				},
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ")"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And after a while I discovered a pivot that would provide much more valuable."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "It would require me to rewrite the whole thing."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "The goal now is \"improved note-taking\", instead of \"experiment with this architecture style\"."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "So I decided to also simplify the backend to a classic consistent monolith."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "This is much simpler and matches the current complexity of the problem."
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": "And much cheaper, which is important because this time I actually want to have a production environment so I\n\t\tcan use it!"
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	},
+	{
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"nodeType": "text",
+				"value": ""
+			}
+		],
+		"data": {},
+		"nodeType": "paragraph"
+	}
+]
