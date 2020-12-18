@@ -1058,16 +1058,18 @@ describe('code block', () => {
 				"content": [
 					{
 						"data": {},
-						"marks": [
+						"content": [
 							{
-								"type": "code"
+								"data": {},
+								"marks": [],
+								"value": "flexibly move deployment boundaries",
+								"nodeType": "text"
 							}
 						],
-						"value": "flexibly move deployment boundaries",
-						"nodeType": "text"
+						"nodeType": "paragraph"
 					}
 				],
-				"nodeType": "paragraph"
+				"nodeType": "blockquote"
 			},
 		]
 		const images = {}

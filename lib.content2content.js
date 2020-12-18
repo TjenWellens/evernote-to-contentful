@@ -500,8 +500,20 @@ function isCodeBlock(node) {
 	return isDiv(node) && hasStyleAttribute(node) && styleAttributeContains(node, "-en-codeblock:true")
 }
 
+function parseCodeBlock(node, images) {
+	if (!isNode(node)) throw new Error("Code block should only contain node elements" + JSON.stringify(node))
+
+	const blocks = node.$$.flatMap(node => parseNode(node, images));
+	return [{
+		"data": {},
+		"content": blocks,
+		"nodeType": "blockquote"
+	}]
+}
+
+
 function parseNode(node, images) {
-	if(isCodeBlock(node)) throw new Error("can't handle code blocks")
+	if (isCodeBlock(node)) return parseCodeBlock(node, images)
 
 	if (isTable(node)) return parseTable(node, images)
 

@@ -336,14 +336,20 @@
 	{
 		"content": [
 			{
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"nodeType": "text",
+						"value": "single unit of deployment"
+					}
+				],
 				"data": {},
-				"marks": [],
-				"nodeType": "text",
-				"value": "single unit of deployment"
+				"nodeType": "paragraph"
 			}
 		],
 		"data": {},
-		"nodeType": "paragraph"
+		"nodeType": "blockquote"
 	},
 	{
 		"content": [
@@ -360,14 +366,20 @@
 	{
 		"content": [
 			{
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"nodeType": "text",
+						"value": "flexibly move deployment boundaries"
+					}
+				],
 				"data": {},
-				"marks": [],
-				"nodeType": "text",
-				"value": "flexibly move deployment boundaries"
+				"nodeType": "paragraph"
 			}
 		],
 		"data": {},
-		"nodeType": "paragraph"
+		"nodeType": "blockquote"
 	},
 	{
 		"content": [
