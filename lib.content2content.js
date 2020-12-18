@@ -484,7 +484,25 @@ function parseTable(node, images) {
 	}
 }
 
+function isDiv(node) {
+	return node["#name"] === "div";
+}
+
+function isCodeBlock(node) {
+	function hasStyleAttribute(node) {
+		return node.$ && node.$.style;
+	}
+
+	function styleAttributeContains(node, query) {
+		return node.$.style.indexOf(query) > -1;
+	}
+
+	return isDiv(node) && hasStyleAttribute(node) && styleAttributeContains(node, "-en-codeblock:true")
+}
+
 function parseNode(node, images) {
+	if(isCodeBlock(node)) throw new Error("can't handle code blocks")
+
 	if (isTable(node)) return parseTable(node, images)
 
 	if (isInlineNode(node)) return [parseInlineNode(node, images)]
