@@ -45,5 +45,6 @@ async function createEntryFromNote(note, tags) {
 }
 
 module.exports = {
-	createEntryFromNote
+	createEntryFromNote,
+	createImages,
 }
