@@ -625,8 +625,9 @@ it('should transform horizontal lines', async () => {
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
 
-it('should transform links', async () => {
-	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+describe('should transform links', () => {
+	it('internal links to a', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>(src: <a shape="rect"
@@ -634,41 +635,87 @@ href="evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-c
 target="_blank">In progress blogpost</a>)
 </div>
 </en-note>`
-	const entryContent = [
-		{
-			"data": {},
-			"content": [
-				{
-					"data": {},
-					"marks": [],
-					"value": "(src: ",
-					"nodeType": "text"
-				},
-				{
-					"data": {
-						"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "(src: ",
+						"nodeType": "text"
 					},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "In progress blogpost",
-							"nodeType": "text"
-						}
-					],
-					"nodeType": "hyperlink"
-				},
-				{
-					"data": {},
-					"marks": [],
-					"value": ")",
-					"nodeType": "text"
-				}
-			],
-			"nodeType": "paragraph"
-		},
-	]
-	expect(await content2content(noteContent)).toEqual(entryContent)
+					{
+						"data": {
+							"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+						},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "In progress blogpost",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "hyperlink"
+					},
+					{
+						"data": {},
+						"marks": [],
+						"value": ")",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
+	it('external links to a', async () => {
+		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>(src: <a shape="rect"
+href="https://www.mindmark.it"
+target="_blank">In progress blogpost</a>)
+</div>
+</en-note>`
+		const entryContent = [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "(src: ",
+						"nodeType": "text"
+					},
+					{
+						"data": {
+							"uri": "https://www.mindmark.it"
+						},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "In progress blogpost",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "hyperlink"
+					},
+					{
+						"data": {},
+						"marks": [],
+						"value": ")",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "paragraph"
+			},
+		]
+		expect(await content2content(noteContent)).toEqual(entryContent)
+	})
 })
 
 describe('should transform span', () => {
