@@ -358,9 +358,8 @@ target="_blank">In progress blogpost</a>)
 
 				expect(await content2content(noteContent, images)).toEqual(entryContent)
 			})
-		})
-		it('should work with span', async () => {
-			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+			it('inside another inline', async () => {
+				const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
@@ -371,35 +370,36 @@ target="_blank">In progress blogpost</a>)
   </a>
 </div>
 </en-note>`
-			const entryContent = [
-				{
-					"data": {},
-					"content": [
-						{
-							"data": {},
-							"marks": [],
-							"value": "[ ] ",
-							"nodeType": "text"
-						},
-						{
-							"data": {
-								"uri": "https://mindmark.it"
+				const entryContent = [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "[ ] ",
+								"nodeType": "text"
 							},
-							"content": [
-								{
-									"data": {},
-									"marks": [],
-									"value": "Book: Refactoring to Patterns - Joshua Kerievsky",
-									"nodeType": "text"
-								}
-							],
-							"nodeType": "hyperlink"
-						},
-					],
-					"nodeType": "paragraph"
-				},
-			]
-			expect(await content2content(noteContent)).toEqual(entryContent)
+							{
+								"data": {
+									"uri": "https://mindmark.it"
+								},
+								"content": [
+									{
+										"data": {},
+										"marks": [],
+										"value": "Book: Refactoring to Patterns - Joshua Kerievsky",
+										"nodeType": "text"
+									}
+								],
+								"nodeType": "hyperlink"
+							},
+						],
+						"nodeType": "paragraph"
+					},
+				]
+				expect(await content2content(noteContent)).toEqual(entryContent)
+			})
 		})
 		describe('font', () => {
 
