@@ -4,7 +4,7 @@ const {inlineNewline} = require("../lib.content2content");
 const {link} = require("../lib.content2content");
 const {content2content} = require("../lib.content2content");
 
-describe('should transform paragraphs', () => {
+describe('paragraphs', () => {
 	it('simple line', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -154,7 +154,7 @@ clear="none"/>and this line
 	});
 })
 
-it('should transform empty lines', async () => {
+it('empty lines', async () => {
 	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
@@ -203,7 +203,7 @@ it('should transform empty lines', async () => {
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
 
-describe('should transform images', () => {
+describe('images', () => {
 	it('(without text)', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -356,7 +356,7 @@ describe('should transform images', () => {
 	})
 })
 
-describe('should transform list', () => {
+describe('list', () => {
 	it('ordered', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -489,7 +489,7 @@ describe('should transform list', () => {
 	})
 })
 
-describe('should transform todos', () => {
+describe('todos', () => {
 	it('lone todos', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -607,7 +607,7 @@ describe('should transform todos', () => {
 	})
 })
 
-it('should transform horizontal lines', async () => {
+it('horizontal lines', async () => {
 	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
@@ -625,7 +625,7 @@ it('should transform horizontal lines', async () => {
 	expect(await content2content(noteContent)).toEqual(entryContent)
 })
 
-describe('should transform links', () => {
+describe('links', () => {
 	it('internal links to "entry-hyperlink"', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -724,7 +724,7 @@ target="_blank">In progress blogpost</a>)
 	})
 })
 
-describe('should transform span', () => {
+describe('span', () => {
 	it('when it contains nbsp', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -803,7 +803,7 @@ it('should ignore empty div', async () => {
 	expect(await content2content(noteContent, images)).toEqual(entryContent)
 })
 
-it('should transform empty content', async () => {
+it('empty content', async () => {
 	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note />`
