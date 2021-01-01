@@ -110,8 +110,6 @@ async function tryFindAsset(resourceGuid) {
 
 async function createAssetFromEvernoteResource(resource) {
 	const resourceGuid = resource.guid
-	const alreadyExists = await tryFindAsset(resourceGuid)
-	if (alreadyExists) return alreadyExists
 
 	const url = await fetchResourceUrl(resourceGuid)
 	const {mime, fileName} = await fetchResourceMimeAndFilename(resourceGuid);
@@ -131,12 +129,30 @@ async function createAssetFromEvernoteResource(resource) {
 }
 
 async function createAssetsFromEvernoteResources(resources) {
-	const pairs = []
-	for (const resource of resources) {
-		const pair = await createAssetFromEvernoteResource(resource).then(asset => ({asset, resource}))
-		pairs.push(pair)
+	const resourceGuids = resources.map(({guid}) => guid)
+	const existingAssets = await findExistingAssets(resourceGuids)
+	const existingAssetIds = existingAssets.map(asset => asset.sys.id)
+	const newResources = resources.filter(({guid}) => !existingAssetIds.includes(guid))
+	const result = []
+
+	// add existing assets to result
+	for (const asset of existingAssets) {
+		const resource = resources.find(({guid}) => asset.sys.id === guid)
+		result.push({
+			asset,
+			resource,
+		})
 	}
-	return pairs
+
+	// create new assets, add to result
+	for (const resource of newResources) {
+		const asset = await createAssetFromEvernoteResource(resource)
+		result.push({
+			asset,
+			resource,
+		})
+	}
+	return result
 }
 
 module.exports = {
