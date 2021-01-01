@@ -1,3 +1,4 @@
+const {gatherReferences} = require("./lib.gatherReferences");
 const {createAssetsFromEvernoteResources} = require("./lib.resource2asset");
 const {content2contentAsRichText} = require("./lib.content2content");
 const {createOrUpdateEntry} = require("./lib.createEntry");
@@ -12,6 +13,14 @@ async function createImages(note) {
 		[resource.data.bodyHash.toString('hex')]: asset.sys.id
 	}), {})
 	return images;
+}
+
+function everpostsLinked(references) {
+	return references.map(id => ({sys: {
+			type: 'Link',
+			linkType: 'Entry',
+			id: id
+		}}))
 }
 
 async function createEntryFromNote(note, tags) {
@@ -40,6 +49,7 @@ async function createEntryFromNote(note, tags) {
 			updateSequenceNum: note.updateSequenceNum,
 			created: new Date(note.created).toISOString(),
 			updated: new Date(note.updated).toISOString(),
+			everpostsLinked: everpostsLinked(gatherReferences(entryContent.content)),
 		}
 	})
 }
