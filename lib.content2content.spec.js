@@ -605,7 +605,7 @@ describe('todos', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
-	describe('gets checked state from property "checked"', ()=> {
+	describe('gets checked state from property "checked"', () => {
 		it('checked="true"', async () => {
 			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -961,9 +961,10 @@ describe('tables', () => {
 	})
 })
 
-describe('<b>', ()=>{
-	it('should treat it like any text', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+describe('inline text formatting', () => {
+	describe('bold', () => {
+		it('is ignored', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
@@ -971,26 +972,26 @@ describe('<b>', ()=>{
 </div>
 </en-note>`
 
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					{
-						"data": {},
-						"marks": [],
-						"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis",
-						"nodeType": "text"
-					}
-				],
-				"nodeType": "paragraph"
-			},
-		]
-		const images = {}
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			const images = {}
 
-		expect(await content2content(noteContent, images)).toEqual(entryContent)
-	})
-	it('should work inline', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+			expect(await content2content(noteContent, images)).toEqual(entryContent)
+		})
+		it('should work inline', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
@@ -1001,34 +1002,34 @@ describe('<b>', ()=>{
 </div>
 </en-note>`
 
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					{
-						"content": [
-							{
-								"data": {},
-								"marks": [],
-								"nodeType": "text",
-								"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis"
-							}
-						],
-						"data": {
-							"uri": "https://mindmark.it"
-						},
-						"nodeType": "hyperlink"
-					}
-				],
-				"nodeType": "paragraph"
-			},
-		]
-		const images = {}
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"nodeType": "text",
+									"value": "Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis"
+								}
+							],
+							"data": {
+								"uri": "https://mindmark.it"
+							},
+							"nodeType": "hyperlink"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			const images = {}
 
-		expect(await content2content(noteContent, images)).toEqual(entryContent)
-	})
-	it('should work with inline stuff in it', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+			expect(await content2content(noteContent, images)).toEqual(entryContent)
+		})
+		it('should work with inline stuff in it', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
@@ -1038,18 +1039,19 @@ describe('<b>', ()=>{
 </div>
 </en-note>`
 
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					_text("Books")
-				],
-				"nodeType": "paragraph"
-			},
-		]
-		const images = {}
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						_text("Books")
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			const images = {}
 
-		expect(await content2content(noteContent, images)).toEqual(entryContent)
+			expect(await content2content(noteContent, images)).toEqual(entryContent)
+		})
 	})
 })
 
