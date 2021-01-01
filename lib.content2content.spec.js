@@ -585,7 +585,7 @@ describe('todos', () => {
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
-<en-todo checked="true"/>
+<en-todo checked="falser"/>
 <span style="font-weight: bold;">Rules of play </span>
 </div>
 </en-note>`
@@ -605,6 +605,75 @@ describe('todos', () => {
 		]
 		expect(await content2content(noteContent)).toEqual(entryContent)
 	})
+	describe('gets checked state from property "checked"', ()=> {
+		it('checked="true"', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><en-todo checked="true"/>almost</div>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "[x] almost",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+		it('checked="false"', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><en-todo checked="false"/>almost</div>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "[ ] almost",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+		it('checked is absent', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><en-todo/>almost</div>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "[ ] almost",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+	})
+
 })
 
 it('horizontal lines', async () => {

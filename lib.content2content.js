@@ -134,7 +134,9 @@ function isTodo(node) {
 }
 
 function todo(node) {
-	return _text(" [ ] ");
+	const checked = node.$ && node.$.checked && node.$.checked === 'true'
+	const checkmark = checked ? 'x' : ' ';
+	return _text(` [${checkmark}] `);
 }
 
 function isHorizontalLine(node) {
