@@ -1,8 +1,8 @@
-const {squashInlineTextAndCleanupWhitespace} = require("../lib.content2content");
-const {_text} = require("../lib.content2content");
-const {inlineNewline} = require("../lib.content2content");
-const {link} = require("../lib.content2content");
-const {content2content} = require("../lib.content2content");
+const {squashInlineTextAndCleanupWhitespace} = require("./lib.content2content");
+const {_text} = require("./lib.content2content");
+const {inlineNewline} = require("./lib.content2content");
+const {link} = require("./lib.content2content");
+const {content2content} = require("./lib.content2content");
 
 describe('paragraphs', () => {
 	it('simple line', async () => {
