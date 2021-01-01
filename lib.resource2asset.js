@@ -87,6 +87,17 @@ async function fetchResourceMimeAndFilename(resourceGuid) {
 	}
 }
 
+async function findExistingAssets(resourceGuids) {
+	const space = await contentfulClient.getSpace(process.env.CONTENTFUL_SPACE)
+	const environment = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT)
+	const assets = await environment.getAssets({
+		'sys.id[in]': resourceGuids.join(',')
+	});
+	if (assets.total > assets.limit)
+		throw new Error(`too many assets(${assets.total}), expected less than ${assets.limit}, needs software changes`)
+	return assets.items
+}
+
 async function tryFindAsset(resourceGuid) {
 	const space = await contentfulClient.getSpace(process.env.CONTENTFUL_SPACE)
 	const environment = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT)
@@ -100,7 +111,7 @@ async function tryFindAsset(resourceGuid) {
 async function createAssetFromEvernoteResource(resource) {
 	const resourceGuid = resource.guid
 	const alreadyExists = await tryFindAsset(resourceGuid)
-	if(alreadyExists) return alreadyExists
+	if (alreadyExists) return alreadyExists
 
 	const url = await fetchResourceUrl(resourceGuid)
 	const {mime, fileName} = await fetchResourceMimeAndFilename(resourceGuid);
@@ -110,8 +121,7 @@ async function createAssetFromEvernoteResource(resource) {
 	const description = resource.data.bodyHash.toString('hex');
 	const asset = await createAssetFromUpload({
 		uploadId: upload.sys.id,
-		contentType:
-		mime,
+		contentType: mime,
 		fileName: fileName || 'default-filename.jpg',
 		assetId: resourceGuid,
 		title: resourceGuid,
@@ -122,8 +132,8 @@ async function createAssetFromEvernoteResource(resource) {
 
 async function createAssetsFromEvernoteResources(resources) {
 	const pairs = []
-	for(const resource of resources) {
-		const pair = await createAssetFromEvernoteResource(resource).then(asset =>({asset, resource}))
+	for (const resource of resources) {
+		const pair = await createAssetFromEvernoteResource(resource).then(asset => ({asset, resource}))
 		pairs.push(pair)
 	}
 	return pairs
@@ -135,5 +145,6 @@ module.exports = {
 	createUploadForStream,
 	fetchResourceUrl,
 	fetchResourceMimeAndFilename,
+	findExistingAssets,
 	createAssetsFromEvernoteResources
 }
