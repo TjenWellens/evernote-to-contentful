@@ -11,9 +11,8 @@ describe('real world cases should parse', () => {
 	const images = {}
 	getAssetIdForHash.mockImplementation(() => 'someMockedResourceId')
 
-	test.each([
-		['06df248a-df35-491f-90e4-9bed811e3ee2'],
-	])('check case %s', async (id) => {
+	test('check case 06df248a-df35-491f-90e4-9bed811e3ee2', async () => {
+		const id = '06df248a-df35-491f-90e4-9bed811e3ee2'
 		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
 		const expectedContent = fs.readFileSync(`${basePath}/note_${id}_expected.json`)
 		const result = await content2content(noteContent, images)

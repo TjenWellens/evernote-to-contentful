@@ -545,7 +545,7 @@ describe('should transform todos', () => {
 <div>
 	<en-todo></en-todo>
 	<a shape="rect" style="color: #69aa35;"
-		 href="evernote:///view/30809684/s230/aefbbfb7-aa83-4336-ad37-754426b7d9f3/aefbbfb7-aa83-4336-ad37-754426b7d9f3/">
+		 href="https://mindmark.it">
 		Article: The IT Measurement Inversion - Douglas Hubbard
 	</a>
 </div>
@@ -562,7 +562,7 @@ describe('should transform todos', () => {
 					},
 					{
 						"data": {
-							"uri": "evernote:///view/30809684/s230/aefbbfb7-aa83-4336-ad37-754426b7d9f3/aefbbfb7-aa83-4336-ad37-754426b7d9f3/"
+							"uri": "https://mindmark.it"
 						},
 						"content": [
 							{
@@ -925,7 +925,7 @@ describe('<b>', ()=>{
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div>
-<a href="evernote:///view/30809684/s230/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/"
+<a href="https://mindmark.it"
    style="color: rgb(105, 170, 53);">
 	<b>Book: The DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis</b>
 </a>
@@ -946,7 +946,7 @@ describe('<b>', ()=>{
 							}
 						],
 						"data": {
-							"uri": "evernote:///view/30809684/s230/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/1ffa1dc1-7f4d-4ad7-8b4d-0e8900a5a31e/"
+							"uri": "https://mindmark.it"
 						},
 						"nodeType": "hyperlink"
 					}
@@ -990,7 +990,7 @@ it('should work with span', async () => {
 <en-note>
 <div>
   <en-todo checked="false"/>
-  <a href="evernote:///view/30809684/s230/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/"
+  <a href="https://mindmark.it"
      rev="en_rl_none">
     <span style="color:#69aa35;">Book: Refactoring to Patterns - Joshua Kerievsky</span>
   </a>
@@ -1008,7 +1008,7 @@ it('should work with span', async () => {
 				},
 				{
 					"data": {
-						"uri": "evernote:///view/30809684/s230/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/22312a5c-dd45-4d27-8e1b-7c07e3152d3a/"
+						"uri": "https://mindmark.it"
 					},
 					"content": [
 						{
@@ -1061,7 +1061,7 @@ describe('font', () => {
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <div><a shape="rect"
-href="evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+href="https://mindmark.it"
 target="_blank"><font style="font-size: 36px;">Books</font></a>
 </div>
 </en-note>`
@@ -1072,7 +1072,7 @@ target="_blank"><font style="font-size: 36px;">Books</font></a>
 				"content": [
 					{
 						"data": {
-							"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+							"uri": "https://mindmark.it"
 						},
 						"content": [
 							{

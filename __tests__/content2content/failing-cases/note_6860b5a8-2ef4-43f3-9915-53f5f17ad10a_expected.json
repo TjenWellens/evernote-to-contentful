@@ -29,9 +29,15 @@
 					}
 				],
 				"data": {
-					"uri": "evernote:///view/30809684/s230/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/4ebd9da0-f2cf-41c6-b97b-7b7b80220794/"
+					"target": {
+						"sys": {
+							"type": "Link",
+							"linkType": "Entry",
+							"id": "4ebd9da0-f2cf-41c6-b97b-7b7b80220794"
+						}
+					}
 				},
-				"nodeType": "hyperlink"
+				"nodeType": "entry-hyperlink"
 			},
 			{
 				"data": {},
@@ -73,9 +79,15 @@
 					}
 				],
 				"data": {
-					"uri": "evernote:///view/30809684/s230/f08c4cb1-17ba-4b3d-8674-3c26583b1418/f08c4cb1-17ba-4b3d-8674-3c26583b1418/"
+					"target": {
+						"sys": {
+							"type": "Link",
+							"linkType": "Entry",
+							"id": "f08c4cb1-17ba-4b3d-8674-3c26583b1418"
+						}
+					}
 				},
-				"nodeType": "hyperlink"
+				"nodeType": "entry-hyperlink"
 			},
 			{
 				"data": {},
@@ -421,9 +433,15 @@
 									}
 								],
 								"data": {
-									"uri": "evernote:///view/30809684/s230/e33f6643-ef8e-468f-9a33-7ca31ebf0909/e33f6643-ef8e-468f-9a33-7ca31ebf0909/"
+									"target": {
+										"sys": {
+											"type": "Link",
+											"linkType": "Entry",
+											"id": "e33f6643-ef8e-468f-9a33-7ca31ebf0909"
+										}
+									}
 								},
-								"nodeType": "hyperlink"
+								"nodeType": "entry-hyperlink"
 							}
 						],
 						"data": {},
@@ -447,9 +465,15 @@
 									}
 								],
 								"data": {
-									"uri": "evernote:///view/30809684/s230/d3b49e90-4ac4-4593-950c-7d318af98a00/d3b49e90-4ac4-4593-950c-7d318af98a00/"
+									"target": {
+										"sys": {
+											"type": "Link",
+											"linkType": "Entry",
+											"id": "d3b49e90-4ac4-4593-950c-7d318af98a00"
+										}
+									}
 								},
-								"nodeType": "hyperlink"
+								"nodeType": "entry-hyperlink"
 							}
 						],
 						"data": {},
@@ -577,9 +601,15 @@
 					}
 				],
 				"data": {
-					"uri": "evernote:///view/30809684/s230/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/f6cca091-b178-48c8-b7d4-63ba76bbb7a4/"
+					"target": {
+						"sys": {
+							"type": "Link",
+							"linkType": "Entry",
+							"id": "f6cca091-b178-48c8-b7d4-63ba76bbb7a4"
+						}
+					}
 				},
-				"nodeType": "hyperlink"
+				"nodeType": "entry-hyperlink"
 			},
 			{
 				"data": {},

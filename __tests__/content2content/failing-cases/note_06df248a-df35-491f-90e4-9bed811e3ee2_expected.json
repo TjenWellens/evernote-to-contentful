@@ -171,9 +171,15 @@
 									}
 								],
 								"data": {
-									"uri": "evernote:///view/30809684/s230/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/a6e4a475-5f3d-47ac-ade7-5c7bbfe96589/"
+									"target": {
+										"sys": {
+											"type": "Link",
+											"linkType": "Entry",
+											"id": "a6e4a475-5f3d-47ac-ade7-5c7bbfe96589"
+										}
+									}
 								},
-								"nodeType": "hyperlink"
+								"nodeType": "entry-hyperlink"
 							}
 						],
 						"data": {},
@@ -425,9 +431,15 @@
 									}
 								],
 								"data": {
-									"uri": "evernote:///view/30809684/s230/dfacd720-a049-4464-ab99-69ff3ab03c0c/dfacd720-a049-4464-ab99-69ff3ab03c0c/"
+									"target": {
+										"sys": {
+											"type": "Link",
+											"linkType": "Entry",
+											"id": "dfacd720-a049-4464-ab99-69ff3ab03c0c"
+										}
+									}
 								},
-								"nodeType": "hyperlink"
+								"nodeType": "entry-hyperlink"
 							}
 						],
 						"data": {},
