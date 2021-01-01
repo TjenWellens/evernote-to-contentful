@@ -1,4 +1,5 @@
 const xml2js = require('xml2js');
+const {parseNoteIdFromInternalUrl} = require("./lib.content2content.parseNoteIdFromInternalUrl");
 const {yankImageToRoot} = require("./lib.content2content.yankImageToRoot");
 const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
 
@@ -167,12 +168,36 @@ function isLink(node) {
 
 function link(node, images) {
 	return {
-		"data": {
-			"uri": node.$.href
-		},
+		"data": isInternalLink() ? internalLinkData() : externalLinkData(),
 		"content": _parseInlineNodeContent(node, images),
-		"nodeType": "hyperlink"
+		"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
 	};
+
+	function isInternalLink() {
+		return href().startsWith("evernote:///view/")
+	}
+
+	function internalLinkData() {
+		return {
+			target: {
+				sys: {
+					type: 'Link',
+					linkType: 'Entry',
+					id: parseNoteIdFromInternalUrl(href())
+				}
+			}
+		}
+	}
+
+	function externalLinkData() {
+		return {
+			"uri": href()
+		}
+	}
+
+	function href() {
+		return node.$.href;
+	}
 }
 
 function isBold(node) {

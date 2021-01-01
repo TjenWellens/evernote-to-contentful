@@ -626,7 +626,7 @@ it('should transform horizontal lines', async () => {
 })
 
 describe('should transform links', () => {
-	it('internal links to a', async () => {
+	it('internal links to "entry-hyperlink"', async () => {
 		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
@@ -647,7 +647,13 @@ target="_blank">In progress blogpost</a>)
 					},
 					{
 						"data": {
-							"uri": "evernote:///view/590605/s1/c91a6abd-cec2-426c-8685-2fd03460c23c/c91a6abd-cec2-426c-8685-2fd03460c23c/"
+							target: {
+								sys: {
+									type: 'Link',
+									linkType: 'Entry',
+									id: 'c91a6abd-cec2-426c-8685-2fd03460c23c'
+								}
+							}
 						},
 						"content": [
 							{
@@ -657,7 +663,7 @@ target="_blank">In progress blogpost</a>)
 								"nodeType": "text"
 							}
 						],
-						"nodeType": "hyperlink"
+						"nodeType": "entry-hyperlink"
 					},
 					{
 						"data": {},
