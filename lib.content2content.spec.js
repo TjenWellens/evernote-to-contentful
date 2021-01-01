@@ -328,36 +328,6 @@ target="_blank">In progress blogpost</a>)
 
 				expect(await content2content(noteContent, images)).toEqual(entryContent)
 			})
-			it('when it contains media', async () => {
-				const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
-<en-note>
-<div><span><en-media hash="373798d4ffbde8f490e01d418b9d2a01" type="image/png"/></span></div>
-</en-note>`
-				const hash = "373798d4ffbde8f490e01d418b9d2a01"
-				const assetId = "3n1RaUimNYsv0wGAtcEPn0";
-
-				const entryContent = [
-					{
-						"content": [],
-						"data": {
-							"target": {
-								"sys": {
-									"id": "3n1RaUimNYsv0wGAtcEPn0",
-									"linkType": "Asset",
-									"type": "Link"
-								}
-							}
-						},
-						"nodeType": "embedded-asset-block"
-					}
-				]
-				const images = {
-					[hash]: assetId
-				}
-
-				expect(await content2content(noteContent, images)).toEqual(entryContent)
-			})
 			it('inside another inline', async () => {
 				const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
@@ -965,6 +935,36 @@ clear="none"/>and this line
 
 			const images = {
 				[hash]: assetId,
+			}
+
+			expect(await content2content(noteContent, images)).toEqual(entryContent)
+		})
+		it('when span contains media', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><span><en-media hash="373798d4ffbde8f490e01d418b9d2a01" type="image/png"/></span></div>
+</en-note>`
+			const hash = "373798d4ffbde8f490e01d418b9d2a01"
+			const assetId = "3n1RaUimNYsv0wGAtcEPn0";
+
+			const entryContent = [
+				{
+					"content": [],
+					"data": {
+						"target": {
+							"sys": {
+								"id": "3n1RaUimNYsv0wGAtcEPn0",
+								"linkType": "Asset",
+								"type": "Link"
+							}
+						}
+					},
+					"nodeType": "embedded-asset-block"
+				}
+			]
+			const images = {
+				[hash]: assetId
 			}
 
 			expect(await content2content(noteContent, images)).toEqual(entryContent)
