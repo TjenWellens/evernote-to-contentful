@@ -17,7 +17,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] For The Win",
+				"value": "[x] For The Win",
 				"nodeType": "text"
 			}
 		],
@@ -101,7 +101,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Reality is broken",
+				"value": "[x] Reality is broken",
 				"nodeType": "text"
 			}
 		],
@@ -137,7 +137,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Drive",
+				"value": "[x] Drive",
 				"nodeType": "text"
 			}
 		],
@@ -149,7 +149,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Flourish",
+				"value": "[x] Flourish",
 				"nodeType": "text"
 			}
 		],
@@ -161,7 +161,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Why we do what we do",
+				"value": "[x] Why we do what we do",
 				"nodeType": "text"
 			}
 		],
@@ -173,7 +173,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Delivering Happiness",
+				"value": "[x] Delivering Happiness",
 				"nodeType": "text"
 			}
 		],
@@ -257,7 +257,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] A Theory of Fun for Game Design",
+				"value": "[x] A Theory of Fun for Game Design",
 				"nodeType": "text"
 			}
 		],
@@ -269,7 +269,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] The art of Game Design",
+				"value": "[x] The art of Game Design",
 				"nodeType": "text"
 			}
 		],
@@ -281,7 +281,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Level up!",
+				"value": "[x] Level up!",
 				"nodeType": "text"
 			}
 		],
@@ -293,7 +293,7 @@
 			{
 				"data": {},
 				"marks": [],
-				"value": "[ ] Rules of play",
+				"value": "[x] Rules of play",
 				"nodeType": "text"
 			}
 		],
