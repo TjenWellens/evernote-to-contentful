@@ -9,7 +9,6 @@ const fs = require('fs');
 const {findUpdatedTagIds} = require("./lib.findUpdates");
 
 async function createNotes(noteIds, tags) {
-	fs.writeFileSync('error/_failed-ids.txt', "")
 	console.log(`creating/updating ${noteIds.length} notes...`)
 	let success = 0
 	let failed = 0
