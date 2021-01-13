@@ -17,6 +17,8 @@ async function createNotes(noteIds, tags) {
 			.then(entry => {
 				console.log(`note created: "${note.title}" [${note.guid}]`)
 				success++
+				fs.writeFileSync(`note_${id}_content.xml`, note.content)
+				fs.writeFileSync(`note_${id}_entry.json`, JSON.stringify(entry))
 				return entry
 			})
 			.catch(e => {
@@ -36,7 +38,7 @@ async function note2post() {
 	const notebook = await findNotebook("Blog")
 	const tags = await findTags(notebook)
 
-	const id = '0e0bc924-9a80-45a9-8e4e-a052306b652a'
+	const id = '1521a489-f1ab-44e7-9024-142bb98982c3'
 
 	await createNotes([id], tags)
 

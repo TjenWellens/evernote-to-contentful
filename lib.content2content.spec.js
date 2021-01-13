@@ -532,8 +532,9 @@ target="_blank"><font style="font-size: 36px;">Books</font></a>
 })
 
 describe('block', () => {
-	it('ordered list', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+	describe('list', () => {
+		it('ordered list', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <ol>
@@ -542,72 +543,72 @@ describe('block', () => {
 <li>third</li>
 </ol>
 </en-note>`
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"marks": [],
-										"value": "first",
-										"nodeType": "text"
-									}
-								],
-								"nodeType": "paragraph"
-							}
-						],
-						"nodeType": "list-item"
-					},
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"marks": [],
-										"value": "second",
-										"nodeType": "text"
-									}
-								],
-								"nodeType": "paragraph"
-							}
-						],
-						"nodeType": "list-item"
-					},
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"marks": [],
-										"value": "third",
-										"nodeType": "text"
-									}
-								],
-								"nodeType": "paragraph"
-							}
-						],
-						"nodeType": "list-item"
-					}
-				],
-				"nodeType": "ordered-list"
-			},
-		]
-		expect(await content2content(noteContent)).toEqual(entryContent)
-	})
-	it('unordered list', async () => {
-		const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "first",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "second",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "third",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						}
+					],
+					"nodeType": "ordered-list"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+		it('unordered list', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>
 <ul>
@@ -615,51 +616,182 @@ describe('block', () => {
 <li>bbb</li>
 </ul>
 </en-note>`
-		const entryContent = [
-			{
-				"data": {},
-				"content": [
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"marks": [],
-										"value": "aaa",
-										"nodeType": "text"
-									}
-								],
-								"nodeType": "paragraph"
-							}
-						],
-						"nodeType": "list-item"
-					},
-					{
-						"data": {},
-						"content": [
-							{
-								"data": {},
-								"content": [
-									{
-										"data": {},
-										"marks": [],
-										"value": "bbb",
-										"nodeType": "text"
-									}
-								],
-								"nodeType": "paragraph"
-							}
-						],
-						"nodeType": "list-item"
-					}
-				],
-				"nodeType": "unordered-list"
-			},
-		]
-		expect(await content2content(noteContent)).toEqual(entryContent)
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "aaa",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "bbb",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						}
+					],
+					"nodeType": "unordered-list"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
+		it('nested list', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<ol>
+<li>
+<div>understand your own emotions</div>
+</li>
+<li>
+<div>why do I feel those emotions</div>
+</li>
+<li>
+<div>personal values</div>
+</li>
+<ul>
+<li>
+\t<div>why do I consider this as success / failure</div>
+</li>
+<li>
+\t<div>by what metric do I judge myself and those around me</div>
+</li>
+</ul>
+</ol>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "understand your own emotions",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "why do I feel those emotions",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"marks": [],
+											"value": "personal values",
+											"nodeType": "text"
+										}
+									],
+									"nodeType": "paragraph"
+								}
+							],
+							"nodeType": "list-item"
+						},
+						{
+							"data": {},
+							"content": [
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"content": [
+												{
+													"data": {},
+													"marks": [],
+													"value": "why do I consider this as success / failure",
+													"nodeType": "text"
+												}
+											],
+											"nodeType": "paragraph"
+										}
+									],
+									"nodeType": "list-item"
+								},
+								{
+									"data": {},
+									"content": [
+										{
+											"data": {},
+											"content": [
+												{
+													"data": {},
+													"marks": [],
+													"value": "by what metric do I judge myself and those around me",
+													"nodeType": "text"
+												}
+											],
+											"nodeType": "paragraph"
+										}
+									],
+									"nodeType": "list-item"
+								},
+							],
+							"nodeType": "unordered-list"
+						},
+					],
+					"nodeType": "ordered-list"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
 	})
 	describe('paragraphs', () => {
 		it('simple line', async () => {

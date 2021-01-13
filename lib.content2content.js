@@ -107,12 +107,25 @@ function isList(node) {
 	return isOrderedList(node) || isUnorderedList(node)
 }
 
+function isListItem(node) {
+	return node["#name"] === "li"
+}
+
 function listItem(node) {
-	return {
-		"data": {},
-		"content": parseNode(node.$$[0]),
-		"nodeType": "list-item"
+	if (isListItem(node)) {
+		if (node.$$.length !== 1) throw new Error('only list-items with one child are supported')
+		return {
+			"data": {},
+			"content": parseNode(node.$$[0]),
+			"nodeType": "list-item"
+		}
 	}
+
+	if (isList(node)) {
+		return list(node)
+	}
+
+	throw new Error('unsupported list content')
 }
 
 function listType(node) {
