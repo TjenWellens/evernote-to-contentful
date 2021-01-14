@@ -755,36 +755,42 @@ describe('block', () => {
 											"content": [
 												{
 													"data": {},
-													"marks": [],
-													"value": "why do I consider this as success / failure",
-													"nodeType": "text"
+													"content": [
+														{
+															"data": {},
+															"marks": [],
+															"value": "why do I consider this as success / failure",
+															"nodeType": "text"
+														}
+													],
+													"nodeType": "paragraph"
 												}
 											],
-											"nodeType": "paragraph"
-										}
-									],
-									"nodeType": "list-item"
-								},
-								{
-									"data": {},
-									"content": [
+											"nodeType": "list-item"
+										},
 										{
 											"data": {},
 											"content": [
 												{
 													"data": {},
-													"marks": [],
-													"value": "by what metric do I judge myself and those around me",
-													"nodeType": "text"
+													"content": [
+														{
+															"data": {},
+															"marks": [],
+															"value": "by what metric do I judge myself and those around me",
+															"nodeType": "text"
+														}
+													],
+													"nodeType": "paragraph"
 												}
 											],
-											"nodeType": "paragraph"
-										}
+											"nodeType": "list-item"
+										},
 									],
-									"nodeType": "list-item"
+									"nodeType": "unordered-list"
 								},
 							],
-							"nodeType": "unordered-list"
+							"nodeType": "list-item"
 						},
 					],
 					"nodeType": "ordered-list"

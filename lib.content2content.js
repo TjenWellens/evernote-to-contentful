@@ -111,18 +111,22 @@ function isListItem(node) {
 	return node["#name"] === "li"
 }
 
+function _listItem(content) {
+	return {
+		"data": {},
+		"content": content,
+		"nodeType": "list-item"
+	}
+}
+
 function listItem(node) {
 	if (isListItem(node)) {
 		if (node.$$.length !== 1) throw new Error('only list-items with one child are supported')
-		return {
-			"data": {},
-			"content": parseNode(node.$$[0]),
-			"nodeType": "list-item"
-		}
+		return _listItem(parseNode(node.$$[0]))
 	}
 
 	if (isList(node)) {
-		return list(node)
+		return _listItem([list(node)])
 	}
 
 	throw new Error('unsupported list content')
