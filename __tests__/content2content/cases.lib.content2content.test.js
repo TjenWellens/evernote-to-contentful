@@ -48,7 +48,6 @@ describe('real world cases should parse', () => {
 		['f8e6a7e0-3fdf-4555-84fb-f72668066c88'],
 		['0e0bc924-9a80-45a9-8e4e-a052306b652a'],
 		['49703f01-1bff-4726-bf27-bf4ed2549332'],
-		['6e72bb1d-d0d4-462f-8751-0845782e5a00'],
 		['690ab66a-dc65-4c46-a7f7-932d85566942'],
 		['b5c91703-724f-4174-83a0-5fa8f99fdd9d'],
 		['5dc19a5e-12d8-47b4-9bac-dec0d8fc65e3'],
@@ -61,6 +60,12 @@ describe('real world cases should parse', () => {
 
 	test('parse case f08c4cb1-17ba-4b3d-8674-3c26583b1418', async () => {
 		const id = 'f08c4cb1-17ba-4b3d-8674-3c26583b1418'
+		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
+		const result = await content2content(noteContent, images)
+	})
+
+	test('parse case 6e72bb1d-d0d4-462f-8751-0845782e5a00', async () => {
+		const id = '6e72bb1d-d0d4-462f-8751-0845782e5a00'
 		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
 		const result = await content2content(noteContent, images)
 	})
