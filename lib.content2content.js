@@ -122,9 +122,10 @@ function _listItem(content) {
 function listItem(node) {
 	if (isListItem(node)) {
 		if (node.$$.length !== 1) {
-			if (node.$$.length === 2 && isEmptyNewline(node.$$[1])) {
-				// ignore when second list content newline
-			} else {
+			if (node.$$.length !== 2) {
+				throw new Error('only list-items with one child are supported')
+			}
+			if (!isNewline(node.$$[1]) && !isEmptyNewline(node.$$[1])) {
 				throw new Error('only list-items with one child are supported')
 			}
 		}
