@@ -1,0 +1,6105 @@
+[
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Table of Contents",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "01. Getting to Know HTML5",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "02. Introducing JavaScript and the DOM",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "03. Events, Handlers and All that Jazz",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "04. JavaScript functions and Objects",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "(05. Geolocation)",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "06. Talking to the web",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "07. Canvas",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "08. Video",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "09. Web Storage",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "10. Web Workers",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "01. Getting to Know HTML5",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "minimal html5 document:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<!doctype html>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<html>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<head>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<meta charset=\"utf-8\">",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<linkrel=\"stylesheet\"href=\"name.css\">",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<script src=\"src.js\"></script>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "</head>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<body></body>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "</html>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<script> javascript code </script>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var name = \"tekst\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var othername = 100;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "while(condition){...}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if(condition){}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "else{}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "name = name + \"<br>\"; // string concatination",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "document.write(name); // write string at position of <script> tag",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "02. Introducing JavaScript and the DOM",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var element = document.getElementById(\"idName\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "element.innerHTML = \"nieuwe tekst\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function initBlaBla() {...}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "window.onload=initBlaBla;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var arr = new Array();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "arr[1]=\"tests\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var arr = [4,8,6];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var length = arr.length;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Math.floor(x);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Math.random() * arr.length;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Book: David Flanagan - Javascript: The Definitive Guide",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "undefined != null",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "03. Events, Handlers and All that Jazz",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "H3: Events, Handlers, ... - Interaction",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "DOM: Document Object Model",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "adding a click listener to a button",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "button.onclick = handleButtonClick; // self defined function",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function handleButtonClick(){",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "alert(\"Button was clicked\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "access or edit value of input text field",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "txt.value = \"new text\"; // for input text fields",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "creating a DOM element and add it to the page",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var li = document.createElement(\"li\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "ul.appendChild(li);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "04. JavaScript functions and Objects",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Arguments VS Parameters:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "fName(arg);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function fName(param){",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "return param;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "parameters: pass-by-value",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "objects: pass-by-reference",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function without return, returns 'undefined'",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "functions are values",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Object Literals:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var obj = {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "name : \"name\",",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "rank : 3,",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "arrName : [\"elt0\",\"elt1\"],",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "methodName : function(){...}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {
+					"uri": "http://obj.name/"
+				},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "obj.name",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"value": ";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "obj[\"name\"];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "for(prop in obj){...}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Add/remove property to object",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "obj.newFieldName = \"test\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "delete obj.newFieldName; // undefined",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "current time:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "new Date().getTime();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Function vs Method",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "function: global",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "method: object-bound",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Constructor(function with statements using 'this')",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function Dog(name, weight){",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {
+					"uri": "http://this.name/"
+				},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "this.name",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"value": "= name;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "this.weight = weight;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "this.bark = function(){...};",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var instance = new Dog(\"fido\", 46);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Assigning a variable without 'var' makes it global, even when done in a function",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "06. Talking to the web",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "A) XHRorAJAX: XML Http Request",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "secure",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "only from same server as webpage",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "not only JSON",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var request = new XMLHttpRequest();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "request.open(\"GET\", url);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "request.onload = function() {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if (request.status == 200) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "alert(\"Data received!\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "};",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "request.send(null); // or data you want to send",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "JSON: JavaScript Object Notation",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "JSON.stringify(movie);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "JSON.parse(jsonString);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "? WHY does 'for..in' not work but 'for i-n++' does work?",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "> because 'for..in' is more complicated than 'for..i-n++'",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "-----------------------------------------------------------------------------",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "B) JSONP: json with Padding",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "less secure",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "from ANY server",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "automatically parsed as JavaScript",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "usually callback function",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var newScriptElement = document.createElement(\"script\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "newScriptElement.setAttribute(\"src\", url);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "newScriptElement.setAttribute(\"id\", \"jsonp\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "insert a script tag",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<script src=\"",
+				"nodeType": "text"
+			},
+			{
+				"data": {
+					"uri": "http://externalsite.be/dog.json?q=hfhtml5&amp;callback=myCallback"
+				},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "http://externalsite.be/dog.json?q=hfhtml5&callback=myCallback",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"value": "\"></script>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "linking a file usually containing",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var data = [{\"name\":\"tw\"},{\"name\":\"other}]",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "myCallback(data);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Script injection: insert script tag with JavaScript",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var head = document.getElementsByTagName(\"head\")[0];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if(oldScriptElement == null){",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "head.appendChild(newScriptElement):",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}else{",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "head.replaceChild(newScriptElement, oldScriptElement);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "-----------------------------------------------------------------------------",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Timer",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "setInterval(handleRefresh, 3000);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Anti-browser-cache",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var url = \"",
+				"nodeType": "text"
+			},
+			{
+				"data": {
+					"uri": "http://gumball.wickedlysmart.com/?callback=updateSales"
+				},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "http://gumball.wickedlysmart.com/?callback=updateSales",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"value": "\" +",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "\"&random=\" + (new Date()).getTime();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "07. Canvas",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "canvas html tag",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<canvas id=\"...\" width=\"300\" height=\"150\">Msg when canvas not supported</canvas>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "css width and height SCALE the canvas",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var cancas = document.getElementById(\"...\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var context = canvas.getContext(\"2d\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "stroke/fill",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "context.fillRect(x,y,width,height);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "checksupport:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if(canvas.getContext){}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "check support without canvas in html:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var cavas = document.createElement(\"canvas\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "color(like CSS)",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "context.fillStyle = \"lightblue\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "// c --> context",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Create paths:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.beginPath();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.moveTo(x,y);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.lineTo(x,y);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "...",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.closePath();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Draw paths:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.lineWidth = 5",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.stroke();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.fillStyle = \"red\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.fill();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Arcs:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "angles in radial",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "direction true is counterClockwise",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.beginPath();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.arc(x,y,radius, startAngle, endAngle, direction);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Text:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.font = \"italic 1.2em serif\"; // cfcss",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.textAlign = \"left\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "c.fillText(\"text\", x,y);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Image:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var img = new Image();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "img.src = \"url.png\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "img.onload = function(){c.drawImage(img, x, y, width, hieght);}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "08 Video",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<video controls autoplay src=\"video/preroll.mp4\" width=\"480\" height=\"360\" poster=\"images/prerollposter.jpg\" id=\"video\"></video>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "attributes:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "src=\"url\": video file",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "width=\"\"",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "height=\"\"",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "controls: show controls",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "preload: load before play is clicked",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "autoplay: start playing when loaded",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "poster=\"imgSrc\": show this image before playing",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "loop: auto replay",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Video formats:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "MP4: H264 video + AAC audio",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "safari",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "IE9",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "chrome?",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Ogg: Theora video + Vorbis audio",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "firefox",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "chrome",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "opera",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "WebM: Vp8 video + Vorbis audio",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "firefox",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "chrome",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "opera",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Fallback flash:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "<object> tag in <video>",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Extra's:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "scratch buffer to process video before copying it to the display.",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "no HTML5 standard for streaming",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "no standard way of protecting video delivered through the video element",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "H9: Web Storage - storing things locally",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "localStorage/sessionStorage",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "---------------------------",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "length",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "---------------------------",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "setItem(\"key\", \"value\")",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "getItem(\"key\") : \"value\"",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "key(i) : \"key\"",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "removeItem(\"key\")",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "clear()",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Cookies:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "size=4KB",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "key-value pairs",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "sent with every HTTP request",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Web Storage:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "size=5-10MB per domain",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "key-value pairs",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "private per browser, per domain",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "save/load:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "localStorage.setItem(\"key\", \"value\"); // overrides if key already exists",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var valueString = localStorage.getItem(\"key\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "or",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "localStorage[\"key\"] = \"value\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var value = localStorage[\"key\"];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "check if supported",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if (window[\"localStorage\"]) {...}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "loopthrough whole storage: (undefined order)",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "for (var i = 0; i < localStorage.length; i++) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var key = localStorage.key(i);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var value = localStorage[key];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "FOR IN",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "for (var key in localStorage) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var value = localStorage[key];",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "remove:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "localStorage.removeItem(\"key\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Developer tools of a browser can show all local storage",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "use JSON to store arrays,objects,... in localstorage",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Going over thequota:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "try {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "localStorage.setItem(myKey, myValue);",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "} catch(e) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if (e == QUOTA_EXCEEDED_ERR) {}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "Session Storage:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "remove data on exit",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "\"sessionStorage\" instead of \"localStorage\"",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "? Does editing page source allow localStorage.clear() for that domain?",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [],
+		"nodeType": "hr"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "10 Web Workers",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "MAIN",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "check if workers areavailable:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if (window[\"Worker\"]) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var status = document.getElementById(\"status\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "status.innerHTML = \"Bummer, no Web Workers\";",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "createworkers:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var worker = new Worker(\"worker.js\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var worker2 = new Worker(\"worker.js\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "communicate(string, array, JSON, not functions):",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "worker.postMessage(\"ping\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "worker.onmessage = function (event) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var message = \"Worker says \" + event.data;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "var worker = event.target;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "};",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "WORKER",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "onmessage = pingPong;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "function pingPong(event) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "if (event.data == \"ping\") {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "postMessage(\"pong\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "VARIA",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "scripts:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "importScripts(\"",
+				"nodeType": "text"
+			},
+			{
+				"data": {
+					"uri": "http://bigscience.org/nuclear.js"
+				},
+				"content": [
+					{
+						"data": {},
+						"marks": [],
+						"value": "http://bigscience.org/nuclear.js",
+						"nodeType": "text"
+					}
+				],
+				"nodeType": "hyperlink"
+			},
+			{
+				"data": {},
+				"marks": [],
+				"value": "\",\"mylibs/atomsmasher.js\");",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "main:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "worker.terminate();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "worker:",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "close();",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "handle errors (main):",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "worker.onerror = function(error) {",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "document.getElementById(\"output\").innerHTML =\"There was an error in \" + error.filename +\" at line number \" + error.lineno +\": \" + error.message;",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "}",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "workers can use",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "XMLHttpRequest",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			},
+			{
+				"data": {},
+				"content": [
+					{
+						"data": {},
+						"content": [
+							{
+								"data": {},
+								"marks": [],
+								"value": "Local Storage",
+								"nodeType": "text"
+							}
+						],
+						"nodeType": "paragraph"
+					}
+				],
+				"nodeType": "list-item"
+			}
+		],
+		"nodeType": "unordered-list"
+	},
+	{
+		"data": {},
+		"content": [
+			{
+				"data": {},
+				"marks": [],
+				"value": "",
+				"nodeType": "text"
+			}
+		],
+		"nodeType": "paragraph"
+	}
+]
