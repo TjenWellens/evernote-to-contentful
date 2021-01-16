@@ -188,7 +188,7 @@ function isLink(node) {
 function link(node, images) {
 	return {
 		"data": isInternalLink() ? internalLinkData() : externalLinkData(),
-		"content": _parseInlineNodeContent(node, images),
+		"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, images)),
 		"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
 	};
 
@@ -413,9 +413,7 @@ function squashInlineTextAndCleanupWhitespace(children) {
 }
 
 function _parseInlineNodeContent(node, images) {
-	const contentSquashed = squashInlineTextAndCleanupWhitespace(node.$$.flatMap(node => parseInline(node, images)));
-
-	return contentSquashed
+	return node.$$.flatMap(node => parseInline(node, images));
 
 	function isTextEntry({nodeType}) {
 		return nodeType && nodeType === 'text';
@@ -458,11 +456,14 @@ function _parseInlineNodeContent(node, images) {
 }
 
 function parseInlineNode(node, images) {
-	return yankImageToRoot({
+	const parsed = _parseInlineNodeContent(node, images);
+	const squashed = squashInlineTextAndCleanupWhitespace(parsed);
+	const paragraph = {
 		"data": {},
-		"content": _parseInlineNodeContent(node, images),
+		"content": squashed,
 		"nodeType": "paragraph"
-	})
+	};
+	return yankImageToRoot(paragraph)
 }
 
 function isTable(node) {

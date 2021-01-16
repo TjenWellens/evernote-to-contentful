@@ -296,6 +296,66 @@ target="_blank">In progress blogpost</a>)
 			]
 			expect(await content2content(noteContent)).toEqual(entryContent)
 		})
+		it('space between text and link is kept', async () => {
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>
+<span style="-en-paragraph:true;">Teaching myself how to code, I started writing applications and immersed
+myself more and more in the world of software. Initially I created small games, but over time also started
+creating small utility programs for myself. I programmed by myself for years. And I learned, the hard way,
+the need for maintainable code. I had to rewrite a big project multiple times! All that effort wasted! This
+drove me to study topics like: version control, design patterns, clean code, tdd, ddd, architecture, … This
+is the basis for my 
+</span>
+<a href="evernote:///view/30809684/s230/c2272844-4bd8-6400-23fa-52e53392378c/c2272844-4bd8-6400-23fa-52e53392378c/"
+   style="color: rgb(105, 170, 53);">Quest: Learn to write adaptable software
+</a>
+<span style="-en-paragraph:true;">.</span>
+</div>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "Teaching myself how to code, I started writing applications and immersed\nmyself more and more in the world of software. Initially I created small games, but over time also started\ncreating small utility programs for myself. I programmed by myself for years. And I learned, the hard way,\nthe need for maintainable code. I had to rewrite a big project multiple times! All that effort wasted! This\ndrove me to study topics like: version control, design patterns, clean code, tdd, ddd, architecture, … This\nis the basis for my \n",
+							"nodeType": "text"
+						},
+						{
+							"data": {
+								"target": {
+									"sys": {
+										"id": "c2272844-4bd8-6400-23fa-52e53392378c",
+										"type": "Link",
+										"linkType": "Entry"
+									}
+								}
+							},
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"value": "Quest: Learn to write adaptable software",
+									"nodeType": "text"
+								}
+							],
+							"nodeType": "entry-hyperlink"
+						},
+						{
+							"data": {},
+							"marks": [],
+							"value": ".",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent)).toEqual(entryContent)
+		})
 	})
 	describe('ignored (treated as plain text)', () => {
 		describe('span', () => {
@@ -678,10 +738,10 @@ describe('block', () => {
 </li>
 <ul>
 <li>
-\t<div>why do I consider this as success / failure</div>
+<div>why do I consider this as success / failure</div>
 </li>
 <li>
-\t<div>by what metric do I judge myself and those around me</div>
+<div>by what metric do I judge myself and those around me</div>
 </li>
 </ul>
 </ol>
