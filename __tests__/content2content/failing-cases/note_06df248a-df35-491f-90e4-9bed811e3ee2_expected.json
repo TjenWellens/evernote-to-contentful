@@ -173,9 +173,9 @@
 								"data": {
 									"target": {
 										"sys": {
-											"type": "Link",
+											"id": "a6e4a475-5f3d-47ac-ade7-5c7bbfe96589",
 											"linkType": "Entry",
-											"id": "a6e4a475-5f3d-47ac-ade7-5c7bbfe96589"
+											"type": "Link"
 										}
 									}
 								},
@@ -212,14 +212,80 @@
 					{
 						"content": [
 							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Story: 'retrospective driven improvement' is awesome"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
 								"data": {},
-								"marks": [],
-								"nodeType": "text",
-								"value": "Story: 'retrospective driven improvement' is awesome"
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Story: retrospectives are teambuilding"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Story: So 'pair programming' can work on the job"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Story: 'automate relentlessly' is awesome"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
 							}
 						],
 						"data": {},
-						"nodeType": "paragraph"
+						"nodeType": "unordered-list"
 					}
 				],
 				"data": {},
@@ -248,14 +314,80 @@
 					{
 						"content": [
 							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Pantera"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
 								"data": {},
-								"marks": [],
-								"nodeType": "text",
-								"value": "Pantera"
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Stijn, Christina, Sana, me"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Sana's focus team"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
+							},
+							{
+								"content": [
+									{
+										"content": [
+											{
+												"data": {},
+												"marks": [],
+												"nodeType": "text",
+												"value": "Competitor analysis"
+											}
+										],
+										"data": {},
+										"nodeType": "paragraph"
+									}
+								],
+								"data": {},
+								"nodeType": "list-item"
 							}
 						],
 						"data": {},
-						"nodeType": "paragraph"
+						"nodeType": "unordered-list"
 					}
 				],
 				"data": {},
@@ -433,9 +565,9 @@
 								"data": {
 									"target": {
 										"sys": {
-											"type": "Link",
+											"id": "dfacd720-a049-4464-ab99-69ff3ab03c0c",
 											"linkType": "Entry",
-											"id": "dfacd720-a049-4464-ab99-69ff3ab03c0c"
+											"type": "Link"
 										}
 									}
 								},
