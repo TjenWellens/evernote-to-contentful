@@ -52,11 +52,19 @@ describe('real world cases should parse', () => {
 		expect(result).toEqual(JSON.parse(expectedContent))
 	})
 
+	test('check case 49703f01-1bff-4726-bf27-bf4ed2549332', async () => {
+		const id = `49703f01-1bff-4726-bf27-bf4ed2549332`;
+		const noteContent = fs.readFileSync(`${basePath}/note_${id}_content.xml`)
+		const expectedContent = fs.readFileSync(`${basePath}/note_${id}_expected.json`)
+		getAssetIdForHash.mockImplementation(() => 'foo-asset-id')
+		const result = await content2content(noteContent, images)
+		expect(result).toEqual(JSON.parse(expectedContent))
+	})
+
 	test.each([
 		['3ed9cba4-96c2-4791-8c18-4bad86a8f09f'],
 		['f8e6a7e0-3fdf-4555-84fb-f72668066c88'],
 		['0e0bc924-9a80-45a9-8e4e-a052306b652a'],
-		['49703f01-1bff-4726-bf27-bf4ed2549332'],
 		['b5c91703-724f-4174-83a0-5fa8f99fdd9d'],
 		['5dc19a5e-12d8-47b4-9bac-dec0d8fc65e3'],
 		['eef32f08-24e5-4640-b791-449dba4ac52e'],

@@ -125,7 +125,7 @@ function listItem(node) {
 			if (node.$$.length !== 2) {
 				throw new Error('only list-items with one child are supported')
 			}
-			if (!isNewline(node.$$[1]) && !isEmptyNewline(node.$$[1])) {
+			if (!isNewline(node.$$[1]) && !isDivAroundNewline(node.$$[1])) {
 				throw new Error('only list-items with one child are supported')
 			}
 		}
@@ -136,10 +136,18 @@ function listItem(node) {
 		return _listItem([list(node)])
 	}
 
+	if (isDivWithOneElement(node)) {
+		return listItem(node.$$[0])
+	}
+
 	throw new Error('unsupported list content')
 
-	function isEmptyNewline(node) {
+	function isDivAroundNewline(node) {
 		return isDiv(node) && node.$$.length === 1 && isNewline(node.$$[0]);
+	}
+
+	function isDivWithOneElement(node) {
+		return isDiv(node) && node.$$.length === 1;
 	}
 }
 
