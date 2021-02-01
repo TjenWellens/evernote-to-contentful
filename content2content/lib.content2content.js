@@ -1,5 +1,5 @@
 const xml2js = require('xml2js');
-const {Node} = require('./content-elements');
+const {RootElementHandler} = require('./content-elements');
 
 const parser = new xml2js.Parser({
 	// trim: true,
@@ -11,7 +11,7 @@ const parser = new xml2js.Parser({
 async function content2content(noteContent, images) {
 	const parsedNodeContent = await parser.parseStringPromise(noteContent)
 	const content = parsedNodeContent["en-note"];
-	const defaultHandler = new Node()
+	const defaultHandler = new RootElementHandler()
 	if (!defaultHandler.appliesTo(content)) {
 		return []
 	}

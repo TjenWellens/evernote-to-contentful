@@ -626,6 +626,7 @@ function isDiv(node) {
 }
 
 module.exports = {
+	RootElementHandler: Node,
 	squashInlineTextAndCleanupWhitespace,
 	_text: value => new Text_inline()._text(value),
 	inlineNewline: node => new Newline_inline()._parseSingle(node),
