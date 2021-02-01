@@ -1,6 +1,6 @@
 
-const {parseNoteIdFromInternalUrl} = require("./lib.content2content.parseNoteIdFromInternalUrl");
-const {yankImageToRoot} = require("./lib.content2content.yankImageToRoot");
+const {parseNoteIdFromInternalUrl} = require("./parseNoteIdFromInternalUrl");
+const {yankImageToRoot} = require("./yankImageToRoot");
 const {getAssetIdForHash} = require("./../lib.getAssetIdForHash");
 
 function hasChildren(node) {

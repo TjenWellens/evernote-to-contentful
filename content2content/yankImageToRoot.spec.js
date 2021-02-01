@@ -1,4 +1,4 @@
-const {yankImageToRoot} = require("./lib.content2content.yankImageToRoot");
+const {yankImageToRoot} = require("./yankImageToRoot");
 
 it('should return the same when no image', () => {
 	const input = {

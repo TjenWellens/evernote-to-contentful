@@ -1,4 +1,4 @@
-const {parseNoteIdFromInternalUrl} = require("./lib.content2content.parseNoteIdFromInternalUrl");
+const {parseNoteIdFromInternalUrl} = require("./parseNoteIdFromInternalUrl");
 
 it('should parse noteId', () => {
 	const id = `c91a6abd-cec2-426c-8685-2fd03460c23d`;
