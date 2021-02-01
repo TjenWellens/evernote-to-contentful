@@ -40,6 +40,7 @@ class CodeBlock {
 		}]
 	}
 }
+
 class Table {
 	appliesTo(node) {
 		return node["#name"] === "table"
@@ -104,6 +105,7 @@ class Table {
 		}
 	}
 }
+
 class InlineNode {
 	appliesTo(node) {
 		return new Node().appliesTo(node) && node.$$.every(child => new Inline().appliesTo(child))
@@ -124,6 +126,7 @@ class InlineNode {
 		return yankImageToRoot(paragraph)
 	}
 }
+
 class ImageNode {
 	appliesTo(node) {
 		return new Node().appliesTo(node) && node.$$.some(child => new Image().appliesTo(child))
@@ -135,6 +138,7 @@ class ImageNode {
 			.flatMap(node => new Node()._parseSingle(node, images))
 	}
 }
+
 class List {
 	appliesTo(node) {
 		return this._isOrderedList(node) || this._isUnorderedList(node)
@@ -167,6 +171,7 @@ class List {
 		return node["#name"] === "ul";
 	}
 }
+
 class Node {
 	appliesTo(node) {
 		return hasChildren(node)
@@ -198,6 +203,7 @@ class Node {
 		throw new Error("Unknown node type" + JSON.stringify(node))
 	}
 }
+
 class Image {
 	appliesTo(node) {
 		return node["#name"] === "en-media"
@@ -226,6 +232,7 @@ class Image {
 		}
 	}
 }
+
 class HorizontalLine {
 	appliesTo(node) {
 		return node["#name"] === "hr"
@@ -243,6 +250,7 @@ class HorizontalLine {
 		}
 	}
 }
+
 class Ignorable {
 	appliesTo(node) {
 		return isEmptyDiv(node) || isEmptySpan(node)
@@ -260,6 +268,7 @@ class Ignorable {
 		return []
 	}
 }
+
 class Inline {
 	_chainOfResponsibility_appliesTo = [
 		// new Ignorable(),
@@ -298,6 +307,7 @@ class Inline {
 		throw new Error('Unknown inline node type ' + JSON.stringify(node))
 	}
 }
+
 class Newline_inline {
 	appliesTo(node) {
 		return isNewline(node)
@@ -311,6 +321,7 @@ class Newline_inline {
 		return new Text_inline()._text('\n');
 	}
 }
+
 class Link {
 	appliesTo(node) {
 		return node["#name"] === "a"
@@ -354,6 +365,7 @@ class Link {
 		}
 	}
 }
+
 class Todo {
 	appliesTo(node) {
 		return node["#name"] === "en-todo"
@@ -369,6 +381,7 @@ class Todo {
 		return new Text_inline()._text(` [${checkmark}] `);
 	}
 }
+
 class Bold {
 	appliesTo(node) {
 		return node["#name"] === "b"
@@ -378,6 +391,7 @@ class Bold {
 		return _parseInlineNodeContent(node, images)
 	}
 }
+
 class Span {
 	appliesTo(node) {
 		return node["#name"] === "span"
@@ -387,6 +401,7 @@ class Span {
 		return _parseInlineNodeContent(node, images)
 	}
 }
+
 class Font {
 	appliesTo(node) {
 		return node["#name"] === "font"
@@ -396,6 +411,7 @@ class Font {
 		return _parseInlineNodeContent(node, images)
 	}
 }
+
 class Newline_block {
 	appliesTo(node) {
 		return isNewline(node)
@@ -409,6 +425,7 @@ class Newline_block {
 		}]
 	}
 }
+
 class Text_inline {
 	appliesTo(node) {
 		return node["#name"] === "__text__"
@@ -431,6 +448,7 @@ class Text_inline {
 		};
 	}
 }
+
 class Text_forParagraph {
 	appliesTo(node) {
 		return new Text_inline().appliesTo(node)
@@ -444,6 +462,7 @@ class Text_forParagraph {
 		}]
 	}
 }
+
 class ListItem {
 	appliesTo(node) {
 		return node["#name"] === "li"
