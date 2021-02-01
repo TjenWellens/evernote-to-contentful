@@ -1,7 +1,7 @@
 const xml2js = require('xml2js');
 const {parseNoteIdFromInternalUrl} = require("./lib.content2content.parseNoteIdFromInternalUrl");
 const {yankImageToRoot} = require("./lib.content2content.yankImageToRoot");
-const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
+const {getAssetIdForHash} = require("./../lib.getAssetIdForHash");
 
 const parser = new xml2js.Parser({
 	// trim: true,

@@ -1,6 +1,6 @@
 const {gatherReferences} = require("./lib.gatherReferences");
 const {createAssetsFromEvernoteResources} = require("./lib.resource2asset");
-const {content2contentAsRichText} = require("./lib.content2content");
+const {content2contentAsRichText} = require("./content2content/lib.content2content");
 const {createOrUpdateEntry} = require("./lib.createEntry");
 
 async function createImages(note) {

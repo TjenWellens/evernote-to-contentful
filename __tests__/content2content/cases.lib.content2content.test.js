@@ -1,5 +1,5 @@
-const {squashInlineNewline} = require("../../lib.content2content");
-const {content2content} = require("../../lib.content2content");
+const {squashInlineNewline} = require("../../content2content/lib.content2content");
+const {content2content} = require("../../content2content/lib.content2content");
 const {getAssetIdForHash} = require("../../lib.getAssetIdForHash");
 
 jest.mock('../../lib.getAssetIdForHash')

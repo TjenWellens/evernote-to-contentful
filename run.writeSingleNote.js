@@ -3,7 +3,7 @@ require('dotenv').config()
 const {findNoteById} = require("./lib.findPublishedBlogposts");
 const fs = require('fs');
 const {createImages} = require("./lib.createEntryFromNote");
-const {content2contentAsRichText} = require("./lib.content2content");
+const {content2contentAsRichText} = require("./content2content/lib.content2content");
 
 async function run(id) {
 	const note = await findNoteById(id)
