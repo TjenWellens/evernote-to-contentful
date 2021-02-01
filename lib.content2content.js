@@ -564,6 +564,14 @@ function isCodeBlock(node) {
 	return isDiv(node) && hasStyleAttribute(node) && styleAttributeContains(node, "-en-codeblock:true")
 }
 
+function parseImageNode(node, images) {
+	// evernote always adds a newline between text and image
+	// we don't want those to be added
+	return node.$$
+		.filter(node => !isNewline(node))
+		.flatMap(node => parseNode(node, images))
+}
+
 function parseCodeBlock(node, images) {
 	if (!isNode(node)) throw new Error("Code block should only contain node elements" + JSON.stringify(node))
 
@@ -583,13 +591,7 @@ function parseNode(node, images) {
 
 	if (isInlineNode(node)) return [parseInlineNode(node, images)]
 
-	if (isImageNode(node)) {
-		// evernote always adds a newline between text and image
-		// we don't want those to be added
-		return node.$$
-			.filter(node => !isNewline(node))
-			.flatMap(node => parseNode(node, images))
-	}
+	if (isImageNode(node)) return parseImageNode(node, images)
 
 	if (isList(node)) return [list(node)]
 
