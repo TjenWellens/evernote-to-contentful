@@ -659,9 +659,7 @@ module.exports = {
 	content2content,
 	squashInlineTextAndCleanupWhitespace,
 	content2contentAsRichText,
-	_text: function (value) {
-		return new Text_inline()._text(value)
-	},
+	_text: value => new Text_inline()._text(value),
 	inlineNewline: node => new Newline_inline()._parseSingle(node),
 	link: (node, images) => new Link()._parseSingle(node, images),
 }
