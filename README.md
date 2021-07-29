@@ -25,12 +25,24 @@ CONTENTFUL_CONTENT_MANAGEMENT_API_KEY="..."
 Don't commit this to git.
 (I have removed all personal info with `...`)
 
-## Install
+## With npm
+### Install
 ```
 npm install
 ```
 
-## Run
+### Run
 ```
 npm start
+```
+
+## With Docker
+### install
+```
+docker build -t evernote-to-contentful .
+```
+
+### run
+```
+docker run -it evernote-to-contentful
 ```
