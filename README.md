@@ -50,6 +50,7 @@ docker run -it -v $(pwd)/errors:/home/node/app/errors evernote-to-contentful
 
 ## known formatting problems
 ### "only list-items with one child are supported"
+caused by: image wrapped in a link
 ```
 "status": 422,
   "statusText": "Unprocessable Entity",
@@ -77,15 +78,20 @@ docker run -it -v $(pwd)/errors:/home/node/app/errors evernote-to-contentful
         ]
       },
 ```
-caused by: image wrapped in a link
 fix by: removing the link around the images
 
 ### "only list-items with one child are supported"
+caused by: multiple divs inside a list-item
 ```
 <li>
   <div></div>
   <div></div>
 </li>
 ```
-caused by: multiple divs inside a list-item
 fix by: breaking up multi-line list-items
+
+### "message: Cannot read property 'flatMap' of undefined"
+caused by: ???
+fix by: 
+- evernote 'simplify formatting'
+- ???
