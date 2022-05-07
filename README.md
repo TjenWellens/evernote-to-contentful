@@ -49,6 +49,11 @@ docker run -it -v $(pwd)/errors:/home/node/app/errors evernote-to-contentful
 
 
 ## known formatting problems
+### any problem
+caused by: ???
+fix by:
+- evernote 'simplify formatting'
+
 ### "only list-items with one child are supported"
 caused by: image wrapped in a link
 ```
@@ -91,7 +96,11 @@ caused by: multiple divs inside a list-item
 fix by: breaking up multi-line list-items
 
 ### "message: Cannot read property 'flatMap' of undefined"
-caused by: ???
-fix by: 
-- evernote 'simplify formatting'
-- ???
+caused by: empty link
+```
+<div>
+    <a href="...">
+    </a>
+</div>
+```
+fix by: remove empty link
