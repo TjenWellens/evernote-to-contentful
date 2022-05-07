@@ -46,3 +46,46 @@ docker build -t evernote-to-contentful .
 ```
 docker run -it -v $(pwd)/errors:/home/node/app/errors evernote-to-contentful
 ```
+
+
+## known formatting problems
+### "only list-items with one child are supported"
+```
+"status": 422,
+  "statusText": "Unprocessable Entity",
+  "message": "Validation error",
+  "details": {
+    "errors": [
+      {
+        "name": "in",
+        "details": "Value must be one of expected values",
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          "content",
+          4,
+          "content",
+          0,
+          "content",
+          0,
+          "nodeType"
+        ],
+        "value": "embedded-asset-block",
+        "expected": [
+          "text"
+        ]
+      },
+```
+caused by: image wrapped in a link
+fix by: removing the link around the images
+
+### "only list-items with one child are supported"
+```
+<li>
+  <div></div>
+  <div></div>
+</li>
+```
+caused by: multiple divs inside a list-item
+fix by: breaking up multi-line list-items
