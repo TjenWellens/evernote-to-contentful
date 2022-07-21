@@ -1,4 +1,5 @@
 require('dotenv').config()
+const assert = require('node:assert/strict');
 
 const {findNotebook, findTags, findNotes} = require("./lib.findPublishedBlogposts");
 const {createEntryFromTag} = require("./lib.createEntryFromTag");
@@ -78,4 +79,15 @@ async function note2post() {
 	// const noteEntries = await Promise.all(notes.map(note => createEntryFromNote(note, tags)))
 }
 
+function assertEnvVariables() {
+	assert.ok(process.env.EVERNOTE_TOKEN)
+	assert.ok(process.env.EVERNOTE_NOTESTORE_URL)
+	assert.ok(process.env.CONTENTFUL_SPACE)
+	assert.ok(process.env.CONTENTFUL_ENVIRONMENT)
+	assert.ok(process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID)
+	assert.ok(process.env.CONTENTFUL_TAG_ENTRY_TYPE_ID)
+	assert.ok(process.env.CONTENTFUL_CONTENT_MANAGEMENT_API_KEY)
+}
+
+assertEnvVariables();
 note2post()
