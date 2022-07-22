@@ -12,4 +12,6 @@ RUN npm ci --only=production
 
 COPY --chown=node:node . .
 
+RUN mkdir -p /home/node/app/errors
+
 CMD [ "npm", "start" ]
