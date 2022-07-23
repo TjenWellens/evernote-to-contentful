@@ -91,4 +91,7 @@ function assertEnvVariables() {
 
 assertEnvVariables();
 note2post()
-	.catch(console.error)
+	.catch(reason => {
+		console.error(reason)
+		throw new Error("did not finish correctly")
+	})
