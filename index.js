@@ -93,5 +93,12 @@ assertEnvVariables();
 note2post()
 	.catch(reason => {
 		console.error(reason)
+		console.log({
+			EVERNOTE_NOTESTORE_URL: process.env.EVERNOTE_NOTESTORE_URL,
+			CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+			CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
+			CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID: process.env.CONTENTFUL_BLOGPOST_ENTRY_TYPE_ID,
+			CONTENTFUL_TAG_ENTRY_TYPE_ID: process.env.CONTENTFUL_TAG_ENTRY_TYPE_ID,
+		})
 		throw new Error("did not finish correctly")
 	})
