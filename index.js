@@ -91,3 +91,4 @@ function assertEnvVariables() {
 
 assertEnvVariables();
 note2post()
+	.catch(console.error)
