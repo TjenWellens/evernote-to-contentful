@@ -1,7 +1,7 @@
 
 const {parseNoteIdFromInternalUrl} = require("./parseNoteIdFromInternalUrl");
 const {yankImageToRoot} = require("./yankImageToRoot");
-const {getAssetIdForHash} = require("./../lib.getAssetIdForHash");
+const {getAssetIdForHash} = require("../lib.getAssetIdForHash");
 
 function hasChildren(node) {
 	return node.$$ && node.$$.length !== 0
