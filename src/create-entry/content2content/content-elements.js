@@ -170,8 +170,8 @@ class Node {
 		return hasChildren(node)
 	}
 
-	parse(node, images) {
-		return node.$$.flatMap(node => this._parseSingle(node, {images}))
+	parse(node, images, clippings) {
+		return node.$$.flatMap(node => this._parseSingle(node, {images, clippings}))
 	}
 
 	_parseSingle(node, lookups) {
@@ -630,5 +630,5 @@ module.exports = {
 	squashInlineTextAndCleanupWhitespace,
 	_text: value => new Text_inline()._text(value),
 	inlineNewline: node => new Newline_inline()._parseSingle(node),
-	link: (node, images) => new Link()._parseSingle(node, {images}),
+	link: (node, images, clippings = {}) => new Link()._parseSingle(node, {images, clippings}),
 }

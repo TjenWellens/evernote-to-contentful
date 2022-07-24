@@ -28,7 +28,7 @@ async function createEntryFromNote(note, tags) {
 	const images = await createImages(note);
 	const clippings = await gatherClippings(note);
 
-	const entryContent = await content2contentAsRichText(note.content, images)
+	const entryContent = await content2contentAsRichText(note.content, images, clippings)
 
 	note.tagGuids = note.tagGuids || []
 
