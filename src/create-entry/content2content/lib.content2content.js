@@ -1,16 +1,8 @@
-const xml2js = require('xml2js');
+const {parseXmlToJs} = require("./evernote-xml-to-js-parser");
 const {RootElementHandler} = require('./content-elements');
 
-const parser = new xml2js.Parser({
-	// trim: true,
-	preserveChildrenOrder: true,
-	explicitChildren: true,
-	charsAsChildren: true,
-});
-
 async function content2content(noteContent, images) {
-	const parsedNodeContent = await parser.parseStringPromise(noteContent)
-	const content = parsedNodeContent["en-note"];
+	const content = await parseXmlToJs(noteContent)
 	const defaultHandler = new RootElementHandler()
 	if (!defaultHandler.appliesTo(content)) {
 		return []
