@@ -1,8 +1,8 @@
 require('dotenv').config()
 
 const {findNotebook, findTags, findNotes} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
-const {createEntryFromTag} = require("./lib.createEntryFromTag");
-const {createEntryFromNote} = require("./lib.createEntryFromNote");
+const {createEntryFromTag} = require("./create-entry/lib.createEntryFromTag");
+const {createEntryFromNote} = require("./create-entry/lib.createEntryFromNote");
 const {findUpdatedNoteIds} = require("./find-updates/lib.findUpdates");
 const {findNoteById} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
 const fs = require('fs');

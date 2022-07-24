@@ -5,9 +5,9 @@ const assert = require('node:assert/strict');
 const {findNotebook, findTags, findNotes} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
 const {findUpdatedNoteIds, findUpdatedTagIds} = require("./find-updates/lib.findUpdates");
 
-const {createEntryFromTag} = require("./lib.createEntryFromTag");
+const {createEntryFromTag} = require("./create-entry/lib.createEntryFromTag");
 
-const {createEntryFromNote} = require("./lib.createEntryFromNote");
+const {createEntryFromNote} = require("./create-entry/lib.createEntryFromNote");
 const {findNoteById} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
 
 async function createNotes(noteIds, tags) {
