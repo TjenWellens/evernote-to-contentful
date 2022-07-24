@@ -2,11 +2,11 @@ const {squashInlineNewline} = require("../../create-entry/content2content/lib.co
 const {content2content} = require("../../create-entry/content2content/lib.content2content");
 const {getAssetIdForHash} = require("../../create-entry/content2content/lib.getAssetIdForHash");
 
-jest.mock('../../lib.getAssetIdForHash')
+jest.mock('../../create-entry/content2content/lib.getAssetIdForHash')
 
 describe('real world cases should parse', () => {
 	const fs = require('fs')
-	const basePath = './__tests__/content2content/failing-cases';
+	const basePath = './src/__tests__/content2content/failing-cases';
 
 	const images = {}
 	getAssetIdForHash.mockImplementation(() => 'someMockedResourceId')
