@@ -1,4 +1,4 @@
-const {findTags} = require("./lib.findPublishedBlogposts");
+const {findTags} = require("./lib.evernote.findPublishedBlogposts");
 
 async function getTagUpdates(notebook) {
 	const tags = await findTags(notebook);

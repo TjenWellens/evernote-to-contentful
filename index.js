@@ -2,13 +2,13 @@ require('dotenv').config()
 const fs = require('fs');
 const assert = require('node:assert/strict');
 
-const {findNotebook, findTags, findNotes} = require("./lib.findPublishedBlogposts");
+const {findNotebook, findTags, findNotes} = require("./lib.evernote.findPublishedBlogposts");
 const {findUpdatedNoteIds, findUpdatedTagIds} = require("./lib.findUpdates");
 
 const {createEntryFromTag} = require("./lib.createEntryFromTag");
 
 const {createEntryFromNote} = require("./lib.createEntryFromNote");
-const {findNoteById} = require("./lib.findPublishedBlogposts");
+const {findNoteById} = require("./lib.evernote.findPublishedBlogposts");
 
 async function createNotes(noteIds, tags) {
     console.log(`creating/updating ${noteIds.length} notes...`)
