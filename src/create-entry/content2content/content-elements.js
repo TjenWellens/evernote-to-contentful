@@ -20,12 +20,12 @@ class CodeBlock {
 		}
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		const handler = [
 			new Node(),
 		].find(handler => handler.appliesTo(node))
 		if (!handler.appliesTo(node)) throw new Error("Code block should only contain node elements" + JSON.stringify(node))
-		const blocks = handler.parse(node, images);
+		const blocks = handler.parse(node, lookups);
 		return [{
 			"data": {},
 			"content": blocks,
@@ -39,27 +39,27 @@ class Table {
 		return node["#name"] === "table"
 	}
 
-	parse(node, images) {
-		if (isEvernoteTable(node)) return parseEvernoteTable(node, images)
+	parse(node, lookups) {
+		if (isEvernoteTable(node)) return parseEvernoteTable(node, lookups)
 
-		if (isHtmlTable(node)) return parseHtmlTable(node, images)
+		if (isHtmlTable(node)) return parseHtmlTable(node, lookups)
 
 		throw new Error('no weird tables allowed')
 
-		function parseHtmlTable(node, images) {
+		function parseHtmlTable(node, lookups) {
 			const rows = node.$$ || []
 			if (rows.length !== 1) throw new Error('only simple tables with one row allowed')
-			return rows.flatMap(row => parseHtmlTableRow(row, images))
+			return rows.flatMap(row => parseHtmlTableRow(row, lookups))
 
-			function parseHtmlTableRow(row, images) {
+			function parseHtmlTableRow(row, lookups) {
 				const columns = row.$$
 				if (!columns.every(isTableColumn)) throw new Error('html table can only have columns in a row')
 				if (columns.length !== 1) throw new Error('only simple tables with one column allowed')
-				return columns.flatMap(column => parseHtmlTableColumn(column, images))
+				return columns.flatMap(column => parseHtmlTableColumn(column, lookups))
 			}
 
-			function parseHtmlTableColumn(column, images) {
-				return new Node()._parseSingle(column, images)
+			function parseHtmlTableColumn(column, lookups) {
+				return new Node()._parseSingle(column, lookups)
 			}
 
 			function isTableColumn(node) {
@@ -67,10 +67,10 @@ class Table {
 			}
 		}
 
-		function parseEvernoteTable(node, images) {
+		function parseEvernoteTable(node, lookups) {
 			const body = node.$$.find(isTableBody);
 			if (!body) throw new Error('no weird tables allowed')
-			return new Node()._parseSingle(body, images)
+			return new Node()._parseSingle(body, lookups)
 		}
 
 		function isTableBody(node) {
@@ -104,12 +104,12 @@ class InlineNode {
 		return new Node().appliesTo(node) && node.$$.every(child => new Inline().appliesTo(child))
 	}
 
-	parse(node, images) {
-		return [this._parseSingle(node, images)]
+	parse(node, lookups) {
+		return [this._parseSingle(node, lookups)]
 	}
 
-	_parseSingle(node, images) {
-		const parsed = _parseInlineNodeContent(node, images);
+	_parseSingle(node, lookups) {
+		const parsed = _parseInlineNodeContent(node, lookups);
 		const squashed = squashInlineTextAndCleanupWhitespace(parsed);
 		const paragraph = {
 			"data": {},
@@ -125,10 +125,10 @@ class ImageNode {
 		return new Node().appliesTo(node) && node.$$.some(child => new Image().appliesTo(child))
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return node.$$
 			.filter(node => !isNewline(node))
-			.flatMap(node => new Node()._parseSingle(node, images))
+			.flatMap(node => new Node()._parseSingle(node, lookups))
 	}
 }
 
@@ -137,11 +137,11 @@ class List {
 		return this._isOrderedList(node) || this._isUnorderedList(node)
 	}
 
-	parse(node, images) {
-		return [this._parseSingle(node, images)]
+	parse(node, lookups) {
+		return [this._parseSingle(node, lookups)]
 	}
 
-	_parseSingle(node, images) {
+	_parseSingle(node, lookups) {
 		const handler = new ListItem()
 		return {
 			"data": {},
@@ -171,10 +171,10 @@ class Node {
 	}
 
 	parse(node, images) {
-		return node.$$.flatMap(node => this._parseSingle(node, images))
+		return node.$$.flatMap(node => this._parseSingle(node, {images}))
 	}
 
-	_parseSingle(node, images) {
+	_parseSingle(node, lookups) {
 		const handler = [
 			new CodeBlock(),
 			new Table(),
@@ -190,7 +190,7 @@ class Node {
 		].find(handler => handler.appliesTo(node))
 
 		if (handler) {
-			return handler.parse(node, images)
+			return handler.parse(node, lookups)
 		}
 
 		throw new Error("Unknown node type" + JSON.stringify(node))
@@ -202,11 +202,11 @@ class Image {
 		return node["#name"] === "en-media"
 	}
 
-	parse(node, images) {
-		return [this._image(node, images)]
+	parse(node, lookups) {
+		return [this._image(node, lookups)]
 	}
 
-	_image(node, images) {
+	_image(node, {images}) {
 		const hash = node.$.hash
 		const assetId = getAssetIdForHash(images, hash)
 		if (!assetId) throw new Error(`link could not find matching image for hash(${hash}) in images(${JSON.stringify(images)})`)
@@ -231,7 +231,7 @@ class HorizontalLine {
 		return node["#name"] === "hr"
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [this._parseSingle()]
 	}
 
@@ -257,7 +257,7 @@ class Ignorable {
 		}
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return []
 	}
 }
@@ -290,11 +290,11 @@ class Inline {
 		return !!this._chainOfResponsibility_appliesTo.find(handler => handler.appliesTo(node))
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		const handler = this._chainOfResponsibility_parse.find(handler => handler.appliesTo(node))
 
 		if (handler) {
-			return handler.parse(node, images)
+			return handler.parse(node, lookups)
 		}
 
 		throw new Error('Unknown inline node type ' + JSON.stringify(node))
@@ -306,7 +306,7 @@ class Newline_inline {
 		return isNewline(node)
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [this._parseSingle(node)]
 	}
 
@@ -320,14 +320,14 @@ class Link {
 		return node["#name"] === "a"
 	}
 
-	parse(node, images) {
-		return [this._parseSingle(node, images)]
+	parse(node, lookups) {
+		return [this._parseSingle(node, lookups)]
 	}
 
-	_parseSingle(node, images) {
+	_parseSingle(node, lookups) {
 		return {
 			"data": isInternalLink() ? internalLinkData() : externalLinkData(),
-			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, images)),
+			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
 			"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
 		};
 
@@ -364,7 +364,7 @@ class Todo {
 		return node["#name"] === "en-todo"
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [this._parseSingle(node)]
 	}
 
@@ -380,8 +380,8 @@ class Bold {
 		return node["#name"] === "b"
 	}
 
-	parse(node, images) {
-		return _parseInlineNodeContent(node, images)
+	parse(node, lookups) {
+		return _parseInlineNodeContent(node, lookups)
 	}
 }
 
@@ -390,8 +390,8 @@ class Span {
 		return node["#name"] === "span"
 	}
 
-	parse(node, images) {
-		return _parseInlineNodeContent(node, images)
+	parse(node, lookups) {
+		return _parseInlineNodeContent(node, lookups)
 	}
 }
 
@@ -400,8 +400,8 @@ class Font {
 		return node["#name"] === "font"
 	}
 
-	parse(node, images) {
-		return _parseInlineNodeContent(node, images)
+	parse(node, lookups) {
+		return _parseInlineNodeContent(node, lookups)
 	}
 }
 
@@ -410,7 +410,7 @@ class Newline_block {
 		return isNewline(node)
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [{
 			"data": {},
 			"content": new Text_inline()._text(""),
@@ -424,7 +424,7 @@ class Text_inline {
 		return node["#name"] === "__text__"
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [this._parseSingle(node)]
 	}
 
@@ -447,7 +447,7 @@ class Text_forParagraph {
 		return new Text_inline().appliesTo(node)
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		return [{
 			"data": {},
 			"content": squashInlineTextAndCleanupWhitespace(new Text_inline().parse(node)),
@@ -461,7 +461,7 @@ class ListItem {
 		return node["#name"] === "li"
 	}
 
-	parse(node, images) {
+	parse(node, lookups) {
 		if (new ListItem().appliesTo(node)) {
 			if (node.$$.length !== 1) {
 				if (node.$$.length !== 2) {
@@ -578,8 +578,8 @@ function squashInlineTextAndCleanupWhitespace(children) {
 	}
 }
 
-function _parseInlineNodeContent(node, images) {
-	return node.$$.flatMap(node => new Inline().parse(node, images));
+function _parseInlineNodeContent(node, lookups) {
+	return node.$$.flatMap(node => new Inline().parse(node, lookups));
 
 	function isTextEntry({nodeType}) {
 		return nodeType && nodeType === 'text';
@@ -630,5 +630,5 @@ module.exports = {
 	squashInlineTextAndCleanupWhitespace,
 	_text: value => new Text_inline()._text(value),
 	inlineNewline: node => new Newline_inline()._parseSingle(node),
-	link: (node, images) => new Link()._parseSingle(node, images),
+	link: (node, images) => new Link()._parseSingle(node, {images}),
 }
