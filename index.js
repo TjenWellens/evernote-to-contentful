@@ -3,7 +3,7 @@ const fs = require('fs');
 const assert = require('node:assert/strict');
 
 const {findNotebook, findTags, findNotes} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
-const {findUpdatedNoteIds, findUpdatedTagIds} = require("./lib.findUpdates");
+const {findUpdatedNoteIds, findUpdatedTagIds} = require("./find-updates/lib.findUpdates");
 
 const {createEntryFromTag} = require("./lib.createEntryFromTag");
 
