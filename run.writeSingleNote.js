@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const {findNoteById} = require("./lib.evernote.findPublishedBlogposts");
+const {findNoteById} = require("./ext/evernote/lib.evernote.findPublishedBlogposts");
 const fs = require('fs');
 const {createImages} = require("./lib.createEntryFromNote");
 const {content2contentAsRichText} = require("./content2content/lib.content2content");

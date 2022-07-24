@@ -1,10 +1,10 @@
 const {compareTagUpdates} = require("./lib.compareUpdates");
 const {getTagUpdates: getContentfulTagUpdates} = require("./ext/contentful/lib.contentful.getTagUpdates");
-const {getTagUpdates: getEvernoteTagUpdates} = require("./lib.evernote.getTagUpdates");
+const {getTagUpdates: getEvernoteTagUpdates} = require("./ext/evernote/lib.evernote.getTagUpdates");
 
 const {compareNoteUpdates} = require("./lib.compareUpdates");
 
-const {getNotesUpdates} = require("./lib.evernote.findNoteUpdates");
+const {getNotesUpdates} = require("./ext/evernote/lib.evernote.findNoteUpdates");
 const {getBlogUpdates} = require("./ext/contentful/lib.contentful.getBlogUpdates");
 
 async function findUpdatedNoteIds(notebook) {
