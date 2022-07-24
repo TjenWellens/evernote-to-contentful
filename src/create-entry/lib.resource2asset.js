@@ -2,7 +2,7 @@ const contentful = require('contentful-management')
 const axios = require('axios');
 const qs = require('querystring')
 const httpAdapter = require('axios/lib/adapters/http');
-const {createEvernoteClient} = require("./ext/evernote/lib.evernote");
+const {createEvernoteClient} = require("../ext/evernote/lib.evernote");
 
 const contentfulClient = contentful.createClient({
 	accessToken: process.env.CONTENTFUL_CONTENT_MANAGEMENT_API_KEY
