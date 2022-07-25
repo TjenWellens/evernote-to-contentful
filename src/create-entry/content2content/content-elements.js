@@ -145,7 +145,7 @@ class List {
 		const handler = new ListItem()
 		return {
 			"data": {},
-			"content": node.$$.map(node => handler.parse(node)),
+			"content": node.$$.map(node => handler.parse(node, lookups)),
 			"nodeType": this._listType(node)
 		};
 	}
@@ -318,13 +318,14 @@ class Newline_inline {
 class Link {
 	constructor() {
 		this.handlers = [
+			new Link_clipping(),
 			new Link_internal(),
 			new Link_external(),
 		]
 	}
 
 	appliesTo(node) {
-		return node["#name"] === "a" && this.handlers.some(h => h.appliesTo(node))
+		return node["#name"] === "a"
 	}
 
 	parse(node, lookups) {
@@ -332,7 +333,7 @@ class Link {
 	}
 
 	_parseSingle(node, lookups) {
-		const handler = this.handlers.find(h => h.appliesTo(node))
+		const handler = this.handlers.find(h => h.appliesTo(node, lookups))
 		return handler._parseSingle(node, lookups)
 	}
 
@@ -421,6 +422,39 @@ class Link_external {
 	linkData(node) {
 		return {
 			"uri": this.href(node)
+		}
+	}
+}
+
+class Link_clipping {
+	href(node) {
+		return node.$.href;
+	}
+
+	getClipping(node, lookups) {
+		const id = parseNoteIdFromInternalUrl(this.href(node))
+		return lookups.clippings[id];
+	}
+
+	appliesTo(node, lookups) {
+		if(node["#name"] !== "a")
+			return false;
+		if(!isInternalUrl(this.href(node)))
+			return false;
+		return !!this.getClipping(node, lookups);
+	}
+
+	_parseSingle(node, lookups) {
+		return {
+			"data": this.linkData(node, lookups),
+			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+			"nodeType": "hyperlink"
+		}
+	}
+
+	linkData(node, lookups) {
+		return {
+			"uri": this.getClipping(node, lookups)
 		}
 	}
 }
@@ -537,7 +571,7 @@ class ListItem {
 					throw new Error('only list-items with one child are supported')
 				}
 			}
-			return this._listItem(new Node()._parseSingle(node.$$[0]))
+			return this._listItem(new Node()._parseSingle(node.$$[0], lookups))
 		}
 
 		const handler = new List();
