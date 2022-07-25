@@ -316,8 +316,15 @@ class Newline_inline {
 }
 
 class Link {
+	constructor() {
+		this.handlers = [
+			new Link_internal(),
+			new Link_external(),
+		]
+	}
+
 	appliesTo(node) {
-		return node["#name"] === "a"
+		return node["#name"] === "a" && this.handlers.some(h => h.appliesTo(node))
 	}
 
 	parse(node, lookups) {
@@ -325,36 +332,95 @@ class Link {
 	}
 
 	_parseSingle(node, lookups) {
+		const handler = this.handlers.find(h => h.appliesTo(node))
+		return handler._parseSingle(node, lookups)
+	}
+
+	// _parseSingle(node, lookups) {
+	// 	return {
+	// 		"data": isInternalLink() ? internalLinkData() : externalLinkData(),
+	// 		"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+	// 		"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
+	// 	};
+	//
+	// 	function isInternalLink() {
+	// 		return isInternalUrl(href())
+	// 	}
+	//
+	// 	function internalLinkData() {
+	// 		return {
+	// 			target: {
+	// 				sys: {
+	// 					type: 'Link',
+	// 					linkType: 'Entry',
+	// 					id: parseNoteIdFromInternalUrl(href())
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	//
+	// 	function externalLinkData() {
+	// 		return {
+	// 			"uri": href()
+	// 		}
+	// 	}
+	//
+	// 	function href() {
+	// 		return node.$.href;
+	// 	}
+	// }
+}
+
+class Link_internal {
+	href(node) {
+		return node.$.href;
+	}
+
+	appliesTo(node) {
+		return node["#name"] === "a" && isInternalUrl(this.href(node))
+	}
+
+	_parseSingle(node, lookups) {
 		return {
-			"data": isInternalLink() ? internalLinkData() : externalLinkData(),
+			"data": this.linkData(node),
 			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
-			"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
-		};
-
-		function isInternalLink() {
-			return isInternalUrl(href())
+			"nodeType": "entry-hyperlink"
 		}
+	}
 
-		function internalLinkData() {
-			return {
-				target: {
-					sys: {
-						type: 'Link',
-						linkType: 'Entry',
-						id: parseNoteIdFromInternalUrl(href())
-					}
+	linkData(node) {
+		return {
+			target: {
+				sys: {
+					type: 'Link',
+					linkType: 'Entry',
+					id: parseNoteIdFromInternalUrl(this.href(node))
 				}
 			}
 		}
+	}
+}
 
-		function externalLinkData() {
-			return {
-				"uri": href()
-			}
+class Link_external {
+	href(node) {
+		return node.$.href;
+	}
+
+	appliesTo(node) {
+		return node["#name"] === "a" && !isInternalUrl(this.href(node))
+	}
+
+	_parseSingle(node, lookups) {
+		return {
+			"data": this.linkData(node),
+			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+			"nodeType": "hyperlink"
 		}
+	}
 
-		function href() {
-			return node.$.href;
+	linkData(node) {
+		return {
+			"uri": this.href(node)
 		}
 	}
 }
