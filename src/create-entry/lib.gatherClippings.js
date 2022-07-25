@@ -1,10 +1,10 @@
 const {content2links} = require("./content2content/lib.content2links");
-const {isInternalLink, parseNoteIdFromInternalUrl} = require("./content2content/parseNoteIdFromInternalUrl");
+const {isInternalUrl, parseNoteIdFromInternalUrl} = require("./content2content/parseNoteIdFromInternalUrl");
 const {getTagsForNote} = require("../ext/evernote/lib.evernote.getTagsFromNote");
 const {getNoteWithAttributes} = require("../ext/evernote/lib.evernote.getNoteWithAttributes");
 
 function getPotentialClippingNoteIds(links) {
-    return links.filter(isInternalLink).map(parseNoteIdFromInternalUrl);
+    return links.filter(isInternalUrl).map(parseNoteIdFromInternalUrl);
 }
 
 async function gatherNoteIdsOfPotentialClippings(note) {

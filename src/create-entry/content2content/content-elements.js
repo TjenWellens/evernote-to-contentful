@@ -1,5 +1,5 @@
 
-const {parseNoteIdFromInternalUrl} = require("./parseNoteIdFromInternalUrl");
+const {parseNoteIdFromInternalUrl, isInternalUrl} = require("./parseNoteIdFromInternalUrl");
 const {yankImageToRoot} = require("./yankImageToRoot");
 const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
 
@@ -332,7 +332,7 @@ class Link {
 		};
 
 		function isInternalLink() {
-			return href().startsWith("evernote:///view/")
+			return isInternalUrl(href())
 		}
 
 		function internalLinkData() {

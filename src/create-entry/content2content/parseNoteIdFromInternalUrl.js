@@ -1,5 +1,5 @@
 function isInternalUrl(url) {
-	return url.startsWith("evernote:///");
+	return url.startsWith("evernote:///view/");
 }
 
 function parseNoteIdFromInternalUrl(url) {
@@ -9,5 +9,5 @@ function parseNoteIdFromInternalUrl(url) {
 
 module.exports = {
 	parseNoteIdFromInternalUrl,
-	isInternalLink: isInternalUrl,
+	isInternalUrl,
 }
