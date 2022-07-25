@@ -1,7 +1,7 @@
 const {parseXmlToJs} = require("./evernote-xml-to-js-parser");
 const {RootElementHandler} = require('./content-elements');
 
-async function content2content(noteContent, images, clippings) {
+async function content2content(noteContent, images, clippings = {}) {
 	const content = await parseXmlToJs(noteContent)
 	const defaultHandler = new RootElementHandler()
 	if (!defaultHandler.appliesTo(content)) {

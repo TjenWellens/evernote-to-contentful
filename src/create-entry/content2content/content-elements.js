@@ -170,7 +170,7 @@ class Node {
 		return hasChildren(node)
 	}
 
-	parse(node, images, clippings) {
+	parse(node, images, clippings = {}) {
 		return node.$$.flatMap(node => this._parseSingle(node, {images, clippings}))
 	}
 
