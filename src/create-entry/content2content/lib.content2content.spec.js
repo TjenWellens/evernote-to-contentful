@@ -1438,3 +1438,39 @@ clear="none"/>and this line
 		})
 	})
 })
+
+it('trailing newline', async () => {
+	const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><br/></div>
+<br/>
+</en-note>`
+	const entryContent = [
+		{
+			"data": {},
+			"content": [
+				{
+					"data": {},
+					"marks": [],
+					"value": "",
+					"nodeType": "text"
+				}
+			],
+			"nodeType": "paragraph"
+		},
+		{
+			"data": {},
+			"content": [
+				{
+					"data": {},
+					"marks": [],
+					"value": "",
+					"nodeType": "text"
+				}
+			],
+			"nodeType": "paragraph"
+		},
+	]
+	expect(await content2content(noteContent)).toEqual(entryContent)
+})

@@ -513,7 +513,7 @@ class Newline_block {
 	parse(node, lookups) {
 		return [{
 			"data": {},
-			"content": new Text_inline()._text(""),
+			"content": [new Text_inline()._text("")],
 			"nodeType": "paragraph"
 		}]
 	}
