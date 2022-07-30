@@ -32,6 +32,11 @@ async function createNotes(noteIds, tags) {
 
 				stack: ${e.stack}
 				`)
+                try {
+                    const messageJson = JSON.parse(e.message)
+                    fs.writeFileSync(`errors/note_${id}_payloadData.json`, messageJson.request.payloadData)
+                } catch (e) {
+                }
                 failed++
             })
 
