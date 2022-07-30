@@ -251,6 +251,56 @@ target="_blank">In progress blogpost</a>)
 			]
 			expect(await content2content(noteContent)).toEqual(entryContent)
 		})
+		it('clipping links to "hyperlink"', async () => {
+			let noteId = `c91a6abd-cec2-426c-8685-2fd03460c23c`;
+			let clippingOrigin = 'https://some.external.link.com/foo';
+			const clippings = {
+				[noteId]: clippingOrigin
+			}
+			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>(src: <a shape="rect"
+href="evernote:///view/590605/s1/${noteId}/${noteId}/"
+target="_blank">Article: something I found on the internet</a>)
+</div>
+</en-note>`
+			const entryContent = [
+				{
+					"data": {},
+					"content": [
+						{
+							"data": {},
+							"marks": [],
+							"value": "(src: ",
+							"nodeType": "text"
+						},
+						{
+							"data": {
+								"uri": clippingOrigin
+							},
+							"content": [
+								{
+									"data": {},
+									"marks": [],
+									"value": "Article: something I found on the internet",
+									"nodeType": "text"
+								}
+							],
+							"nodeType": "hyperlink"
+						},
+						{
+							"data": {},
+							"marks": [],
+							"value": ")",
+							"nodeType": "text"
+						}
+					],
+					"nodeType": "paragraph"
+				},
+			]
+			expect(await content2content(noteContent, {}, clippings)).toEqual(entryContent)
+		})
 		it('external links to a', async () => {
 			const noteContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">

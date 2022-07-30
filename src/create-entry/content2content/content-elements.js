@@ -1,5 +1,5 @@
 
-const {parseNoteIdFromInternalUrl} = require("./parseNoteIdFromInternalUrl");
+const {parseNoteIdFromInternalUrl, isInternalUrl} = require("./parseNoteIdFromInternalUrl");
 const {yankImageToRoot} = require("./yankImageToRoot");
 const {getAssetIdForHash} = require("./lib.getAssetIdForHash");
 
@@ -145,7 +145,7 @@ class List {
 		const handler = new ListItem()
 		return {
 			"data": {},
-			"content": node.$$.map(node => handler.parse(node)),
+			"content": node.$$.map(node => handler.parse(node, lookups)),
 			"nodeType": this._listType(node)
 		};
 	}
@@ -170,8 +170,8 @@ class Node {
 		return hasChildren(node)
 	}
 
-	parse(node, images) {
-		return node.$$.flatMap(node => this._parseSingle(node, {images}))
+	parse(node, images, clippings = {}) {
+		return node.$$.flatMap(node => this._parseSingle(node, {images, clippings}))
 	}
 
 	_parseSingle(node, lookups) {
@@ -316,6 +316,14 @@ class Newline_inline {
 }
 
 class Link {
+	constructor() {
+		this.handlers = [
+			new Link_clipping(),
+			new Link_internal(),
+			new Link_external(),
+		]
+	}
+
 	appliesTo(node) {
 		return node["#name"] === "a"
 	}
@@ -325,36 +333,128 @@ class Link {
 	}
 
 	_parseSingle(node, lookups) {
+		const handler = this.handlers.find(h => h.appliesTo(node, lookups))
+		return handler._parseSingle(node, lookups)
+	}
+
+	// _parseSingle(node, lookups) {
+	// 	return {
+	// 		"data": isInternalLink() ? internalLinkData() : externalLinkData(),
+	// 		"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+	// 		"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
+	// 	};
+	//
+	// 	function isInternalLink() {
+	// 		return isInternalUrl(href())
+	// 	}
+	//
+	// 	function internalLinkData() {
+	// 		return {
+	// 			target: {
+	// 				sys: {
+	// 					type: 'Link',
+	// 					linkType: 'Entry',
+	// 					id: parseNoteIdFromInternalUrl(href())
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	//
+	// 	function externalLinkData() {
+	// 		return {
+	// 			"uri": href()
+	// 		}
+	// 	}
+	//
+	// 	function href() {
+	// 		return node.$.href;
+	// 	}
+	// }
+}
+
+class Link_internal {
+	href(node) {
+		return node.$.href;
+	}
+
+	appliesTo(node) {
+		return node["#name"] === "a" && isInternalUrl(this.href(node))
+	}
+
+	_parseSingle(node, lookups) {
 		return {
-			"data": isInternalLink() ? internalLinkData() : externalLinkData(),
+			"data": this.linkData(node),
 			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
-			"nodeType": isInternalLink() ? "entry-hyperlink" : "hyperlink"
-		};
-
-		function isInternalLink() {
-			return href().startsWith("evernote:///view/")
+			"nodeType": "entry-hyperlink"
 		}
+	}
 
-		function internalLinkData() {
-			return {
-				target: {
-					sys: {
-						type: 'Link',
-						linkType: 'Entry',
-						id: parseNoteIdFromInternalUrl(href())
-					}
+	linkData(node) {
+		return {
+			target: {
+				sys: {
+					type: 'Link',
+					linkType: 'Entry',
+					id: parseNoteIdFromInternalUrl(this.href(node))
 				}
 			}
 		}
+	}
+}
 
-		function externalLinkData() {
-			return {
-				"uri": href()
-			}
+class Link_external {
+	href(node) {
+		return node.$.href;
+	}
+
+	appliesTo(node) {
+		return node["#name"] === "a" && !isInternalUrl(this.href(node))
+	}
+
+	_parseSingle(node, lookups) {
+		return {
+			"data": this.linkData(node),
+			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+			"nodeType": "hyperlink"
 		}
+	}
 
-		function href() {
-			return node.$.href;
+	linkData(node) {
+		return {
+			"uri": this.href(node)
+		}
+	}
+}
+
+class Link_clipping {
+	href(node) {
+		return node.$.href;
+	}
+
+	getClipping(node, lookups) {
+		const id = parseNoteIdFromInternalUrl(this.href(node))
+		return lookups.clippings[id];
+	}
+
+	appliesTo(node, lookups) {
+		if(node["#name"] !== "a")
+			return false;
+		if(!isInternalUrl(this.href(node)))
+			return false;
+		return !!this.getClipping(node, lookups);
+	}
+
+	_parseSingle(node, lookups) {
+		return {
+			"data": this.linkData(node, lookups),
+			"content": squashInlineTextAndCleanupWhitespace(_parseInlineNodeContent(node, lookups)),
+			"nodeType": "hyperlink"
+		}
+	}
+
+	linkData(node, lookups) {
+		return {
+			"uri": this.getClipping(node, lookups)
 		}
 	}
 }
@@ -471,7 +571,7 @@ class ListItem {
 					throw new Error('only list-items with one child are supported')
 				}
 			}
-			return this._listItem(new Node()._parseSingle(node.$$[0]))
+			return this._listItem(new Node()._parseSingle(node.$$[0], lookups))
 		}
 
 		const handler = new List();
@@ -630,5 +730,5 @@ module.exports = {
 	squashInlineTextAndCleanupWhitespace,
 	_text: value => new Text_inline()._text(value),
 	inlineNewline: node => new Newline_inline()._parseSingle(node),
-	link: (node, images) => new Link()._parseSingle(node, {images}),
+	link: (node, images, clippings = {}) => new Link()._parseSingle(node, {images, clippings}),
 }

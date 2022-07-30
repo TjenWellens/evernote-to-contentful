@@ -2,6 +2,7 @@ const {gatherReferences} = require("./lib.gatherReferences");
 const {createAssetsFromEvernoteResources} = require("./lib.resource2asset");
 const {content2contentAsRichText} = require("./content2content/lib.content2content");
 const {createOrUpdateEntry} = require("./lib.createEntry");
+const {gatherClippings} = require("./lib.gatherClippings");
 
 async function createImages(note) {
 	if(!note.resources) return {}
@@ -25,8 +26,9 @@ function everpostsLinked(references) {
 
 async function createEntryFromNote(note, tags) {
 	const images = await createImages(note);
+	const clippings = await gatherClippings(note);
 
-	const entryContent = await content2contentAsRichText(note.content, images)
+	const entryContent = await content2contentAsRichText(note.content, images, clippings)
 
 	note.tagGuids = note.tagGuids || []
 

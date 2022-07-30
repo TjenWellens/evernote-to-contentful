@@ -1,13 +1,13 @@
 const {parseXmlToJs} = require("./evernote-xml-to-js-parser");
 const {RootElementHandler} = require('./content-elements');
 
-async function content2content(noteContent, images) {
+async function content2content(noteContent, images, clippings = {}) {
 	const content = await parseXmlToJs(noteContent)
 	const defaultHandler = new RootElementHandler()
 	if (!defaultHandler.appliesTo(content)) {
 		return []
 	}
-	return defaultHandler.parse(content, images)
+	return defaultHandler.parse(content, images, clippings)
 }
 
 function richText(content) {
@@ -18,8 +18,8 @@ function richText(content) {
 	}
 }
 
-async function content2contentAsRichText(noteContent, images) {
-	const content = await content2content(noteContent, images)
+async function content2contentAsRichText(noteContent, images, clippings) {
+	const content = await content2content(noteContent, images, clippings)
 	return richText(content)
 }
 
