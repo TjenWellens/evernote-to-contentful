@@ -576,7 +576,7 @@ class ListItem {
 
 		const handler = new List();
 		if (handler.appliesTo(node)) {
-			return this._listItem([handler._parseSingle(node)])
+			return this._listItem([handler._parseSingle(node, lookups)])
 		}
 
 		if (isDivWithOneElement(node)) {
