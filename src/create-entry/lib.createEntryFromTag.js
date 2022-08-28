@@ -1,4 +1,4 @@
-const {createOrUpdateEntry} = require("./lib.createEntry");
+const {createOrUpdateEntry} = require("../ext/contentful/lib.contentful.createEntry");
 
 
 function createEntryFromTag(tag) {
