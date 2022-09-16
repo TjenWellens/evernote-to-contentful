@@ -7,7 +7,7 @@ async function content2content(noteContent, images, clippings = {}) {
 	if (!defaultHandler.appliesTo(content)) {
 		return []
 	}
-	return defaultHandler.parse(content, images, clippings)
+	return defaultHandler.parse(content, {images, clippings})
 }
 
 function richText(content) {
