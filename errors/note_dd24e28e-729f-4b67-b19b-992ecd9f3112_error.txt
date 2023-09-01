@@ -1,0 +1,112 @@
+'ERROR: Failed to create note "Model: When SRE? Mission Critical, Operable, Mutable" [dd24e28e-729f-4b67-b19b-992ecd9f3112]
+
+				message: {
+  "status": 422,
+  "statusText": "Unprocessable Entity",
+  "message": "Validation error",
+  "details": {
+    "errors": [
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "3d1caaab-f2c4-46ec-bc56-24755831a794"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          0
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "3d1caaab-f2c4-46ec-bc56-24755831a794"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          0
+        ]
+      }
+    ]
+  },
+  "request": {
+    "url": "/spaces/p2rtto0i6kcn/environments/master/entries/dd24e28e-729f-4b67-b19b-992ecd9f3112/published",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/vnd.contentful.management.v1+json",
+      "X-Contentful-User-Agent": "sdk contentful-management.js/7.5.0; platform node.js/v19.5.0; os macOS/22.5.0;",
+      "Authorization": "Bearer ...W3a4I",
+      "user-agent": "node.js/v19.5.0",
+      "Accept-Encoding": "gzip",
+      "X-Contentful-Version": 1
+    },
+    "method": "put",
+    "payloadData": null
+  },
+  "requestId": "7dfc7ef7-b881-4113-b18d-a492d72705ef"
+}
+
+				stack: UnresolvedLinks: {
+  "status": 422,
+  "statusText": "Unprocessable Entity",
+  "message": "Validation error",
+  "details": {
+    "errors": [
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "3d1caaab-f2c4-46ec-bc56-24755831a794"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          0
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "3d1caaab-f2c4-46ec-bc56-24755831a794"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          0
+        ]
+      }
+    ]
+  },
+  "request": {
+    "url": "/spaces/p2rtto0i6kcn/environments/master/entries/dd24e28e-729f-4b67-b19b-992ecd9f3112/published",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/vnd.contentful.management.v1+json",
+      "X-Contentful-User-Agent": "sdk contentful-management.js/7.5.0; platform node.js/v19.5.0; os macOS/22.5.0;",
+      "Authorization": "Bearer ...W3a4I",
+      "user-agent": "node.js/v19.5.0",
+      "Accept-Encoding": "gzip",
+      "X-Contentful-Version": 1
+    },
+    "method": "put",
+    "payloadData": null
+  },
+  "requestId": "7dfc7ef7-b881-4113-b18d-a492d72705ef"
+}
+    at errorHandler (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/node_modules/contentful-management/dist/contentful-management.node.js:11038:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createNotes (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/index.js:20:9)
+    at async note2post (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/index.js:83:5)
+				

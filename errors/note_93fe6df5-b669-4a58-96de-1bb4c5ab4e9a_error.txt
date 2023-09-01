@@ -1,0 +1,280 @@
+'ERROR: Failed to create note "Course: Evolutionary Architecture" [93fe6df5-b669-4a58-96de-1bb4c5ab4e9a]
+
+				message: {
+  "status": 422,
+  "statusText": "Unprocessable Entity",
+  "message": "Validation error",
+  "details": {
+    "errors": [
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "acc76a91-4329-40c2-8ace-0cfd8aebf267"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          4
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "598ad2a1-2b93-4971-85e4-10ca69acbc96"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          6
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "a41c6539-2426-434a-8fe8-9984fed91608"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          7
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "5a7a2311-426f-4a3b-95fc-1269e71c9fc9"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          9
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "acc76a91-4329-40c2-8ace-0cfd8aebf267"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          4
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "598ad2a1-2b93-4971-85e4-10ca69acbc96"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          6
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "a41c6539-2426-434a-8fe8-9984fed91608"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          7
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "5a7a2311-426f-4a3b-95fc-1269e71c9fc9"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          9
+        ]
+      }
+    ]
+  },
+  "request": {
+    "url": "/spaces/p2rtto0i6kcn/environments/master/entries/93fe6df5-b669-4a58-96de-1bb4c5ab4e9a/published",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/vnd.contentful.management.v1+json",
+      "X-Contentful-User-Agent": "sdk contentful-management.js/7.5.0; platform node.js/v19.5.0; os macOS/22.5.0;",
+      "Authorization": "Bearer ...W3a4I",
+      "user-agent": "node.js/v19.5.0",
+      "Accept-Encoding": "gzip",
+      "X-Contentful-Version": 1
+    },
+    "method": "put",
+    "payloadData": null
+  },
+  "requestId": "fcef10a1-8269-4aec-8c3f-894d02c59486"
+}
+
+				stack: UnresolvedLinks: {
+  "status": 422,
+  "statusText": "Unprocessable Entity",
+  "message": "Validation error",
+  "details": {
+    "errors": [
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "acc76a91-4329-40c2-8ace-0cfd8aebf267"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          4
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "598ad2a1-2b93-4971-85e4-10ca69acbc96"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          6
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "a41c6539-2426-434a-8fe8-9984fed91608"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          7
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "5a7a2311-426f-4a3b-95fc-1269e71c9fc9"
+        },
+        "path": [
+          "fields",
+          "content",
+          "en-US",
+          9
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "acc76a91-4329-40c2-8ace-0cfd8aebf267"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          4
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "598ad2a1-2b93-4971-85e4-10ca69acbc96"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          6
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "a41c6539-2426-434a-8fe8-9984fed91608"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          7
+        ]
+      },
+      {
+        "name": "notResolvable",
+        "link": {
+          "type": "Link",
+          "linkType": "Entry",
+          "id": "5a7a2311-426f-4a3b-95fc-1269e71c9fc9"
+        },
+        "path": [
+          "fields",
+          "everpostsLinked",
+          "en-US",
+          9
+        ]
+      }
+    ]
+  },
+  "request": {
+    "url": "/spaces/p2rtto0i6kcn/environments/master/entries/93fe6df5-b669-4a58-96de-1bb4c5ab4e9a/published",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/vnd.contentful.management.v1+json",
+      "X-Contentful-User-Agent": "sdk contentful-management.js/7.5.0; platform node.js/v19.5.0; os macOS/22.5.0;",
+      "Authorization": "Bearer ...W3a4I",
+      "user-agent": "node.js/v19.5.0",
+      "Accept-Encoding": "gzip",
+      "X-Contentful-Version": 1
+    },
+    "method": "put",
+    "payloadData": null
+  },
+  "requestId": "fcef10a1-8269-4aec-8c3f-894d02c59486"
+}
+    at errorHandler (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/node_modules/contentful-management/dist/contentful-management.node.js:11038:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createNotes (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/index.js:20:9)
+    at async note2post (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/index.js:83:5)
+				

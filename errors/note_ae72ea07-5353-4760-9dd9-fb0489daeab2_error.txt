@@ -1,0 +1,16 @@
+'ERROR: Failed to create note "Book: Applying UML and Patterns" [ae72ea07-5353-4760-9dd9-fb0489daeab2]
+
+				message: unsupported list content
+
+				stack: Error: unsupported list content
+    at ListItem.parse (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:586:9)
+    at ListItem.parse (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:583:26)
+    at /Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:148:43
+    at Array.map (<anonymous>)
+    at List._parseSingle (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:148:23)
+    at List.parse (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:141:16)
+    at Node._parseSingle (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:193:19)
+    at /Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:174:39
+    at Array.flatMap (<anonymous>)
+    at Node.parse (/Users/tjen/dev/tjen/_tjenwellens.eu/evernote-to-contentful/src/create-entry/content2content/content-elements.js:174:18)
+				

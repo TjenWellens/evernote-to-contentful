@@ -1,0 +1,45 @@
+{
+  "src/index.js": {
+    "src/ext/evernote/lib.evernote.findPublishedBlogposts.js": {
+      "src/ext/evernote/lib.evernote.js": {}
+    },
+    "src/find-updates/lib.findUpdates.js": {
+      "src/find-updates/lib.compareUpdates.js": {},
+      "src/ext/contentful/lib.contentful.getTagUpdates.js": {
+        "src/ext/contentful/lib.contentful.getEntryUpdates.js": {
+          "src/ext/contentful/lib.contentful.js": {}
+        }
+      },
+      "src/ext/evernote/lib.evernote.getTagUpdates.js": {
+        "src/ext/evernote/lib.evernote.findPublishedBlogposts.js": {
+          "src/ext/evernote/lib.evernote.js": {}
+        }
+      },
+      "src/ext/evernote/lib.evernote.findNoteUpdates.js": {
+        "src/ext/evernote/lib.evernote.js": {}
+      },
+      "src/ext/contentful/lib.contentful.getBlogUpdates.js": {
+        "src/ext/contentful/lib.contentful.getEntryUpdates.js": {
+          "src/ext/contentful/lib.contentful.js": {}
+        }
+      }
+    },
+    "src/create-entry/lib.createEntryFromTag.js": {
+      "src/create-entry/lib.createEntry.js": {}
+    },
+    "src/create-entry/lib.createEntryFromNote.js": {
+      "src/lib.gatherReferences.js": {},
+      "src/lib.resource2asset.js": {
+        "src/ext/evernote/lib.evernote.js": {}
+      },
+      "src/content2content/lib.content2content.js": {
+        "src/content2content/content-elements.js": {
+          "src/content2content/parseNoteIdFromInternalUrl.js": {},
+          "src/content2content/yankImageToRoot.js": {},
+          "src/lib.getAssetIdForHash.js": {}
+        }
+      },
+      "src/create-entry/lib.createEntry.js": {}
+    }
+  }
+}
